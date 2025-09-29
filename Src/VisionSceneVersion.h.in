@@ -1,0 +1,15 @@
+#pragma once
+// Auto-generated version header template. CMake will replace @...@ variables.
+
+#define VISIONSCENE_VERSION_MAJOR @PROJECT_VERSION_MAJOR@
+#define VISIONSCENE_VERSION_MINOR @PROJECT_VERSION_MINOR@
+#define VISIONSCENE_VERSION_PATCH @PROJECT_VERSION_PATCH@
+#define VISIONSCENE_VERSION_STRING "@PROJECT_VERSION@"
+
+namespace vision_scene {
+inline constexpr int VersionMajor = VISIONSCENE_VERSION_MAJOR;
+inline constexpr int VersionMinor = VISIONSCENE_VERSION_MINOR;
+inline constexpr int VersionPatch = VISIONSCENE_VERSION_PATCH;
+inline constexpr const char* VersionString = VISIONSCENE_VERSION_STRING;
+}
+
