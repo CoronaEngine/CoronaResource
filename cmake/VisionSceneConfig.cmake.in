@@ -1,0 +1,13 @@
+# - CMake package configuration file for VisionScene
+@PACKAGE_INIT@
+
+set(VisionScene_VERSION "@PROJECT_VERSION@")
+
+include("${CMAKE_CURRENT_LIST_DIR}/VisionSceneTargets.cmake")
+
+# Convenience variables
+set(VisionScene_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/include")
+set(VisionScene_LIBRARIES VisionScene::Core)
+
+check_required_components(VisionScene)
+
