@@ -7,6 +7,8 @@
 
 int main()
 {
-    std::cout << "VisionScene version: " << vision_scene::VersionString << "\n";
+
+    // DatasmithSceneXmlReader reader;
+    // reader.ParseFile();
     return 0;
 }

@@ -52,6 +52,7 @@ target_include_directories(VisionSceneCore
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/datasmith_refactor/Public>
         $<BUILD_INTERFACE:${VISIONSCENE_GENERATED_DIR}>
+        $<BUILD_INTERFACE:${ktm_SOURCE_DIR}>
         $<INSTALL_INTERFACE:include>
 )
 

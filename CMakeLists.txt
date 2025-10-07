@@ -29,6 +29,16 @@ else()
     add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
+include(FetchContent)
+
+FetchContent_Declare(
+        ktm
+        GIT_REPOSITORY https://github.com/YGXXD/ktm.git
+        GIT_TAG main
+        EXCLUDE_FROM_ALL
+)
+FetchContent_MakeAvailable(ktm)
+
 add_subdirectory(Src)
 if(VISIONSCENE_BUILD_EXAMPLES)
     add_subdirectory(Examples)
