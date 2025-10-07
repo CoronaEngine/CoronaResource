@@ -1,0 +1,333 @@
+Datasmith (.udatasmith) 文件读取与解析流程整理
+更新日期: 2025-09-30
+适用范围: 参考 Unreal Datasmith 原始解析 (FDatasmithSceneXmlReader) 的通用逻辑，抽象出与 Unreal Engine 框架弱关联的部分，便于移植或精简。
+
+============================
+1. 入口层级概览
+============================
+用户代码 (Tool / Importer) 调用:
+  ParseFile(Path, OutScene, bAppend)
+    └─ LoadFromFile(Path, Buffer)
+         └─ (平台文件 I/O, 读文本/UTF-8/UTF-16 归一化)
+    └─ ParseBuffer(Buffer, OutScene, bAppend)
+         └─ LoadFromBuffer(Buffer) -> 构造 Xml DOM (FXmlFile 或第三方 TinyXML/RapidXML)
+         └─ ParseXmlFile(Xml, OutScene, bAppend)
+              └─ 根节点遍历 + 各类资源/Actor/Variant/MetaData 解析
+              └─ PatchUpVersion / CleanUpScene / 返回成功或失败
+
+============================
+2. 关键数据结构 (抽象化)
+============================
+Scene 容器接口 (IDatasmithScene):
+  - 资源集合: StaticMeshes, Materials, MaterialInstances, Textures, LevelSequences, VariantSets, Environments, Lights, Cameras, PostProcess, Metadata 等
+  - Actor 根列表: RootActors (每个 Actor 含子树)
+  - 应用/导出信息: Host, ExporterVersion, ExporterSDKVersion, ResourcePath
+  - 地理信息: Latitude, Longitude, Elevation
+  - 辅助映射: (解析时临时) Name -> Element
+
+Actor Element (IDatasmithActorElement):
+  - Name, Label, UniqueName
+  - Transform: Translation, Rotation(Quat/Euler), Scale
+  - Mobility, Visibility, CastShadow, Layers, Tags
+  - 子节点列表 Children
+  - 特化: MeshActor(引用StaticMesh+材质覆盖) / LightActor / CameraActor / DecalActor / CustomActor / HISMActor / Landscape / PostProcessVolume
+
+Resource Elements:
+  - Mesh: SourceFile, Hash, LightmapSettings, MaterialSlots, BoundingInfo
+  - Texture: SourceFile, Hash, Sampling/Address/ColorSpace/UVTransform
+  - Material (Graph): Expressions(Nodes), Links, Parameters
+  - MaterialInstance: Parent Ref + Overrides
+  - VariantSet/Variant: ActorBindings -> PropertyCaptures(Object/Value/Bytes)
+  - Metadata: Key->Value (多类型), AttachedTo(Actor/Object)
+
+临时辅助容器:
+  ActorsMap: Name -> ActorElement (支持 Variant / 绑定引用)
+  ObjectsMap: Name -> (Mesh / Material / Texture 等可以被引用的对象)
+
+============================
+3. ParseFile / ParseBuffer 详细
+============================
+ParseFile(Path):
+  1. 读取磁盘文本 -> Buffer (string)
+  2. 若失败: 返回 false
+  3. 调用 ParseBuffer(Buffer)
+
+ParseBuffer(Buffer):
+  1. LoadFromBuffer: 尝试构造 XML DOM
+      - 验证根节点是否为 "DatasmithUnrealScene" 或兼容别名
+      - 失败: 记录错误并返回 false
+  2. ParseXmlFile(Xml)
+
+============================
+4. ParseXmlFile 主流程 (线性扫描根子节点)
+============================
+伪代码概览:
+  if (!Xml.IsValid()) return false
+  if (!bAppend) OutScene.Reset()
+  ExporterSDKVersion = "N/A"
+  Init ActorsMap, ObjectsMap
+
+  for child in Root.Children:
+      tag = child.TagLower()
+      switch(tag):
+        case "host": ParseHost(child)
+        case "exporterversion": SetExporterVersion(child.Text)
+        case "exportersdkversion": SetExporterSDKVersion(child.Text)
+        case "resourcepath": Scene.SetResourcePath(child.Text)
+        case "application": ParseApplicationInfo(child)
+        case "user": ParseUserInfo(child)
+        case "geolocation": ParseGeo(child)
+        case "staticmesh": ParseMesh(child) -> Scene.AddMesh() -> ObjectsMap[name]=mesh
+        case "cloth": (Legacy) ParseCloth
+        case "levelsequence": ParseLevelSequence(child)
+        case "levelvariantsets": ParseVariantSets(child, ActorsMap, ObjectsMap)
+        case "texture": ParseTexture(child) -> Scene.AddTexture() -> ObjectsMap[name]=tex
+        case "environment": ParseEnvironment(child)
+        case "physicalsky": ParsePhysicalSky(child)
+        case "postprocess": ParsePostProcessGlobal(child)
+        case one_of(MaterialTags): ParseMaterial/MaterialInstance/Decal/UEPBR(child) -> Add -> ObjectsMap
+        case "metadata": ParseMetaData(child, ActorsMap, ObjectsMap)
+        case "exportstatistics": ParseExportStats(child)
+        default:
+            if (IsActorTag(tag))
+               actor = ParseActor(child, ActorsMap, ObjectsMap)
+               if (actor.Parentless) Scene.AddActor(actor)
+
+  PatchUpVersion(Scene)
+  CleanUpScene(Scene)
+  return true
+
+============================
+5. 节点解析细节分类
+============================
+5.1 Host / Application / User
+  - host: 保存导出端平台或 DCC (e.g. "3dsMax", "Revit")
+  - application: vendor/product/version 子节点
+  - user: userid / os
+
+5.2 Geolocation
+  - 属性或子节点: latitude / longitude / elevation (存在再设)
+
+5.3 StaticMesh 解析
+  - 属性: name, label, source, hash
+  - 可选: lightmap, lmcoord, customnormals, bounds(size/center)
+  - 子节点: materials (slot name/order), metadata
+  - 登记: Scene.AddStaticMesh(mesh) + ObjectsMap[name] = mesh
+
+5.4 Texture 解析
+  - 属性: name, file, hash, compression, colorspace
+  - 采样/地址: wrap(modeU,modeV), filter, srgb
+  - UVTransform: offset(u,v), scale(u,v), rotate
+  - 特殊曲线/atlas/裁剪参数 (若存在)
+
+5.5 Material / MaterialInstance / Decal / UEPBR
+  - 标准材质: 表达式节点 (Textures, Scalars, Colors) + 连接输出
+  - 实例材质: parent 引用 + override 参数 (scalar/vector/texture/switch)
+  - UEPBR: 先构建所有表达式，再二次连接 BaseColor/Roughness/Metallic/Normal/Emissive 等 pin
+
+5.6 LevelVariantSets
+  - VariantSet 列表
+    - Variant 列表
+      - ActorBinding (actorName -> 查 ActorsMap)
+        - PropertyCapture:
+            * 类型: Transform/Visibility/MaterialSlot/Color/GenericBytes
+            * 如果是对象引用属性，使用 ObjectsMap 的目标名称
+            * 如果是值捕获，存储为字节或字符串表示
+
+5.7 MetaData
+  - 目标: actorName 或 objectName (mesh/material/texture)
+  - KeyValue 集合 (string/int/float/bool)
+  - 若重复 key -> 更新或合并策略 (通常覆盖)
+
+5.8 Environment / PhysicalSky / PostProcess
+  - Environment: CubeMap / Intensity / Color Tint
+  - PhysicalSky: 地理/时间/大气参数
+  - PostProcess: 曝光/对比度/色调/景深/胶片/体积雾等 (只解析存在字段)
+
+5.9 Actor 树 (递归)
+  通用字段:
+    name,label, mobility(static/movable), visible, castshadow, layers[], tags[], component(flag)
+    transform: translation(tx,ty,tz), rotation(支持 quatHex 或 qx,qy,qz,qw 或 euler), scale(sx,sy,sz)
+  专用 Actor:
+    MeshActor:
+      - staticmesh = nameRef / indexRef
+      - materialoverrides: slotName -> materialName
+    LightActor:
+      - type(point/spot/directional/area/portal)
+      - intensity, color(r,g,b) 或 temperature, iesProfile, attenuationRadius, inner/outer cone, areaShape(sizeX,sizeY)
+    CameraActor:
+      - sensorWidth/height, fov, aspect, focusDistance, aperture, DOF flags, lookAt(actorName or target vector)
+    DecalActor:
+      - materialRef, size, blend params
+    CustomActor:
+      - classPath / blueprintPath, custom key-values
+    HISMActor:
+      - staticMeshRef + instances[] transforms
+    Landscape:
+      - heightmap file, materialRef, section sizes
+    PostProcessVolume:
+      - 体积包围盒 + override flags + settings 子集
+  子节点: <children> ... (递归同级 Actor 标签)
+  唯一命名: 如 name 冲突则追加 _1, _2 直到不冲突
+  插入: 若父为空加入 Scene.RootActors
+
+============================
+6. 版本兼容 PatchUpVersion
+============================
+旧版本 (<0.19) 可能 Mesh 缺少材质槽定义；通过扫描使用该 Mesh 的第一个 MeshActor 的材质覆盖列表来反向补齐 Mesh 的 MaterialSlots。
+
+============================
+7. CleanUpScene 收尾
+============================
+- 移除引用缺失的覆盖
+- 去除空的 Actor (无子、无资源且无元数据) (可选策略)
+- 规范化 Transform (例如非常接近 0 的缩放归零)
+- 重新索引或压缩内部数组 (非必需，视实现)
+
+============================
+8. 错误与健壮性策略
+============================
+- XML 不合法: 直接失败
+- 缺少关键属性: 记录警告并跳过当前节点
+- 引用丢失: 记录警告; Variant 或 Material override 可部分忽略
+- 重复名称: 自动重命名 (保持稳定映射)
+- 数值解析失败: 使用默认值 (0/单位矩阵)
+- 非法十六进制 (Quat/Bytes 捕获): 警告并跳过该捕获
+
+============================
+9. 示例伪代码 (更精简)
+============================
+function ParseXmlFile(xml, scene, append):
+    if !xml.valid: return false
+    if !append: scene.Reset()
+    actors = {}
+    objects = {}
+
+    for node in xml.root.children:
+        switch node.tagLower:
+          case in HOST_INFO: ParseHostLike(node, scene)
+          case 'staticmesh': m = ParseMesh(node); scene.AddMesh(m); objects[m.name]=m
+          case 'texture': t = ParseTexture(node); scene.AddTexture(t); objects[t.name]=t
+          case in MATERIAL_TAGS: mat = ParseMaterial(node); scene.AddMaterial(mat); objects[mat.name]=mat
+          case 'levelvariantsets': ParseVariantSets(node, scene, actors, objects)
+          case 'metadata': ParseMeta(node, scene, actors, objects)
+          default:
+             if IsActor(node.tagLower):
+                a = ParseActor(node, actors, objects)
+                actors[a.name] = a
+                if a.isRoot: scene.AddActor(a)
+
+    PatchUpVersion(scene)
+    CleanUpScene(scene)
+    return true
+
+============================
+10. 可移植性注意点 (去 UE 化)
+============================
+- FString/TArray/TMap → std::string / std::vector / std::unordered_map
+- TSharedPtr / TSharedRef → std::shared_ptr / 引用传递
+- FXmlFile/FXmlNode → 第三方 XML (TinyXML2/RapidXML/pugixml)
+- FQuat/FVector/FMatrix → 自建数学库 (或 glm/DirectXMath/ktm)
+- 日志 UE_LOG → 自定义 Logger(级别: Info/Warning/Error)
+- LocaleScope → C setlocale + i/o facets 或手动解析 (std::from_chars 保持独立)
+- Hash/Path: 使用 std::filesystem 替换 FPaths / FFileHelper
+- UD 数据类型 (FColor, FLinearColor) → 自定义结构 {float r,g,b,a}
+
+============================
+11. 扩展点
+============================
+- 新 Actor 类型: 在 IsActorTag + ParseActor 分派增加 case
+- 新资源类型: 根节点扫描添加标签分支 + Resource 容器
+- Variant 扩展: 增加新的 PropertyCapture 类型枚举并补充序列化
+- 材质图: 节点类型表 + 工厂注册
+
+============================
+12. 简化 / 精简策略 (仅保留核心渲染所需)
+============================
+保留: Mesh, Texture, Material(PBR 简化), MeshActor, Light(Point/Spot/Directional), Camera, 基础 Transform
+移除: VariantSets, LevelSequence, Metadata, PostProcess, Decal, HISM, Landscape, CustomActor
+可选: Environment/PhysicalSky (若引擎支持 IBL 与天光)
+
+============================
+13. 安全性与健壮性补充
+============================
+- 限制最大节点数量与文本尺寸 (防止恶意超大 XML)
+- 对文件路径做沙箱校验 (不得跳出资源根)
+- 对二进制/十六进制字段做长度与字符集验证
+
+============================
+14. 性能优化思路
+============================
+- 单次根遍历 (O(N))，避免多次查找
+- 预先保留 vector 容量 (根据子节点数量)
+- 使用 string_view + arena 分配 (C++20) 减少拷贝
+- 并行解析资源型节点 (Meshes/Textures/Materials) —— 需线程安全工厂
+
+============================
+15. 最小实现建议顺序 (移植)
+============================
+1. 定义跨平台基础类型 (Vec3, Quat, Transform, Color)
+2. 定义 Scene 数据结构与接口
+3. 引入 XML 解析库 + DOM/游标封装
+4. 实现 ParseFile/ParseBuffer + 根循环骨架
+5. 实现 Mesh / Texture / PBRMaterial 基础解析
+6. 实现 MeshActor + Light + Camera
+7. 添加命名唯一化 + 错误收集
+8. 扩展材质节点/实例化/Variant (按需)
+9. 添加清理与版本兼容逻辑
+10. 性能与日志完善
+
+============================
+16. 流程极简一览 (便于嵌入注释)
+============================
+[LoadFile] -> [BuildXML] -> [InitMaps] -> [ScanRootChildren]
+  -> (Meshes/Textures/Materials) -> (Actors 递归) -> (Variants/Metadata)
+  -> PatchVersion -> Cleanup -> Done
+
+============================
+17. 与 UE 绑定的典型点 (需要替换)
+============================
+- 宏: UE_API, TEXT(), check(), ensure() -> 自定义宏或内联函数
+- 智能指针: TSharedPtr/TSharedRef -> std::shared_ptr / 引用
+- 容器: TArray/TMap -> std::vector / std::unordered_map
+- 字符串: FString -> std::string (UTF-8 统一)
+- 路径: FPaths/FFileHelper -> std::filesystem + ifstream/ofstream
+- 日志: UE_LOG -> Logger::Warn/Info/Error
+- 数学: FTransform/FQuat/FVector -> 自定义/第三方数学库
+
+============================
+18. 失败返回点汇总
+============================
+- 文件读失败
+- XML 根不匹配
+- 关键资源节点缺少最少属性 (可选: 失败 or 警告 + 跳过)
+- 解析中断: 致命异常 (内存/格式) -> 返回 false
+
+============================
+19. 典型最小 Pseudocode (仅核心子集)
+============================
+bool Import(const std::string& path, Scene& scene) {
+  std::string buffer; if(!ReadTextFile(path, buffer)) return false;
+  XmlDoc doc; if(!doc.Parse(buffer)) return false;
+  auto root = doc.Root("DatasmithUnrealScene"); if(!root) return false;
+  NameMap actors, objects;
+  for(auto& n: root.Children()) {
+    if(n.Is("staticmesh")) AddMesh(n, scene, objects);
+    else if(n.Is("texture")) AddTexture(n, scene, objects);
+    else if(IsMaterial(n.Tag())) AddMaterial(n, scene, objects);
+    else if(IsActor(n.Tag())) {
+       auto a = ParseActor(n, actors, objects); actors[a->Name]=a; if(a->IsRoot()) scene.RootActors.push_back(a);
+    }
+  }
+  PatchVersion(scene);
+  CleanUp(scene);
+  return true;
+}
+
+============================
+20. 结论
+============================
+本文件提供了 Datasmith .udatasmith 场景文件解析完整视图：输入链路、节点分类、数据结构、移植与裁剪策略、健壮性与性能要点。该结构可直接指导一次性精简实现或分阶段移植到任意自研/第三方引擎。
+
+(EOF)
+

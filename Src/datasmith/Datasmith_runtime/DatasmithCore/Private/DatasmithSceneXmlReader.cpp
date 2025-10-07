@@ -1125,16 +1125,14 @@ bool FDatasmithSceneXmlReader::LoadFromBuffer(const FString& XmlBuffer)
 	const FXmlNode* SceneNode = XmlFile->GetRootNode();
 	if (SceneNode == NULL)
 	{
-		FMessageDialog::Open(EAppMsgType::Ok, FText::FromString( TEXT("Invalid Datasmith File") ));
 		XmlFile.Reset();
 		return false;
 	}
 
 	if (SceneNode->GetTag() != TEXT("DatasmithUnrealScene"))
 	{
-		FText DialogTitle = FText::FromString( TEXT("Error parsing file") );
-		FMessageDialog::Open(EAppMsgType::Ok, FText::FromString( SceneNode->GetTag() ), DialogTitle);
 		XmlFile.Reset();
+	    return false;
 	}
 
 	return true;
@@ -1167,8 +1165,6 @@ bool FDatasmithSceneXmlReader::ParseXmlFile(TSharedRef< IDatasmithScene >& OutSc
 		return false;
 	}
 
-	TRACE_CPUPROFILER_EVENT_SCOPE(FDatasmithSceneXmlReader::ParseXmlFile);
-
 	FDatasmithLocaleScope CLocaleScope;
 
 	if (bInAppend == false)
@@ -1181,7 +1177,8 @@ bool FDatasmithSceneXmlReader::ParseXmlFile(TSharedRef< IDatasmithScene >& OutSc
 	TMap< FString, TSharedPtr<IDatasmithActorElement> > Actors;
 	TMap< FString, TSharedPtr<IDatasmithElement> > Objects; // Our variants' property captures may reference objects. Usually materials, but can be actors/textures/etc.
 
-	const TArray<FXmlNode*>& Nodes = XmlFile->GetRootNode()->GetChildrenNodes();
+    //获取文件的根节点的直接子节点
+    const TArray<FXmlNode*>& Nodes = XmlFile->GetRootNode()->GetChildrenNodes();
 
 	for (int i = 0; i < Nodes.Num(); i++)
 	{
