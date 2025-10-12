@@ -1,0 +1,216 @@
+...existing code...
+
+附加深化章节 (Advanced Refinements)
+=================================
+A. 统一 SceneIR 初版 JSON Schema (草案)
+------------------------------------
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SceneIR",
+  "type": "object",
+  "required": ["version", "cameras", "shapes"],
+  "properties": {
+    "version": {"type": "string"},
+    "source": {"type": "string"},
+    "cameras": {"type": "array", "items": {"$ref": "#/definitions/Camera"}},
+    "films": {"type": "array", "items": {"$ref": "#/definitions/Film"}},
+    "sampler": {"$ref": "#/definitions/Block"},
+    "integrator": {"$ref": "#/definitions/Block"},
+    "accel": {"$ref": "#/definitions/Block"},
+    "materials": {"type": "array", "items": {"$ref": "#/definitions/Material"}},
+    "textures": {"type": "array", "items": {"$ref": "#/definitions/Texture"}},
+    "media": {"type": "array", "items": {"$ref": "#/definitions/Medium"}},
+    "lights": {"type": "array", "items": {"$ref": "#/definitions/Light"}},
+    "shapes": {"type": "array", "items": {"$ref": "#/definitions/Shape"}},
+    "instances": {"type": "array", "items": {"$ref": "#/definitions/Instance"}},
+    "prototypes": {"type": "array", "items": {"$ref": "#/definitions/Prototype"}},
+    "errors": {"type": "array", "items": {"$ref": "#/definitions/Error"}}
+  },
+  "definitions": {
+    "Transform": {"type": "array", "items": {"type": "number"}, "minItems":16, "maxItems":16},
+    "Param": {
+      "type": "object",
+      "required":["name","kind"],
+      "properties": {
+        "name":{"type":"string"},
+        "kind":{"type":"string"},
+        "floats":{"type":"array","items":{"type":"number"}},
+        "ints":{"type":"array","items":{"type":"integer"}},
+        "bools":{"type":"array","items":{"type":"boolean"}},
+        "strings":{"type":"array","items":{"type":"string"}}
+      }
+    },
+    "Block": {"type":"object","properties":{"type":{"type":"string"},"params":{"type":"array","items":{"$ref":"#/definitions/Param"}}}},
+    "Camera": {"allOf":[{"$ref":"#/definitions/Block"}]},
+    "Film": {"allOf":[{"$ref":"#/definitions/Block"}]},
+    "Material": {"allOf":[{"$ref":"#/definitions/Block"}],"properties":{"name":{"type":"string"}}},
+    "Texture": {"allOf":[{"$ref":"#/definitions/Block"}],"properties":{"name":{"type":"string"}}},
+    "Medium": {"allOf":[{"$ref":"#/definitions/Block"}],"properties":{"name":{"type":"string"}}},
+    "Light": {"allOf":[{"$ref":"#/definitions/Block"}],"properties":{"area":{"type":"boolean"}}},
+    "Shape": {"type":"object","required":["type","params","transform"],"properties":{"type":{"type":"string"},"params":{"type":"array","items":{"$ref":"#/definitions/Param"}},"transform":{"$ref":"#/definitions/Transform"},"materialRef":{"type":"string"},"areaLightRef":{"type":"string"}}},
+    "Prototype": {"type":"object","properties":{"name":{"type":"string"},"shapes":{"type":"array","items":{"$ref":"#/definitions/Shape"}}}},
+    "Instance": {"type":"object","properties":{"prototype":{"type":"string"},"transform":{"$ref":"#/definitions/Transform"}}},
+    "Error": {"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"loc":{"type":"string"}}}
+  }
+}
+
+B. SceneIR 代码骨架建议
+------------------------
+struct ParamValue {
+  std::string name;
+  enum class Kind { Float, Int, Bool, String, Spectrum, Point3, Vector3, Normal3, Matrix4x4, Unknown } kind = Kind::Unknown;
+  std::vector<float> floats; // float / matrix flatten
+  std::vector<int> ints;
+  std::vector<bool> bools;
+  std::vector<std::string> strings;
+};
+
+struct BlockNode { std::string type; std::vector<ParamValue> params; };
+struct MaterialIR : BlockNode { std::string name; };
+struct TextureIR  : BlockNode { std::string name; };
+struct MediumIR   : BlockNode { std::string name; };
+struct LightIR    : BlockNode { bool area = false; };
+struct ShapeIR {
+  std::string type; std::vector<ParamValue> params; std::array<float,16> transform{}; std::string materialRef; std::string areaLightRef; };
+struct PrototypeIR { std::string name; std::vector<ShapeIR> shapes; };
+struct InstanceIR { std::string prototype; std::array<float,16> transform{}; };
+struct ParseError { std::string code; std::string message; std::string loc; };
+
+struct SceneIR {
+  std::string version = "0.1";
+  std::string source;
+  std::vector<BlockNode> cameras;
+  std::vector<BlockNode> films;
+  BlockNode sampler; bool hasSampler=false;
+  BlockNode integrator; bool hasIntegrator=false;
+  BlockNode accel; bool hasAccel=false;
+  std::vector<MaterialIR> materials; std::unordered_map<std::string,size_t> materialIndex;
+  std::vector<TextureIR> textures; std::unordered_map<std::string,size_t> textureIndex;
+  std::vector<MediumIR> media; std::unordered_map<std::string,size_t> mediumIndex;
+  std::vector<LightIR> lights;
+  std::vector<ShapeIR> shapes;
+  std::vector<PrototypeIR> prototypes; std::unordered_map<std::string,size_t> protoIndex;
+  std::vector<InstanceIR> instances;
+  std::vector<ParseError> errors;
+};
+
+C. 错误码分类建议
+------------------
+ERR_UNEXPECTED_EOF           读取到文件结尾但状态未闭合
+ERR_DUPLICATE_BLOCK          重复定义不允许的单例块(如 Film)
+ERR_MALFORMED_PARAMETER      参数类型或格式错误
+ERR_UNKNOWN_DIRECTIVE        未识别指令
+ERR_STATE_STACK_UNDERFLOW    Attribute/Transform 栈非法回退
+ERR_WORLD_SCOPE              指令位置不合法 (需在/外 WorldBlock)
+ERR_INCLUDE_CYCLE            Include/Import 循环
+ERR_PROTOTYPE_REDEFINE       ObjectBegin 同名重复
+ERR_PROTO_NOT_FOUND          ObjectInstance 引用未定义
+ERR_NAMED_MATERIAL_MISSING   NamedMaterial 未找到
+ERR_MEDIUM_NOT_FOUND         MediumInterface 引用缺失
+ERR_PARAM_TYPE_MISMATCH      形参类型不匹配
+ERR_TRANSFORM_OVERFLOW       深度超过限制
+
+D. 形状三角化策略 (Analytic → Mesh)
+-----------------------------------
+Sphere: 依据细分级别 slices * stacks → 生成顶点/索引 (默认 32x16，可配置)
+Disk: 极坐标细分 → 三角扇
+Cylinder: 细分圆周 + 高度两环顶点 → 侧面网格 + 可选端盖
+Cone: 圆周细分 + 顶点合并
+Curve (若实现): 抽样成 polyline + 可选 ribbon 宽度展平
+Heightfield (若出现): 行列网格直接展开
+注意：保持法线方向与 PBRT 约定一致 (reverseOrientation 标记反转 index winding)
+
+E. PBRT → 本地工具替换映射
+---------------------------
+StringPrintf     → fmt::format 或自写轻量 format
+ErrorExit        → throw ParseException / push error
+Warning          → Logger::Warn
+LOG_VERBOSE      → Logger::Debug (按级别开关)
+pstd::{vector,...} → std::*
+File I/O (ReadFileContents) → std::ifstream + istreambuf_iterator
+ResolveFilename  → std::filesystem::weakly_canonical(base / rel)
+Timer/Stats      → 可选封装或移除
+AsyncJob         → 初期删除；后期 std::async / 线程池
+
+F. 实施任务看板 (可勾选)
+-----------------------
+[ ] T1 提取 Tokenizer 最小子集 (去 mmap / gzip)
+[ ] T2 实现 SyntaxParser + 指令 dispatch
+[ ] T3 定义 SceneIR 与 ParamValue
+[ ] T4 建 IRBuilder (状态机, 栈管理, 指令映射)
+[ ] T5 基础指令集 (Camera/Film/Sampler/WorldBegin/WorldEnd/Shape/Material/LightSource)
+[ ] T6 支持 Attribute/Transform 栈 & 矩阵运算
+[ ] T7 支持 AreaLightSource + 贴附 shape
+[ ] T8 支持 NamedMaterial / MakeNamedMaterial / Texture
+[ ] T9 支持 ObjectBegin/End + ObjectInstance
+[ ] T10 Include/Import + 循环检测
+[ ] T11 错误收集与错误码化
+[ ] T12 JSON 输出工具 + Snapshot 测试
+[ ] T13 解析性能测量 (基准场景)
+[ ] T14 文档生成与样例落地
+[ ] T15 形状三角化模块 (可延迟)
+
+G. 性能与内存注意点补充
+------------------------
+- Tokenizer 使用单一 std::string 缓冲，Token 持 string_view 避免复制
+- 参数数组预估：若遇 "point P" 之类批量数据，可在首轮扫描 size 预 reserve
+- 大文件 import 时限制最大并发 = CPU 核心数 - 1；初期禁用
+- 统计指标：lines/sec, tokens/sec, peak MB, shape count, material dedup ratio
+
+H. 验证用例最小集合建议
+-----------------------
+1_basic_minimal.pbrt          仅全局块 + World 空
+2_shapes_materials.pbrt       球 + 命名材质切换
+3_attribute_transform.pbrt    多层 Attribute + Transform 校验
+4_arealight_attach.pbrt       AreaLight + Shape 组合
+5_instances.pbrt              ObjectBegin/Instance
+6_include_cycle_a/b.pbrt      循环引用检测
+7_error_missing_worldend.pbrt 错误恢复
+8_medium_named.pbrt           MediumInterface + MakeNamedMedium
+9_texture_param.pbrt          Texture + 绑定材质
+
+I. Transform 处理细节
+---------------------
+内部保留两个矩阵：activeStart, activeEnd (PBRT 有时间插值概念)；若暂不支持 motion blur，可只保留单一 currentTransform。
+ConcatTransform: current = current * M (列主假设)；若使用行主注意顺序调整。
+LookAt: 构造视图矩阵再取逆 (PBRT 用列主)；记录到 Camera 或当前 state。
+ReverseOrientation: 标记后在三角化阶段翻转三角索引 (i1,i2,i3) → (i1,i3,i2)。
+
+J. 参数解析扩展 (后续)
+---------------------
+- Spectrum 文件 / SPD → 延迟
+- RGB/RGBA 聚合 → 若字符串形式 ("color") 转 float[3]
+- matrix 参数 (16 个 float) 自动标注 Kind::Matrix4x4
+
+K. 统一导出（调试 JSON 样例）
+----------------------------
+{
+  "version":"0.1",
+  "cameras":[{"type":"perspective","params":[{"name":"fov","kind":"Float","floats":[45]}]}],
+  "films":[{"type":"image","params":[{"name":"xresolution","kind":"Int","ints":[800]}]}],
+  "lights":[{"type":"point","params":[{"name":"from","kind":"Point3","floats":[0,5,0]}]}],
+  "shapes":[{"type":"sphere","params":[{"name":"radius","kind":"Float","floats":[1]}],"transform":[1,0,0,0,0,1,0,0,0,0,1,0,0,1,0,1],"materialRef":""}]
+}
+
+L. 兼容性提示 (与 Datasmith/Mitsuba)
+-----------------------------------
+- 若其它导入器已有 Mesh/Material 结构，可用 Adapter 模式：PBRT → CommonIR → Engine Mesh
+- 匹配字段规范：所有枚举转字符串，保留源标签 prefix (pbrt: / datasmith: / mitsuba:)
+
+M. 后续可选增强
+---------------
+- 指令流增量序列化：边解析边输出中间 JSON 行，降低峰值内存
+- 错误恢复策略：检测错误后跳读到下一行开头 token
+- 统计覆盖率：记录每种指令出现次数输出报告
+- 并发 shape 三角化 (任务队列 + join)
+
+N. 退出条件 (Definition of Done) 补充
+------------------------------------
+- 20+ 测试用例全部通过
+- 对照原 PBRT 场景随机抽样 5 个，可在不崩溃前提下输出结构化 JSON
+- JSON Schema 校验通过率 100%
+- 峰值内存 < 原文件大小 * 4 (经验值)
+- 解析速率 ≥ 50k tokens/s (桌面 CPU)
+
+(附加章节结束)
+

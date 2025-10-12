@@ -1,0 +1,306 @@
+PBRT 场景文件解析移植完善流程 (2025-10-07)
+================================================
+目标
+----
+在不引入 PBRT 全部渲染管线的前提下，将其场景描述语言(.pbrt) 解析能力移植到本引擎/工具，输出统一的中间场景表示（IR），与 Datasmith / Mitsuba 导入保持一致接口，为后续资源重建与渲染或离线转换奠定基础。
+
+总体阶段
+--------
+1. 资产梳理与裁剪 (Inventory & Prune)
+2. 统一数据模型设计 (Unified IR)
+3. 解析层抽象与降依赖 (Tokenizer / Parser isolation)
+4. 指令到 IR 的语义映射 (Command → IR Mapping)
+5. 替换/封装 PBRT 辅助设施 (日志/错误/内存/路径)
+6. CMake 构建与可选特性 (Build Integration)
+7. 增量测试与回归验证 (Testing Strategy)
+8. 性能与鲁棒性增强 (Perf & Robustness)
+9. 文档与示例 (Docs & Samples)
+10. 后续扩展路线 (Roadmap)
+
+第 1 阶段：资产梳理与裁剪
+-------------------------
+保留最小解析闭包：
+- 必需文件：parser.h / parser.cpp（Tokenizer, parse() 主循环, ParsedParameter）
+- 依赖最小集合：
+  - util/string.h (StringPrintf 等) → 可用自实现简化版替代
+  - util/error.h (ErrorExit/Warning) → 改为抛异常 + 采集错误列表
+  - util/file.h (ResolveFilename, ReadFileContents) → std::filesystem + ifstream
+  - util/check.h (CHECK 宏) → assert 或自定义 VS_CHECK
+  - util/print.h (Printf/LOG_VERBOSE) → 统一 Logger 接口
+  - double-conversion 库 → 可保留；若仅实验可用 std::strtod 替代
+- 移除 / 推迟：
+  - progressreporter.h, stats.h, memory.h, mesh.h, shapes.h, scene.h, accelerator, options.h (渲染阶段/构建阶段不需要)
+  - pstd (可用 std::optional/vector/string 替代)
+  - AsyncJob / 多线程 import → 初始关闭，后续再做
+  - PBRT_HAVE_MMAP / Windows 映射 → 初始直接读入内存 (减少条件编译)
+
+第 2 阶段：统一数据模型设计 (IR)
+--------------------------------
+核心结构 (命名示例)：
+SceneIR
+  - metadata: version, sourcePath
+  - cameras: vector<CameraIR>
+  - films: vector<FilmIR>
+  - integrator: IntegratorIR (可选)
+  - sampler: SamplerIR (可选)
+  - accel: AcceleratorIR (string + params)
+  - materials: vector<MaterialIR>
+  - textures: vector<TextureIR>
+  - media: vector<MediumIR>
+  - lights: vector<LightIR>
+  - shapes: vector<ShapeIR>
+  - instances: vector<InstanceIR> (或将实例化用 transform + shapeRefs)
+  - transforms: 栈式管理 (内部用) 不全部存，只落地到节点
+  - namedCoordinateSystems: map<string, Matrix4x4>
+  - namedMaterials / namedMedia / namedTextures
+  - errors: vector<ParseError>
+
+参数表达：
+ParamValue
+  - name
+  - type (enum: Float, Int, Bool, String, SpectrumRGB, SpectrumBlackbody, Point3, Vector3, Normal3, Matrix4x4, NestedArray, Unknown)
+  - floats / ints / bools / strings / composite
+
+材料/纹理引用：
+- 引用使用统一结构 Reference { enum Kind; string name; }
+
+兼容其它导入器 (Datasmith / Mitsuba)：
+- 统一几何：MeshIR { vertices, indices, normals, uvs, materialRef }
+- 统一光源：LightIR { type, params }
+- 统一材质：MaterialIR { model, params }
+
+第 3 阶段：解析层抽象与降依赖
+------------------------------
+分层：
+Layer 0: RawTokenizer  (从 PBRT Tokenizer 精简)
+Layer 1: SyntaxParser  (读取 token → 指令 + 参数列表)
+Layer 2: SemanticDispatcher (switch 指令 → 回调接口 ISceneParseListener)
+Layer 3: IRBuilder (实现 ISceneParseListener, 构造 SceneIR)
+
+替换策略：
+- 去除 LOG_VERBOSE → Logger::Debug
+- CHECK → VS_CHECK(expr, "message")
+- ErrorExit → 抛 ParseException 或记录错误继续（严格/宽松模式可选）
+- pstd::optional → std::optional
+- pstd::vector → std::vector
+
+第 4 阶段：指令到 IR 映射
+-------------------------
+核心 PBRT 指令分类：
+Scene Structure: WorldBegin, WorldEnd
+State Stack: AttributeBegin/End, TransformBegin/End, ActiveTransform, ConcatTransform, Transform, Scale/Translate/Rotate/LookAt
+Object Instancing: ObjectBegin/End, ObjectInstance
+Geometry: Shape
+Materials: Material, MakeNamedMaterial, NamedMaterial
+Lights: LightSource, AreaLightSource
+Camera & Film & Sampler & Integrator & Accelerator
+Texture: Texture
+Medium: MakeNamedMedium, MediumInterface
+Include/Import: 递归解析
+
+映射策略：
+- 进入 WorldBlock 前只允许：Camera/Film/Sampler/Integrator/Accelerator/LookAt/Transform 系列
+- WorldBlock 内：Shape/Light/Material/Texture/Attribute/Transform/Media/Instance
+- 通过栈记录当前 attribute state: { transform, reverseOrientation, currentMaterialRef, areaLightRef, mediumInterface }
+- 每遇到 Shape 指令：
+  1) 解析参数 → 基础几何描述 (存 textualType + 参数列表)
+  2) 立即或延迟转换为 MeshIR (如果需要加载外部文件)
+  3) 注入 SceneIR.shapes
+- ObjectBegin：缓存当前 state + 收集局部 shapes → 完成时放入一个 PrototypeIR
+- ObjectInstance：生成 InstanceIR { prototypeName, transform }
+
+第 5 阶段：替换/封装辅助设施
+----------------------------
+Logging: ILogSink 接口 (Console / File) + Logger::Info/Warn/Error
+Filesystem: std::filesystem::path + ResolveRelative(base, includedFile)
+Error Handling 模式：
+  STRICT: 首个致命错误中断
+  LENIENT: 收集错误，继续解析，末尾返回 SceneIR.errors
+Performance：初期不启用多线程 import；大文件时可分块解析（保持语义顺序需谨慎）
+
+第 6 阶段：CMake 集成
+---------------------
+选项：
+option(VS_ENABLE_PBRT_IMPORTER "Enable PBRT scene parser" ON)
+目录结构建议：
+Src/
+  pbrt_import/
+    Tokenizer.h/.cpp
+    ParserCore.h/.cpp  (精简自 parser.cpp)
+    IRScene.h/.cpp
+    IRBuilder.h/.cpp
+    PBRTImporterFacade.h/.cpp
+    CMakeLists.txt
+
+CMake 示例片段：
+add_library(pbrt_import STATIC
+  Tokenizer.cpp ParserCore.cpp IRScene.cpp IRBuilder.cpp PBRTImporterFacade.cpp)
+# 公开 include
+target_include_directories(pbrt_import PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+# 若使用 double-conversion
+find_package(double-conversion QUIET)
+if(double-conversion_FOUND)
+  target_link_libraries(pbrt_import PRIVATE double-conversion::double-conversion)
+  target_compile_definitions(pbrt_import PRIVATE VS_HAVE_DOUBLE_CONVERSION=1)
+endif()
+# 可选：配置统一编译特性
+
+示例执行器：
+add_executable(pbrt_dump tools/pbrt_dump.cpp)
+target_link_libraries(pbrt_dump PRIVATE pbrt_import)
+
+第 7 阶段：测试策略
+-------------------
+测试层级：
+1) 单元测试：
+   - Tokenizer: 空文件 / UTF16 BOM / 注释 / 字符串转义
+   - 参数解析：标量、数组、混合、错误类型
+   - 指令序列：Attribute 嵌套、Transform 栈、Include 深度
+2) 集成测试：
+   - 小场景 (单 shape + 材质 + 光) 输出 IR JSON → 进行 snapshot 对比
+   - 包含/导入测试 (Include/Import) 路径解析正确性
+3) 错误处理：
+   - 未关闭 WorldBlock
+   - 未匹配的 AttributeEnd
+   - Unknown directive
+4) 性能基准：
+   - 统计解析大场景耗时 (N 次均值)
+
+工具：
+- 提供 pbrt_dump 可将 .pbrt → IR(JSON) 输出
+
+第 8 阶段：性能与鲁棒性
+-----------------------
+优化点：
+- 避免重复分配：ParameterVector 预留容量
+- 字符串视图复用：Token 持 std::string_view 指向原 buffer
+- 大数组（顶点数据）延迟 material 绑定
+- Include 防循环：维护 visited 集合
+- 递归深度防护：最大嵌套层数 (Attribute/Transform) > 128 报警
+
+第 9 阶段：文档与示例
+---------------------
+Docs 内容：
+- 解析功能支持矩阵 (已支持 / 计划支持)
+- IR 字段说明与 JSON schema
+- 移植裁剪列表 (Removed subsystems)
+- 常见错误及解决 (路径 / 指令顺序 / 非法参数)
+
+样例：
+Camera "perspective" "float fov" [45]
+Film "image" "integer xresolution" [800] "integer yresolution" [600]
+Sampler "sobol" "integer pixelsamples" [64]
+WorldBegin
+  AttributeBegin
+    Translate 0 1 0
+    Shape "sphere" "float radius" [1]
+  AttributeEnd
+  LightSource "point" "point3 from" [0 5 0]
+WorldEnd
+
+第 10 阶段：后续扩展路线 (Roadmap)
+----------------------------------
+- 支持 Spectrum 解析映射到统一色彩系统
+- 支持外部 mesh 加载 (PLY) 对应到 GeometryCache
+- 支持多线程 Import (依赖拓扑无序时可并发)
+- 与 Datasmith/Mitsuba 共享 Material 归一参数表
+- 增加差异报告：比较两个 IR 差异 (回归检测)
+
+指令 → IR 细化映射速查
+-----------------------
+Camera         => SceneIR.cameras.push_back(CameraIR{type, params}) 若只允许一个，可存 activeCamera
+Film           => SceneIR.films
+Sampler        => SceneIR.sampler
+Integrator     => SceneIR.integrator
+Accelerator    => SceneIR.accel
+WorldBegin     => state.worldMode = true; flush pending global state
+AttributeBegin => stateStack.push(currentState)
+AttributeEnd   => pop
+Transform/Concat/Scale/Rotate/Translate/LookAt => currentState.transform *= step
+Shape          => build ShapeIR{type, params, materialRef=currentState.material}
+Material       => currentState.material = inline MaterialRef
+MakeNamedMaterial => namedMaterials[name] = MaterialIR
+NamedMaterial  => currentState.material = lookup
+AreaLightSource => currentState.areaLight = LightTemplate
+LightSource    => emit LightIR immediately (if not area) else applied to subsequent Shape(s)
+Texture        => textures.push_back(TextureIR)
+ObjectBegin    => begin collect prototype
+ObjectEnd      => store PrototypeIR
+ObjectInstance => instances.push_back(InstanceIR{proto, transform})
+Include/Import => 递归 parse (visited set)
+MediumInterface => currentState.medium = {inside, outside}
+MakeNamedMedium => media[name] = MediumIR
+
+最小落地实施顺序 (迭代建议)
+---------------------------
+Iteration 1: Tokenizer + 只支持 Camera/Film/Sampler/WorldBegin/WorldEnd + 空场景输出
+Iteration 2: Transform + Shape + Material (内联)
+Iteration 3: LightSource + AreaLightSource + Attribute 栈
+Iteration 4: Texture + NamedMaterial + Instance/Object 系列
+Iteration 5: Include + 错误收集 + JSON 导出工具
+Iteration 6: 性能优化 + 文档
+
+风险与规避
+----------
+- 过度依赖原 PBRT 宏：尽快用薄封装替换
+- 指令顺序异常：添加状态机校验 (需在 WorldBlock 内) -> 统一报错码
+- 深度递归 Include：检测循环 + 限制层数
+- 大文件内存峰值：流式解析（保留指令逐条构建 IR）
+- 参数类型歧义（字符串 vs bool）：严格分支，必要时报错
+
+可视化 / 调试建议
+-----------------
+- 添加 --traceTokens 输出 token 序列
+- 添加 --dumpState 在每个指令后打印当前 transform hash + material
+- JSON 输出加 hash(scene) 便于回归比较
+
+示例伪代码：
+--------------------------------
+int main(int argc, char** argv) {
+  PBRTImporter importer;
+  SceneIR scene = importer.ParseFile(argv[1]);
+  if (!scene.errors.empty()) {
+    for (auto& e : scene.errors) std::cerr << e.message << "\n";
+  }
+  WriteSceneIRAsJson(scene, std::cout);
+}
+
+解析入口接口建议：
+class IPBRTImporter {
+public:
+  virtual SceneIR ParseFile(const std::filesystem::path& file, const ImportOptions& opt) = 0;
+  virtual SceneIR ParseString(std::string_view content, const ImportOptions& opt) = 0;
+};
+
+ImportOptions {
+  bool strict = true;
+  bool enableInclude = true;
+  size_t maxIncludeDepth = 32;
+  bool collapseTransforms = true;
+  bool deduplicateMaterials = true;
+};
+
+完成度检查清单
+--------------
+[ ] 解析最小指令集
+[ ] IR 数据结构定义
+[ ] 错误收集机制
+[ ] Include 路径与循环检测
+[ ] Attribute/Transform 栈正确回溯测试
+[ ] Shape 材质绑定测试
+[ ] JSON 导出工具
+[ ] CMake 构建可开关
+[ ] 性能 Smoke Test
+[ ] 文档与样例
+
+附录：与 Datasmith / Mitsuba 的 IR 对齐点
+----------------------------------------
+Geometry: 统一 MeshIR；若 Datasmith 输出静态网格，pbrt Shape 中 procedural(如 analytic sphere) 可即时三角化
+Material: 归一 key-value，保留原语义标签 ("pbrt:uber", "datasmith:UE_Material")
+Texture: 统一 sampler/filter 表述
+Light: Type 归一 (point/spot/directional/area/env) + 参数 map
+Transform: 统一 4x4 列主或行主约定（文档标注）
+Spectrum: 先用 RGB 三元；后续扩展 SPD
+
+(完)
+

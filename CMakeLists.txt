@@ -74,3 +74,4 @@ endif()
 
 # Summary message
 message(STATUS "VisionScene ${PROJECT_VERSION} | Shared: ${BUILD_SHARED_LIBS} | Examples: ${VISIONSCENE_BUILD_EXAMPLES}")
+

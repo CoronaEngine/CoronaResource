@@ -1,0 +1,23 @@
+PBRT场景文件解析流程
+=====================
+
+1. 初始化Tokenizer，读取场景文件内容（支持文件、字符串、内存映射等）。
+2. 进入主解析循环，逐步获取Token：
+   - 跳过空白、注释、特殊字符。
+   - 识别指令（如Camera、Film、Shape、Material等）。
+3. 对于参数，调用parseParameters函数：
+   - 解析参数类型（float、int、string、bool等）。
+   - 支持数组参数（如[ ... ]）。
+   - 参数校验与类型转换。
+4. 通过ParserTarget接口分发指令，构建场景结构：
+   - 世界块（WorldBlock）、属性块（AttributeBegin/End）、导入（Import）、包含（Include）等。
+   - 递归处理多文件场景（Include/Import）。
+5. 错误处理与异常抛出，保证解析流程健壮。
+6. 支持自定义扩展（如FormattingParserTarget、BasicSceneBuilder等）。
+
+流程示例：
+---------
+- 读取文件 -> Tokenizer分词 -> 识别指令 -> 解析参数 -> 构建场景对象 -> 递归处理子文件 -> 完成场景解析。
+
+核心代码位置：Src/pbrt/parser.cpp
+
