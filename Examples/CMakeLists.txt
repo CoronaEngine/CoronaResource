@@ -12,4 +12,3 @@ set_target_properties(VisionSceneExample PROPERTIES FOLDER Examples)
 if(VISIONSCENE_INSTALL)
     install(TARGETS VisionSceneExample RUNTIME DESTINATION bin)
 endif()
-

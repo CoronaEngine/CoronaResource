@@ -1,8 +1,9 @@
 # CMake build script for core C++ parts of VisionScene
 
-# Options for selectively building subsystems (import depends on external headers not in repo)
+# Options for selectively building subsystems (import depends on external engine headers not in repo)
 option(VISIONSCENE_BUILD_IMPORT "Build import subsystem (requires external engine headers)" OFF)
 option(VISIONSCENE_BUILD_DATASMITH "Build datasmith refactor sources" ON)
+option(VISIONSCENE_BUILD_PBRT_IMPORT "Build PBRT scene importer" ON)
 
 set(VISIONSCENE_CORE_SOURCES)
 set(VISIONSCENE_CORE_PUBLIC_HEADERS)
@@ -27,9 +28,29 @@ if(VISIONSCENE_BUILD_IMPORT)
     list(APPEND VISIONSCENE_CORE_PUBLIC_HEADERS ${IMPORT_HEADERS})
 endif()
 
+# PBRT importer skeleton
+if(VISIONSCENE_BUILD_PBRT_IMPORT)
+    file(GLOB PBRT_IMPORT_SRC
+        ${CMAKE_CURRENT_SOURCE_DIR}/pbrt_import/*.cpp)
+    file(GLOB PBRT_IMPORT_HEADERS
+        ${CMAKE_CURRENT_SOURCE_DIR}/pbrt_import/*.h)
+    list(APPEND VISIONSCENE_CORE_SOURCES ${PBRT_IMPORT_SRC})
+    list(APPEND VISIONSCENE_CORE_PUBLIC_HEADERS ${PBRT_IMPORT_HEADERS})
+endif()
+
+# Utils (format detection + import factory)
+file(GLOB VS_UTILS_SRC ${CMAKE_CURRENT_SOURCE_DIR}/utils/*.cpp)
+file(GLOB VS_UTILS_HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/utils/*.h)
+list(APPEND VISIONSCENE_CORE_SOURCES ${VS_UTILS_SRC})
+list(APPEND VISIONSCENE_CORE_PUBLIC_HEADERS ${VS_UTILS_HEADERS})
+
+# Generic scene loader (format auto-detect entry point)
+list(APPEND VISIONSCENE_CORE_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/scene_loader.cpp)
+list(APPEND VISIONSCENE_CORE_PUBLIC_HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/scene_loader.h)
+
 # Fallback if no sources selected
 if(NOT VISIONSCENE_CORE_SOURCES)
-    message(WARNING "No core sources enabled (both DATASMITH and IMPORT disabled). Creating interface target.")
+    message(WARNING "No core sources enabled (all subsystems disabled). Creating interface target.")
     add_library(VisionSceneCore INTERFACE)
     target_include_directories(VisionSceneCore INTERFACE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
     add_library(VisionScene::Core ALIAS VisionSceneCore)
@@ -51,6 +72,7 @@ target_include_directories(VisionSceneCore
     PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/datasmith_refactor/Public>
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/pbrt_import>
         $<BUILD_INTERFACE:${VISIONSCENE_GENERATED_DIR}>
         $<BUILD_INTERFACE:${ktm_SOURCE_DIR}>
         $<INSTALL_INTERFACE:include>
@@ -67,6 +89,11 @@ if(VISIONSCENE_BUILD_DATASMITH)
 else()
     target_compile_definitions(VisionSceneCore PUBLIC VISIONSCENE_ENABLE_DATASMITH=0)
 endif()
+if(VISIONSCENE_BUILD_PBRT_IMPORT)
+    target_compile_definitions(VisionSceneCore PUBLIC VISIONSCENE_ENABLE_PBRT=1)
+else()
+    target_compile_definitions(VisionSceneCore PUBLIC VISIONSCENE_ENABLE_PBRT=0)
+endif()
 
 # Organize sources into folders (for IDEs)
 source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${VISIONSCENE_CORE_SOURCES} ${VISIONSCENE_CORE_PUBLIC_HEADERS})
@@ -81,7 +108,7 @@ if(VISIONSCENE_INSTALL)
     # Install headers (public + generated version header)
     if(VISIONSCENE_CORE_PUBLIC_HEADERS)
         install(FILES ${VISIONSCENE_CORE_PUBLIC_HEADERS}
-            DESTINATION include/datasmith_refactor)
+            DESTINATION include)
     endif()
     install(FILES ${VISIONSCENE_GENERATED_DIR}/VisionSceneVersion.h
         DESTINATION include/VisionScene)
