@@ -12,7 +12,7 @@ add_executable(VisionSceneExample
 target_link_libraries(VisionSceneExample
     PRIVATE
         VisionScene::Core
-        VisionScene::ResourceManager
+        VisionScene::Resource
 )
 
 # Set C++ standard

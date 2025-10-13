@@ -170,11 +170,11 @@ if(VISIONSCENE_INSTALL)
 endif()
 
 # =============================================================================
-# ResourceManager Library (Optional)
+# Resource Library (Optional)
 # =============================================================================
-if(VISIONSCENE_BUILD_RESOURCE_MANAGER)
+if(VISIONSCENE_BUILD_RESOURCE)
     add_subdirectory(resource)
-    message(STATUS "[VisionScene] ResourceManager library included")
+    message(STATUS "[VisionScene] Resource library included")
 else()
-    message(STATUS "[VisionScene] ResourceManager library disabled")
+    message(STATUS "[VisionScene] Resource library disabled")
 endif()
