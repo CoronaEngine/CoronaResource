@@ -14,7 +14,7 @@ CheckOptions:
   - key:             google-readability-identifier-naming.EnumCase
     value:           CamelCase
   - key:             google-readability-identifier-naming.FunctionCase
-    value:           CamelCase
+    value:           snake_case
   - key:             google-readability-identifier-naming.VariableCase
     value:           snake_case
   - key:             google-readability-identifier-naming.MemberCase
