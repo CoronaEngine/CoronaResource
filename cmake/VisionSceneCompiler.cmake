@@ -19,14 +19,17 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # Compiler-specific warnings and flags
 if(MSVC)
     add_compile_options(
-        /W4              # Warning level 4
-        /permissive-     # Standards conformance
-        /utf-8           # UTF-8 source and execution charset
+        /W4 # Warning level 4
+        /permissive- # Standards conformance
+        $<$<COMPILE_LANGUAGE:C>:/source-charset:utf-8>
+        $<$<COMPILE_LANGUAGE:C>:/execution-charset:utf-8>
+        $<$<COMPILE_LANGUAGE:CXX>:/source-charset:utf-8>
+        $<$<COMPILE_LANGUAGE:CXX>:/execution-charset:utf-8>
     )
 else()
     add_compile_options(
-        -Wall            # Enable all warnings
-        -Wextra          # Extra warnings
-        -Wpedantic       # Pedantic warnings
+        -Wall # Enable all warnings
+        -Wextra # Extra warnings
+        -Wpedantic # Pedantic warnings
     )
 endif()
