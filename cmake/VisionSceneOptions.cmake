@@ -2,9 +2,15 @@
 # VisionScene Build Options
 # =============================================================================
 
+# Default values based on whether this is a top-level project
+if(NOT DEFINED VISIONSCENE_IS_TOP_LEVEL)
+    set(VISIONSCENE_IS_TOP_LEVEL ON)
+endif()
+
 # Build options
-option(VISIONSCENE_BUILD_EXAMPLES "Build VisionScene examples" ON)
-option(VISIONSCENE_INSTALL "Enable install rules" ON)
+# When used as a subproject, disable examples and install by default
+option(VISIONSCENE_BUILD_EXAMPLES "Build VisionScene examples" ${VISIONSCENE_IS_TOP_LEVEL})
+option(VISIONSCENE_INSTALL "Enable install rules" ${VISIONSCENE_IS_TOP_LEVEL})
 
 # Subsystem options
 option(VISIONSCENE_BUILD_IMPORT "Build import subsystem (requires external engine headers)" OFF)

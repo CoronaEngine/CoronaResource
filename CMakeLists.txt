@@ -7,6 +7,15 @@ project(VisionScene
     LANGUAGES CXX
 )
 
+# Detect if VisionScene is being used as a subproject
+if(NOT DEFINED VISIONSCENE_IS_TOP_LEVEL)
+    if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
+        set(VISIONSCENE_IS_TOP_LEVEL ON)
+    else()
+        set(VISIONSCENE_IS_TOP_LEVEL OFF)
+    endif()
+endif()
+
 # Add CMake modules path
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
