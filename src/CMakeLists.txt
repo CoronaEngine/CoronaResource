@@ -168,3 +168,13 @@ if(VISIONSCENE_INSTALL)
         DESTINATION ${VISIONSCENE_INSTALL_INCLUDEDIR}/VisionScene
     )
 endif()
+
+# =============================================================================
+# ResourceManager Library (Optional)
+# =============================================================================
+if(VISIONSCENE_BUILD_RESOURCE_MANAGER)
+    add_subdirectory(resource_manager)
+    message(STATUS "[VisionScene] ResourceManager library included")
+else()
+    message(STATUS "[VisionScene] ResourceManager library disabled")
+endif()

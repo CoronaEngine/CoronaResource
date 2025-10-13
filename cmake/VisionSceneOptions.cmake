@@ -10,6 +10,7 @@ option(VISIONSCENE_INSTALL "Enable install rules" ON)
 option(VISIONSCENE_BUILD_IMPORT "Build import subsystem (requires external engine headers)" OFF)
 option(VISIONSCENE_BUILD_DATASMITH "Build Datasmith parser" ON)
 option(VISIONSCENE_BUILD_PBRT_IMPORT "Build PBRT scene importer" ON)
+option(VISIONSCENE_BUILD_RESOURCE_MANAGER "Build resource manager library" ON)
 
 # Library type
 # Allow user to choose static/shared via standard BUILD_SHARED_LIBS
