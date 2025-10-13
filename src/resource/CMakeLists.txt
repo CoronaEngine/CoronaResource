@@ -1,4 +1,4 @@
-# 文件: src/resource_manager/CMakeLists.txt
+# 文件: src/resource/CMakeLists.txt
 # 目标: VisionSceneResourceManager
 # 描述: VisionScene 项目资源管理库
 
