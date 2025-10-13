@@ -1,14 +1,36 @@
-# Examples build
+# =============================================================================
+# VisionScene Examples
+# =============================================================================
 
-add_executable(VisionSceneExample main.cpp)
+# Main example executable
+add_executable(VisionSceneExample
+    main.cpp
+)
 
-# Link against core library (will be INTERFACE if no sources enabled)
-target_link_libraries(VisionSceneExample PRIVATE VisionScene::Core)
+# Link against core library
+# Note: Will be INTERFACE target if no sources are enabled
+target_link_libraries(VisionSceneExample
+    PRIVATE
+        VisionScene::Core
+)
 
-target_compile_features(VisionSceneExample PRIVATE cxx_std_17)
+# Set C++ standard
+target_compile_features(VisionSceneExample
+    PRIVATE
+        cxx_std_20
+)
 
-set_target_properties(VisionSceneExample PROPERTIES FOLDER Examples)
+# IDE folder organization
+set_target_properties(VisionSceneExample
+    PROPERTIES
+        FOLDER "Examples"
+        OUTPUT_NAME "visionscene_example"
+)
 
+# Installation
 if(VISIONSCENE_INSTALL)
-    install(TARGETS VisionSceneExample RUNTIME DESTINATION bin)
+    install(
+        TARGETS VisionSceneExample
+        RUNTIME DESTINATION bin
+    )
 endif()
