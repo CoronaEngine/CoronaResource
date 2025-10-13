@@ -2,11 +2,6 @@
 # VisionScene Core Library
 # =============================================================================
 
-# Build options for subsystems
-option(VISIONSCENE_BUILD_IMPORT "Build import subsystem (requires external engine headers)" OFF)
-option(VISIONSCENE_BUILD_DATASMITH "Build Datasmith parser" ON)
-option(VISIONSCENE_BUILD_PBRT_IMPORT "Build PBRT scene importer" ON)
-
 # Initialize source lists
 set(VISIONSCENE_CORE_SOURCES)
 set(VISIONSCENE_CORE_PUBLIC_HEADERS)
@@ -93,11 +88,8 @@ endif()
 add_library(VisionSceneCore ${VISIONSCENE_CORE_SOURCES} ${VISIONSCENE_CORE_PUBLIC_HEADERS})
 add_library(VisionScene::Core ALIAS VisionSceneCore)
 
-set_target_properties(VisionSceneCore PROPERTIES
-    OUTPUT_NAME visionscene
-    VERSION ${PROJECT_VERSION}
-    SOVERSION ${PROJECT_VERSION_MAJOR}
-)
+# Set library properties using utility function
+visionscene_set_target_properties(VisionSceneCore)
 
 # Generate version header
 set(VISIONSCENE_GENERATED_DIR ${CMAKE_CURRENT_BINARY_DIR}/generated)
@@ -147,34 +139,32 @@ target_link_libraries(VisionSceneCore
         ktm
 )
 
-# IDE source organization
-source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR}
-    FILES ${VISIONSCENE_CORE_SOURCES} ${VISIONSCENE_CORE_PUBLIC_HEADERS}
-)
+# IDE source organization using utility function
+visionscene_add_source_group(VisionSceneCore ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Installation rules
 if(VISIONSCENE_INSTALL)
     # Install library targets
     install(
         TARGETS VisionSceneCore
-        EXPORT VisionSceneTargets
-        ARCHIVE DESTINATION lib
-        LIBRARY DESTINATION lib
-        RUNTIME DESTINATION bin
-        INCLUDES DESTINATION include
+        EXPORT ${VISIONSCENE_EXPORT_NAME}
+        ARCHIVE DESTINATION ${VISIONSCENE_INSTALL_LIBDIR}
+        LIBRARY DESTINATION ${VISIONSCENE_INSTALL_LIBDIR}
+        RUNTIME DESTINATION ${VISIONSCENE_INSTALL_BINDIR}
+        INCLUDES DESTINATION ${VISIONSCENE_INSTALL_INCLUDEDIR}
     )
     
     # Install public headers
     if(VISIONSCENE_CORE_PUBLIC_HEADERS)
         install(
             FILES ${VISIONSCENE_CORE_PUBLIC_HEADERS}
-            DESTINATION include/VisionScene
+            DESTINATION ${VISIONSCENE_INSTALL_INCLUDEDIR}/VisionScene
         )
     endif()
     
     # Install generated version header
     install(
         FILES ${VISIONSCENE_GENERATED_DIR}/VisionSceneVersion.h
-        DESTINATION include/VisionScene
+        DESTINATION ${VISIONSCENE_INSTALL_INCLUDEDIR}/VisionScene
     )
 endif()

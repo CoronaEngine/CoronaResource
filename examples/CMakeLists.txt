@@ -31,6 +31,6 @@ set_target_properties(VisionSceneExample
 if(VISIONSCENE_INSTALL)
     install(
         TARGETS VisionSceneExample
-        RUNTIME DESTINATION bin
+        RUNTIME DESTINATION ${VISIONSCENE_INSTALL_BINDIR}
     )
 endif()
