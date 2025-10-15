@@ -55,10 +55,10 @@ endif()
 
 # Utilities (format detection + import factory)
 file(GLOB VS_UTILS_SRC
-    ${CMAKE_CURRENT_SOURCE_DIR}/utils/*.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/utils/private/*.cpp
 )
 file(GLOB VS_UTILS_HEADERS
-    ${CMAKE_CURRENT_SOURCE_DIR}/utils/*.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/utils/public/*.h
 )
 list(APPEND CORONARESOURCE_CORE_SOURCES ${VS_UTILS_SRC})
 list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${VS_UTILS_HEADERS})
@@ -111,6 +111,7 @@ target_include_directories(CoronaResourceCore
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/pbrt_import>
         $<BUILD_INTERFACE:${CORONARESOURCE_GENERATED_DIR}>
         $<BUILD_INTERFACE:${ktm_SOURCE_DIR}>
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/utils/public>
         $<INSTALL_INTERFACE:include>
 )
 

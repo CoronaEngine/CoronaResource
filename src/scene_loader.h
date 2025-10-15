@@ -3,7 +3,8 @@
 //
 #pragma once
 #include <string>
-#include "utils/import_factor.h"
+
+#include "utils/public/import_factor.h"
 
 struct SceneLoadOutcome {
     SceneFormat format{SceneFormat::Unknown};
