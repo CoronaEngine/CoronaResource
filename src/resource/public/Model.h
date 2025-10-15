@@ -26,16 +26,16 @@ namespace Corona
     class Model final : public IResource
     {
       public:
-        std::vector<Mesh> meshes;                                       ///< 鎵€鏈夌綉鏍?
-        std::map<std::string, std::shared_ptr<BoneInfo>> m_BoneInfoMap; ///< 楠ㄩ淇℃伅鏄犲皠琛?
-        int m_BoneCounter = 0;                                          ///< 楠ㄩ璁℃暟鍣?
-        std::vector<Animation> skeletalAnimations;                      ///< 鎵€鏈夐楠煎姩鐢?
-        ktm::fvec3 minXYZ{0.0f, 0.0f, 0.0f};               ///< 妯″瀷鍖呭洿鐩掓渶灏忕偣
-        ktm::fvec3 maxXYZ{0.0f, 0.0f, 0.0f};               ///< 妯″瀷鍖呭洿鐩掓渶澶х偣
-        ktm::fvec3 positon{0.0f, 0.0f, 0.0f};                           ///< 浣嶇疆
-        ktm::fvec3 rotation{0.0f, 0.0f, 0.0f};                          ///< 鏃嬭浆
-        ktm::fvec3 scale{1.0f, 1.0f, 1.0f};                            ///< 缂╂斁
-        ktm::fmat4x4 modelMatrix = ktm::fmat4x4::from_eye();                          ///< 妯″瀷鐭╅樀
+        std::vector<Mesh> meshes;
+        std::map<std::string, std::shared_ptr<BoneInfo>> m_BoneInfoMap;
+        int m_BoneCounter = 0;
+        std::vector<Animation> skeletalAnimations;
+        ktm::fvec3 minXYZ{0.0f, 0.0f, 0.0f};
+        ktm::fvec3 maxXYZ{0.0f, 0.0f, 0.0f};
+        ktm::fvec3 positon{0.0f, 0.0f, 0.0f};
+        ktm::fvec3 rotation{0.0f, 0.0f, 0.0f};
+        ktm::fvec3 scale{1.0f, 1.0f, 1.0f};
+        ktm::fmat4x4 modelMatrix = ktm::fmat4x4::from_eye();
 
         void getModelMatrix()
         {
@@ -46,7 +46,6 @@ namespace Corona
     class ModelLoader : public IResourceLoader
     {
       public:
-        // 鏀寔绫诲瀷锛歵ype=="model" 鎴?鎵╁睍鍚嶅父瑙佷笁缁存牸寮?
         bool supports(const ResourceId &id) const override;
         std::shared_ptr<IResource> load(const ResourceId &id) override;
 

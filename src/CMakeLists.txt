@@ -1,53 +1,53 @@
 # =============================================================================
-# VisionScene Core Library
+# CoronaResource Core Library
 # =============================================================================
 
 # Initialize source lists
-set(VISIONSCENE_CORE_SOURCES)
-set(VISIONSCENE_CORE_PUBLIC_HEADERS)
+set(CORONARESOURCE_CORE_SOURCES)
+set(CORONARESOURCE_CORE_PUBLIC_HEADERS)
 
 # Collect source files based on enabled features
 
 # Datasmith parser
-if(VISIONSCENE_BUILD_DATASMITH)
+if(CORONARESOURCE_BUILD_DATASMITH)
     file(GLOB DATASMITH_REFACTOR_PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/datasmith_refactor/Private/*.cpp
     )
     file(GLOB DATASMITH_REFACTOR_PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/datasmith_refactor/Public/*.h
     )
-    list(APPEND VISIONSCENE_CORE_SOURCES ${DATASMITH_REFACTOR_PRIVATE})
-    list(APPEND VISIONSCENE_CORE_PUBLIC_HEADERS ${DATASMITH_REFACTOR_PUBLIC})
+    list(APPEND CORONARESOURCE_CORE_SOURCES ${DATASMITH_REFACTOR_PRIVATE})
+    list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${DATASMITH_REFACTOR_PUBLIC})
     message(STATUS "Datasmith parser: ENABLED")
 else()
     message(STATUS "Datasmith parser: DISABLED")
 endif()
 
 # Import subsystem (requires external engine headers)
-if(VISIONSCENE_BUILD_IMPORT)
+if(CORONARESOURCE_BUILD_IMPORT)
     file(GLOB IMPORT_SRC
         ${CMAKE_CURRENT_SOURCE_DIR}/import/*.cpp
     )
     file(GLOB IMPORT_HEADERS
         ${CMAKE_CURRENT_SOURCE_DIR}/import/*.h
     )
-    list(APPEND VISIONSCENE_CORE_SOURCES ${IMPORT_SRC})
-    list(APPEND VISIONSCENE_CORE_PUBLIC_HEADERS ${IMPORT_HEADERS})
+    list(APPEND CORONARESOURCE_CORE_SOURCES ${IMPORT_SRC})
+    list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${IMPORT_HEADERS})
     message(STATUS "Import subsystem: ENABLED")
 else()
     message(STATUS "Import subsystem: DISABLED")
 endif()
 
 # PBRT scene importer
-if(VISIONSCENE_BUILD_PBRT_IMPORT)
+if(CORONARESOURCE_BUILD_PBRT_IMPORT)
     file(GLOB PBRT_IMPORT_SRC
         ${CMAKE_CURRENT_SOURCE_DIR}/pbrt_import/*.cpp
     )
     file(GLOB PBRT_IMPORT_HEADERS
         ${CMAKE_CURRENT_SOURCE_DIR}/pbrt_import/*.h
     )
-    list(APPEND VISIONSCENE_CORE_SOURCES ${PBRT_IMPORT_SRC})
-    list(APPEND VISIONSCENE_CORE_PUBLIC_HEADERS ${PBRT_IMPORT_HEADERS})
+    list(APPEND CORONARESOURCE_CORE_SOURCES ${PBRT_IMPORT_SRC})
+    list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${PBRT_IMPORT_HEADERS})
     message(STATUS "PBRT importer: ENABLED")
 else()
     message(STATUS "PBRT importer: DISABLED")
@@ -60,43 +60,43 @@ file(GLOB VS_UTILS_SRC
 file(GLOB VS_UTILS_HEADERS
     ${CMAKE_CURRENT_SOURCE_DIR}/utils/*.h
 )
-list(APPEND VISIONSCENE_CORE_SOURCES ${VS_UTILS_SRC})
-list(APPEND VISIONSCENE_CORE_PUBLIC_HEADERS ${VS_UTILS_HEADERS})
+list(APPEND CORONARESOURCE_CORE_SOURCES ${VS_UTILS_SRC})
+list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${VS_UTILS_HEADERS})
 
 # Generic scene loader (format auto-detection entry point)
-list(APPEND VISIONSCENE_CORE_SOURCES
+list(APPEND CORONARESOURCE_CORE_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/scene_loader.cpp
 )
-list(APPEND VISIONSCENE_CORE_PUBLIC_HEADERS
+list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS
     ${CMAKE_CURRENT_SOURCE_DIR}/scene_loader.h
 )
 
 # Verify we have sources to build
-if(NOT VISIONSCENE_CORE_SOURCES)
+if(NOT CORONARESOURCE_CORE_SOURCES)
     message(WARNING "No core sources enabled (all subsystems disabled). Creating header-only interface target.")
-    add_library(VisionSceneCore INTERFACE)
-    target_include_directories(VisionSceneCore
+    add_library(CoronaResourceCore INTERFACE)
+    target_include_directories(CoronaResourceCore
         INTERFACE
             $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
             $<INSTALL_INTERFACE:include>
     )
-    add_library(VisionScene::Core ALIAS VisionSceneCore)
+    add_library(CoronaResource::Core ALIAS CoronaResourceCore)
     return()
 endif()
 
 # Create the library
-add_library(VisionSceneCore ${VISIONSCENE_CORE_SOURCES} ${VISIONSCENE_CORE_PUBLIC_HEADERS})
-add_library(VisionScene::Core ALIAS VisionSceneCore)
+add_library(CoronaResourceCore ${CORONARESOURCE_CORE_SOURCES} ${CORONARESOURCE_CORE_PUBLIC_HEADERS})
+add_library(CoronaResource::Core ALIAS CoronaResourceCore)
 
 # Set library properties using utility function
-visionscene_set_target_properties(VisionSceneCore)
+coronaresource_set_target_properties(CoronaResourceCore)
 
 # Generate version header
-set(VISIONSCENE_GENERATED_DIR ${CMAKE_CURRENT_BINARY_DIR}/generated)
-file(MAKE_DIRECTORY ${VISIONSCENE_GENERATED_DIR})
+set(CORONARESOURCE_GENERATED_DIR ${CMAKE_CURRENT_BINARY_DIR}/generated)
+file(MAKE_DIRECTORY ${CORONARESOURCE_GENERATED_DIR})
 configure_file(
-    ${CMAKE_CURRENT_SOURCE_DIR}/VisionSceneVersion.h.in
-    ${VISIONSCENE_GENERATED_DIR}/VisionSceneVersion.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/CoronaResourceVersion.h.in
+    ${CORONARESOURCE_GENERATED_DIR}/CoronaResourceVersion.h
     @ONLY
 )
 
@@ -104,77 +104,77 @@ configure_file(
 # Use generator expressions for export-safe paths:
 # - BUILD_INTERFACE: paths visible during build
 # - INSTALL_INTERFACE: paths visible after installation
-target_include_directories(VisionSceneCore
+target_include_directories(CoronaResourceCore
     PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/datasmith_refactor/Public>
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/pbrt_import>
-        $<BUILD_INTERFACE:${VISIONSCENE_GENERATED_DIR}>
+        $<BUILD_INTERFACE:${CORONARESOURCE_GENERATED_DIR}>
         $<BUILD_INTERFACE:${ktm_SOURCE_DIR}>
         $<INSTALL_INTERFACE:include>
 )
 
 # Compile definitions for feature toggles
-if(VISIONSCENE_BUILD_IMPORT)
-    target_compile_definitions(VisionSceneCore PUBLIC VISIONSCENE_ENABLE_IMPORT=1)
+if(CORONARESOURCE_BUILD_IMPORT)
+    target_compile_definitions(CoronaResourceCore PUBLIC CORONARESOURCE_ENABLE_IMPORT=1)
 else()
-    target_compile_definitions(VisionSceneCore PUBLIC VISIONSCENE_ENABLE_IMPORT=0)
+    target_compile_definitions(CoronaResourceCore PUBLIC CORONARESOURCE_ENABLE_IMPORT=0)
 endif()
 
-if(VISIONSCENE_BUILD_DATASMITH)
-    target_compile_definitions(VisionSceneCore PUBLIC VISIONSCENE_ENABLE_DATASMITH=1)
+if(CORONARESOURCE_BUILD_DATASMITH)
+    target_compile_definitions(CoronaResourceCore PUBLIC CORONARESOURCE_ENABLE_DATASMITH=1)
 else()
-    target_compile_definitions(VisionSceneCore PUBLIC VISIONSCENE_ENABLE_DATASMITH=0)
+    target_compile_definitions(CoronaResourceCore PUBLIC CORONARESOURCE_ENABLE_DATASMITH=0)
 endif()
 
-if(VISIONSCENE_BUILD_PBRT_IMPORT)
-    target_compile_definitions(VisionSceneCore PUBLIC VISIONSCENE_ENABLE_PBRT=1)
+if(CORONARESOURCE_BUILD_PBRT_IMPORT)
+    target_compile_definitions(CoronaResourceCore PUBLIC CORONARESOURCE_ENABLE_PBRT=1)
 else()
-    target_compile_definitions(VisionSceneCore PUBLIC VISIONSCENE_ENABLE_PBRT=0)
+    target_compile_definitions(CoronaResourceCore PUBLIC CORONARESOURCE_ENABLE_PBRT=0)
 endif()
 
 # Link dependencies
-target_link_libraries(VisionSceneCore
+target_link_libraries(CoronaResourceCore
     PUBLIC
         ktm
 )
 
 # IDE source organization using utility function
-visionscene_add_source_group(VisionSceneCore ${CMAKE_CURRENT_SOURCE_DIR})
+coronaresource_add_source_group(CoronaResourceCore ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Installation rules
-if(VISIONSCENE_INSTALL)
+if(CORONARESOURCE_INSTALL)
     # Install library targets
     install(
-        TARGETS VisionSceneCore
-        EXPORT ${VISIONSCENE_EXPORT_NAME}
-        ARCHIVE DESTINATION ${VISIONSCENE_INSTALL_LIBDIR}
-        LIBRARY DESTINATION ${VISIONSCENE_INSTALL_LIBDIR}
-        RUNTIME DESTINATION ${VISIONSCENE_INSTALL_BINDIR}
-        INCLUDES DESTINATION ${VISIONSCENE_INSTALL_INCLUDEDIR}
+        TARGETS CoronaResourceCore
+        EXPORT ${CORONARESOURCE_EXPORT_NAME}
+        ARCHIVE DESTINATION ${CORONARESOURCE_INSTALL_LIBDIR}
+        LIBRARY DESTINATION ${CORONARESOURCE_INSTALL_LIBDIR}
+        RUNTIME DESTINATION ${CORONARESOURCE_INSTALL_BINDIR}
+        INCLUDES DESTINATION ${CORONARESOURCE_INSTALL_INCLUDEDIR}
     )
     
     # Install public headers
-    if(VISIONSCENE_CORE_PUBLIC_HEADERS)
+    if(CORONARESOURCE_CORE_PUBLIC_HEADERS)
         install(
-            FILES ${VISIONSCENE_CORE_PUBLIC_HEADERS}
-            DESTINATION ${VISIONSCENE_INSTALL_INCLUDEDIR}/VisionScene
+            FILES ${CORONARESOURCE_CORE_PUBLIC_HEADERS}
+            DESTINATION ${CORONARESOURCE_INSTALL_INCLUDEDIR}/CoronaResource
         )
     endif()
     
     # Install generated version header
     install(
-        FILES ${VISIONSCENE_GENERATED_DIR}/VisionSceneVersion.h
-        DESTINATION ${VISIONSCENE_INSTALL_INCLUDEDIR}/VisionScene
+        FILES ${CORONARESOURCE_GENERATED_DIR}/CoronaResourceVersion.h
+        DESTINATION ${CORONARESOURCE_INSTALL_INCLUDEDIR}/CoronaResource
     )
 endif()
 
 # =============================================================================
 # Resource Library (Optional)
 # =============================================================================
-if(VISIONSCENE_BUILD_RESOURCE)
+if(CORONARESOURCE_BUILD_RESOURCE)
     add_subdirectory(resource)
-    message(STATUS "[VisionScene] Resource library included")
+    message(STATUS "[CoronaResource] Resource library included")
 else()
-    message(STATUS "[VisionScene] Resource library disabled")
+    message(STATUS "[CoronaResource] Resource library disabled")
 endif()

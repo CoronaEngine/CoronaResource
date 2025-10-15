@@ -1,18 +1,18 @@
 cmake_minimum_required(VERSION 4.0)
 
 # Project definition
-project(VisionScene
+project(CoronaResource
     VERSION 0.5.0
-    DESCRIPTION "VisionScene: Multi-format 3D scene parsing and import library"
+    DESCRIPTION "CoronaResource: Multi-format 3D scene parsing and import library"
     LANGUAGES CXX
 )
 
-# Detect if VisionScene is being used as a subproject
-if(NOT DEFINED VISIONSCENE_IS_TOP_LEVEL)
+# Detect if CoronaResource is being used as a subproject
+if(NOT DEFINED CORONARESOURCE_IS_TOP_LEVEL)
     if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
-        set(VISIONSCENE_IS_TOP_LEVEL ON)
+        set(CORONARESOURCE_IS_TOP_LEVEL ON)
     else()
-        set(VISIONSCENE_IS_TOP_LEVEL OFF)
+        set(CORONARESOURCE_IS_TOP_LEVEL OFF)
     endif()
 endif()
 
@@ -20,21 +20,21 @@ endif()
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 # Include configuration modules
-include(VisionSceneOptions)
-include(VisionSceneCompiler)
-include(VisionSceneDependencies)
-include(VisionSceneInstall)
-include(VisionSceneUtils)
+include(CoronaResourceOptions)
+include(CoronaResourceCompiler)
+include(CoronaResourceDependencies)
+include(CoronaResourceInstall)
+include(CoronaResourceUtils)
 
 # Add subdirectories
 add_subdirectory(src)
 
-if(VISIONSCENE_BUILD_EXAMPLES)
+if(CORONARESOURCE_BUILD_EXAMPLES)
     add_subdirectory(examples)
 endif()
 
 # Configure installation
-visionscene_configure_install()
+coronaresource_configure_install()
 
 # Print configuration summary
-visionscene_print_summary()
+coronaresource_print_summary()

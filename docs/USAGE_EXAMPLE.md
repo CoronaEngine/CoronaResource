@@ -1,6 +1,6 @@
-# VisionScene 使用示例
+# CoronaResource 使用示例
 
-这是一个最小化的示例项目，展示如何通过 FetchContent 使用 VisionScene。
+这是一个最小化的示例项目，展示如何通过 FetchContent 使用 CoronaResource。
 
 ## 项目结构
 
@@ -14,25 +14,25 @@ example-project/
 
 ```cmake
 cmake_minimum_required(VERSION 3.14)
-project(VisionSceneExample VERSION 1.0.0 LANGUAGES CXX)
+project(CoronaResourceExample VERSION 1.0.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(FetchContent)
 
-# 获取 VisionScene
+# 获取 CoronaResource
 FetchContent_Declare(
-    VisionScene
+    CoronaResource
     GIT_REPOSITORY https://github.com/CoronaEngine/CoronaResource.git
     GIT_TAG        main
 )
 
 # 配置选项
-set(VISIONSCENE_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-set(VISIONSCENE_BUILD_RESOURCE ON CACHE BOOL "" FORCE)
+set(CORONARESOURCE_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+set(CORONARESOURCE_BUILD_RESOURCE ON CACHE BOOL "" FORCE)
 
-FetchContent_MakeAvailable(VisionScene)
+FetchContent_MakeAvailable(CoronaResource)
 
 # 创建可执行文件
 add_executable(example main.cpp)
@@ -40,8 +40,8 @@ add_executable(example main.cpp)
 # 链接库
 target_link_libraries(example
     PRIVATE
-        VisionScene::Core
-        VisionScene::Resource
+        CoronaResource::Core
+        CoronaResource::Resource
 )
 ```
 
@@ -123,7 +123,7 @@ cmake --build .
 
 ## 支持的模型格式
 
-通过 Assimp，VisionScene 支持多种 3D 模型格式：
+通过 Assimp，CoronaResource 支持多种 3D 模型格式：
 
 - OBJ
 - FBX

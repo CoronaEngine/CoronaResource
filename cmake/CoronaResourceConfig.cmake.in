@@ -1,0 +1,38 @@
+# - CMake package configuration file for CoronaResource
+@PACKAGE_INIT@
+
+set(CoronaResource_VERSION "@PROJECT_VERSION@")
+
+# Find dependencies
+include(CMakeFindDependencyMacro)
+
+# Find ktm (math library)
+find_dependency(ktm)
+
+# Find Assimp if Resource library was built
+if(@CORONARESOURCE_BUILD_RESOURCE@)
+    find_dependency(assimp)
+endif()
+
+# Include targets
+if(NOT TARGET CoronaResource::Core)
+    include("${CMAKE_CURRENT_LIST_DIR}/CoronaResourceTargets.cmake")
+endif()
+
+# Convenience variables
+set(CoronaResource_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/include")
+set(CoronaResource_LIBRARIES CoronaResource::Core)
+
+# Add optional libraries to CoronaResource_LIBRARIES if they exist
+if(TARGET CoronaResource::Resource)
+    list(APPEND CoronaResource_LIBRARIES CoronaResource::Resource)
+endif()
+
+# Set component found variables
+set(CoronaResource_Core_FOUND TRUE)
+if(TARGET CoronaResource::Resource)
+    set(CoronaResource_Resource_FOUND TRUE)
+endif()
+
+check_required_components(CoronaResource)
+

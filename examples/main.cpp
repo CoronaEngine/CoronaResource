@@ -6,7 +6,7 @@
 #include <iostream>
 #include <algorithm>
 
-#include "VisionSceneVersion.h"
+#include "CoronaResourceVersion.h"
 #include "scene_loader.h"
 
 // Resource Manager includes
@@ -14,8 +14,8 @@
 #include <ResourceTypes.h>
 
 
-#ifndef VISIONSCENE_SOURCE_DIR
-#define VISIONSCENE_SOURCE_DIR ""
+#ifndef CORONARESOURCE_SOURCE_DIR
+#define CORONARESOURCE_SOURCE_DIR ""
 #endif
 
 void resourceManagerExample() {
@@ -25,7 +25,7 @@ void resourceManagerExample() {
     Corona::ModelLoader modelLoader;
     
     // 测试路径 - 使用项目中的一个模型文件路径
-    std::filesystem::path modelPath = std::filesystem::path(VISIONSCENE_SOURCE_DIR) / "Examples" / "test_scenes" / "cbox";
+    std::filesystem::path modelPath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "test_model";
     
     // 查找场景目录中的模型文件
     std::vector<std::string> modelExtensions = {".obj", ".fbx", ".gltf", ".glb", ".dae"};
@@ -105,9 +105,9 @@ int main(int /*argc*/, char** /*argv*/) {
     // 运行 Resource Manager 示例
     resourceManagerExample();
     // 固定内部测试场景路径（使用源目录 + 示例测试场景）
-    std::filesystem::path scenePath = std::filesystem::path(VISIONSCENE_SOURCE_DIR) / "Examples" / "test_scenes" / "sample.pbrt";
+    std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "test_scenes" / "sample.pbrt";
 
-    std::cout << "VisionSceneExample (Version: " << vision_scene::VersionString << ")\n";
+    std::cout << "CORONARESOURCEExample (Version: " << corona_resource::VersionString << ")\n";
     std::cout << "使用固定内部场景文件: " << scenePath.string() << "\n";
 
     if (!std::filesystem::exists(scenePath)) {
