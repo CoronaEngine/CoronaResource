@@ -1,6 +1,0 @@
-# Minimal PBRT sample for internal test
-Film "image" "string filename" "sample_output.png"
-Integrator "path"
-MakeNamedMaterial "mat1" "string type" "matte"
-# end
-

@@ -9,6 +9,7 @@ enum class SceneFormat {
     PBRT,
     Mitsuba,
     Datasmith,
+    Blend,
     Unknown
 };
 
@@ -17,6 +18,8 @@ inline const char* ToString(SceneFormat f) {
         case SceneFormat::PBRT: return "PBRT";
         case SceneFormat::Mitsuba: return "Mitsuba";
         case SceneFormat::Datasmith: return "Datasmith";
+        case SceneFormat::Blend: return "Blend";
+        case SceneFormat::Unknown: return "Unknown";
         default: return "Unknown";
     }
 }

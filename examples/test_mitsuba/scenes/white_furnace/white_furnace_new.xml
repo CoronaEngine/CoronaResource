@@ -1,0 +1,58 @@
+<scene version="3.0.0">
+
+	<default name="spp" value="256" />
+	<default name="resx" value="960" />
+	<default name="resy" value="960" />
+
+	<!-- Camera and Rendering Parameters -->
+
+	<integrator type="path">
+		<integer name="max_depth" value="12" />
+	</integrator>
+	<sensor type="perspective">
+		<string name="fov_axis" value="x" />
+		<float name="fov" value="39.597755" />
+		<float name="principal_point_offset_x" value="0.000000" />
+		<float name="principal_point_offset_y" value="-0.000000" />
+		<float name="near_clip" value="0.100000" />
+		<float name="far_clip" value="100.000000" />
+		<transform name="to_world">
+			<rotate x="1" angle="-153.5592908827048" />
+			<rotate y="1" angle="-46.691938147394204" />
+			<rotate z="1" angle="-179.999991348578" />
+			<translate value="7.358891 4.958309 6.925791" />
+		</transform>
+		<sampler type="ldsampler" name="sampler">
+			<integer name="sample_count" value="$spp" />
+		</sampler>
+		<film type="hdrfilm" name="film">
+			<integer name="width" value="$resx" />
+			<integer name="height" value="$resy" />
+		</film>
+	</sensor>
+
+	<!-- Materials -->
+
+	<bsdf type="roughconductor_mb" id="default-bsdf">
+		<string name="material" value="none" />
+		<rgb name="specular_reflectance" value="1" />
+		<integer name="order" value="5" />
+		<string name="distribution" value="ggx" />
+	</bsdf>
+
+	<!-- Emitters -->
+	<emitter type="constant">
+		<rgb name="radiance" value="0.5" />
+	</emitter>
+
+	<!-- Shapes -->
+
+	<shape type="ply">
+		<string name="filename" value="meshes/Sphere.ply" />
+		<boolean name="face_normals" value="true" />
+		<ref id="default-bsdf" name="bsdf" />
+	</shape>
+
+	<!-- Volumes -->
+
+</scene>

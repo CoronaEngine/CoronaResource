@@ -3,15 +3,18 @@
 //
 
 #include "import_factor.h"
-#include "pbrt_importer.h"
-#include "mitsuba_importer.h"
+
+#include "blend_importer.h"
 #include "datasmith_importer.h"
+#include "mitsuba_importer.h"
+#include "pbrt_importer.h"
 
 ISceneImporterPtr CreateImporter(SceneFormat fmt) {
     switch (fmt) {
         case SceneFormat::PBRT: return std::make_unique<PBRTImporter>();
         case SceneFormat::Mitsuba: return std::make_unique<MitsubaImporter>();
         case SceneFormat::Datasmith: return std::make_unique<DatasmithImporter>();
+        case SceneFormat::Blend: return std::make_unique<BlendImporter>();
         default: return {};
     }
 }

@@ -1,0 +1,2783 @@
+<DatasmithUnrealScene>
+	<Version>0.24</Version>
+	<SDKVersion>5.6.1-44394996</SDKVersion>
+	<Host>Autodesk 3dsmax 25.0.951Corona 11 (Hotfix 2)</Host>
+	<Application Vendor="Autodesk" ProductName="3dsmax" ProductVersion="25.0.951"/>
+	<ResourcePath>C:/Users/Administrator/Desktop</ResourcePath>
+	<User ID="50a5933547ba47c8bae43a94d70280c3" OS="Windows 8"/>
+	<Geolocation/>
+	<StaticMesh name="842" label="Obj3d66-11862398-1-461">
+		<file path="test_Assets/842.udsmesh"/>
+		<Size a="15782.521484" x="51.052673" y="58.280609" z="78.759476"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="81f54f9a1a9c94b78538d9bec77b61c1"/>
+		<Material id="1" name="620005"/>
+		<Material id="2" name="Material__2147474457"/>
+		<Material id="3" name="620007"/>
+		<Material id="4" name="Material__2147474457_2"/>
+	</StaticMesh>
+	<StaticMesh name="1000" label="Obj3d66-11862398-2-647">
+		<file path="test_Assets/1000.udsmesh"/>
+		<Size a="21915.310547" x="89.224426" y="34.8428" z="65.731316"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="78354a6c40938d4885c8796e0b8d9a0d"/>
+		<Material id="1" name="Material__2147474453"/>
+		<Material id="2" name="Material__2147474454"/>
+	</StaticMesh>
+	<StaticMesh name="725" label="Obj3d66-11862398-3-653">
+		<file path="test_Assets/725.udsmesh"/>
+		<Size a="608.349915" x="0.059398" y="27.711523" z="10.926558"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="b45fd833fd26dc7e2809bfab8005e9da"/>
+		<Material id="1" name="Mat3d66-11862398-5-58781"/>
+	</StaticMesh>
+	<StaticMesh name="726" label="Obj3d66-11862398-4-146">
+		<file path="test_Assets/726.udsmesh"/>
+		<Size a="608.350159" x="0.164409" y="27.711523" z="10.926165"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="3897eec773430f13e5bc360afdc5add4"/>
+		<Material id="1" name="Mat3d66-11862398-5-58781"/>
+	</StaticMesh>
+	<StaticMesh name="727" label="Obj3d66-11862398-5-203">
+		<file path="test_Assets/727.udsmesh"/>
+		<Size a="619.921936" x="0.163814" y="27.711523" z="11.134638"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="657c3a8f82b4e81ca638eae55f44fe13"/>
+		<Material id="1" name="Mat3d66-11862398-5-58781"/>
+	</StaticMesh>
+	<StaticMesh name="728" label="Obj3d66-11862398-6-183">
+		<file path="test_Assets/728.udsmesh"/>
+		<Size a="379.65799" x="1.584575" y="28.168585" z="11.39049"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="2db88e82094369f6e7e5540a14945e3c"/>
+		<Material id="1" name="Mat3d66-11862398-6-85545"/>
+	</StaticMesh>
+	<StaticMesh name="729" label="Obj3d66-11862398-7-909">
+		<file path="test_Assets/729.udsmesh"/>
+		<Size a="382.19632" x="1.560796" y="28.168585" z="11.389421"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="7303ec6c81326a61b21f0efa86ee4644"/>
+		<Material id="1" name="Mat3d66-11862398-9-45744"/>
+	</StaticMesh>
+	<StaticMesh name="730" label="Obj3d66-11862398-8-310">
+		<file path="test_Assets/730.udsmesh"/>
+		<Size a="407.001892" x="1.449506" y="28.172813" z="11.624725"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="3366a9b723f8c07b2232d8b95c313785"/>
+		<Material id="1" name="Mat3d66-11862398-7-83697"/>
+	</StaticMesh>
+	<StaticMesh name="732" label="Obj3d66-11862398-9-358">
+		<file path="test_Assets/732.udsmesh"/>
+		<Size a="623.81842" x="10.362087" y="25.871532" z="2.718021"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="a9d45aed8ac81b1f056c6df7183169a7"/>
+		<Material id="1" name="Mat3d66-11862398-4-65671"/>
+	</StaticMesh>
+	<StaticMesh name="735" label="Obj3d66-11862398-10-375">
+		<file path="test_Assets/735.udsmesh"/>
+		<Size a="608.350159" x="0.102817" y="27.711523" z="10.926515"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="6c68b42427691e4eae432234fb5c25ea"/>
+		<Material id="1" name="Mat3d66-11862398-5-58781"/>
+	</StaticMesh>
+	<StaticMesh name="736" label="Obj3d66-11862398-11-77">
+		<file path="test_Assets/736.udsmesh"/>
+		<Size a="619.921936" x="0.163814" y="27.711523" z="11.134638"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="4727e952d314bb6a5565fc353a596d7a"/>
+		<Material id="1" name="Mat3d66-11862398-5-58781"/>
+	</StaticMesh>
+	<StaticMesh name="737" label="Obj3d66-11862398-12-980">
+		<file path="test_Assets/737.udsmesh"/>
+		<Size a="608.349915" x="0.059398" y="27.711523" z="10.926558"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="8b12198bcb3154d31f6db5f9a8df848f"/>
+		<Material id="1" name="Mat3d66-11862398-5-58781"/>
+	</StaticMesh>
+	<StaticMesh name="743" label="Obj3d66-11862398-13-129">
+		<file path="test_Assets/743.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="6f28d86a6ba9372a1af3f9e856657bdc"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="744" label="Obj3d66-11862398-14-457">
+		<file path="test_Assets/744.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="7581c55a2d5445f81c9b3d5a87af3238"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="745" label="Obj3d66-11862398-15-595">
+		<file path="test_Assets/745.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="d580d269634bbc3931259a16f0cfb4a6"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="746" label="Obj3d66-11862398-16-24">
+		<file path="test_Assets/746.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="2402e8046645921efcb6991208ef6541"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="747" label="Obj3d66-11862398-17-355">
+		<file path="test_Assets/747.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="ef1bf7a17702d149f16a4a2c83f617ba"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="748" label="Obj3d66-11862398-18-81">
+		<file path="test_Assets/748.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="62c162e8d7071152256c93dde957be39"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="749" label="Obj3d66-11862398-19-694">
+		<file path="test_Assets/749.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="e1f33eb69af08824a726ee5f59956b49"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="750" label="Obj3d66-11862398-20-247">
+		<file path="test_Assets/750.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="15581b910f695c4551e3c1c44ab6e8ff"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="751" label="Obj3d66-11862398-21-830">
+		<file path="test_Assets/751.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="7a438446402faea8c4429bbc01ad61ea"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="752" label="Obj3d66-11862398-22-717">
+		<file path="test_Assets/752.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="d446a1eefd2a6207f0cf617022089d38"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="753" label="Obj3d66-11862398-23-912">
+		<file path="test_Assets/753.udsmesh"/>
+		<Size a="44.519608" x="0.08781" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="92b7db5cda5402f49e00e4b4df50b47d"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="754" label="Obj3d66-11862398-24-655">
+		<file path="test_Assets/754.udsmesh"/>
+		<Size a="44.519592" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="e584305e5220f6df972d0d6bec83f776"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="755" label="Obj3d66-11862398-25-715">
+		<file path="test_Assets/755.udsmesh"/>
+		<Size a="44.5196" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="01b84fe7b573f18e102be6670d0a0849"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="756" label="Obj3d66-11862398-26-527">
+		<file path="test_Assets/756.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="c1bfe9bac819002f0786886fa63289a4"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="757" label="Obj3d66-11862398-27-544">
+		<file path="test_Assets/757.udsmesh"/>
+		<Size a="44.519592" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="272f718475cffeee68692ffb69119fb2"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="758" label="Obj3d66-11862398-28-369">
+		<file path="test_Assets/758.udsmesh"/>
+		<Size a="44.519592" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="993fc8e22fa973641cc5975edf196d93"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="759" label="Obj3d66-11862398-29-120">
+		<file path="test_Assets/759.udsmesh"/>
+		<Size a="44.519592" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="c7a91b72950ee2e98d6fec4c8ef25a4b"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="760" label="Obj3d66-11862398-30-927">
+		<file path="test_Assets/760.udsmesh"/>
+		<Size a="44.519592" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="34fdaa9668d188370ec5d10f76f6db95"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="761" label="Obj3d66-11862398-31-882">
+		<file path="test_Assets/761.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="5a533ed19d8044ad949deb35f0abed96"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="762" label="Obj3d66-11862398-32-131">
+		<file path="test_Assets/762.udsmesh"/>
+		<Size a="44.519592" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="345f95775eb7c74da77dc1ef3986b38d"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="763" label="Obj3d66-11862398-33-458">
+		<file path="test_Assets/763.udsmesh"/>
+		<Size a="44.5196" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="ecd3787b94748153312521689c688ec0"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="764" label="Obj3d66-11862398-34-540">
+		<file path="test_Assets/764.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="eff11379c597368fee00044a71aca26f"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="765" label="Obj3d66-11862398-35-585">
+		<file path="test_Assets/765.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="ceb6a1920ca1ba24f48b15b5d33bd474"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="766" label="Obj3d66-11862398-36-896">
+		<file path="test_Assets/766.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="2a8c19dacb2bd89ce46383081aa6b40c"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="767" label="Obj3d66-11862398-37-668">
+		<file path="test_Assets/767.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="4b74a11a79b0169b712d19320131a095"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="768" label="Obj3d66-11862398-38-790">
+		<file path="test_Assets/768.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="fdaeaebe36cdb6639c14d70f1f3cf941"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="769" label="Obj3d66-11862398-39-26">
+		<file path="test_Assets/769.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="2543c23aee127049e847bf4a6ac965da"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="770" label="Obj3d66-11862398-40-468">
+		<file path="test_Assets/770.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="cbe92af791ce15c2e6411d8bdd4b183a"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="771" label="Obj3d66-11862398-41-896">
+		<file path="test_Assets/771.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="050d4d824e5d1289d17320d732469435"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="772" label="Obj3d66-11862398-42-823">
+		<file path="test_Assets/772.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918987"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="4b4af28520ec2acbda89c3036c8ddf8e"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="773" label="Obj3d66-11862398-43-953">
+		<file path="test_Assets/773.udsmesh"/>
+		<Size a="44.519608" x="0.087809" y="0.498093" z="37.918983"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="20c58772d4a762247959b3c0fb5da3d4"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="809" label="Obj3d66-11862398-44-649">
+		<file path="test_Assets/809.udsmesh"/>
+		<Size a="39.599403" x="0.087811" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="d1584305531dce393c5e35ec518988a7"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="810" label="Obj3d66-11862398-45-725">
+		<file path="test_Assets/810.udsmesh"/>
+		<Size a="39.599403" x="0.087811" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="5b8710b39d9bf6b7040177f4028f5691"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="811" label="Obj3d66-11862398-46-993">
+		<file path="test_Assets/811.udsmesh"/>
+		<Size a="39.599411" x="0.087811" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="e922df8ccdffa838e743d46de5e5db90"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="812" label="Obj3d66-11862398-47-316">
+		<file path="test_Assets/812.udsmesh"/>
+		<Size a="39.599411" x="0.087811" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="c123cc41a057385948274e3a82a7171c"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="813" label="Obj3d66-11862398-48-867">
+		<file path="test_Assets/813.udsmesh"/>
+		<Size a="39.599411" x="0.087811" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="32327da5c53a579d8b32b390c2767352"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="814" label="Obj3d66-11862398-49-558">
+		<file path="test_Assets/814.udsmesh"/>
+		<Size a="39.599411" x="0.087811" y="0.498095" z="33.720016"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="1c4a80ab9ecba235458b8e2aa7ece88d"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="815" label="Obj3d66-11862398-50-635">
+		<file path="test_Assets/815.udsmesh"/>
+		<Size a="39.599411" x="0.087811" y="0.498095" z="33.720016"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="ed501f73bec7a85469a8579eca86fb2d"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="816" label="Obj3d66-11862398-51-599">
+		<file path="test_Assets/816.udsmesh"/>
+		<Size a="39.599388" x="0.087811" y="0.498095" z="33.720016"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="5f80df91b6739759f689a55b559d388b"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="817" label="Obj3d66-11862398-52-758">
+		<file path="test_Assets/817.udsmesh"/>
+		<Size a="39.599388" x="0.087811" y="0.498095" z="33.720016"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="5dbd4529a6119156b2ba583e1d88b826"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="818" label="Obj3d66-11862398-53-233">
+		<file path="test_Assets/818.udsmesh"/>
+		<Size a="39.599411" x="0.087811" y="0.498095" z="33.720016"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="86487e410f7dc8e67e21f12917871413"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="819" label="Obj3d66-11862398-54-323">
+		<file path="test_Assets/819.udsmesh"/>
+		<Size a="39.599388" x="0.087811" y="0.498095" z="33.720016"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="18e4dfbe77603903e8d872b6409759b5"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="820" label="Obj3d66-11862398-55-498">
+		<file path="test_Assets/820.udsmesh"/>
+		<Size a="39.599403" x="0.087811" y="0.498095" z="33.720016"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="6683c7188314eabca5668aa1808347b4"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="821" label="Obj3d66-11862398-56-671">
+		<file path="test_Assets/821.udsmesh"/>
+		<Size a="39.599403" x="0.087811" y="0.498095" z="33.720016"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="d4dd635aaca640e25a5fb263ed84513a"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="822" label="Obj3d66-11862398-57-479">
+		<file path="test_Assets/822.udsmesh"/>
+		<Size a="39.599388" x="0.08781" y="0.498095" z="33.720016"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="a3362a71616e6d89f27dc897133e07fe"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="823" label="Obj3d66-11862398-58-356">
+		<file path="test_Assets/823.udsmesh"/>
+		<Size a="39.599411" x="0.087811" y="0.498095" z="33.720016"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="73241dfd4fdce7911e7748317417b3a7"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="824" label="Obj3d66-11862398-59-299">
+		<file path="test_Assets/824.udsmesh"/>
+		<Size a="39.599388" x="0.087811" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="8032abc6d25e2d819ae40ba6bd4589da"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="825" label="Obj3d66-11862398-60-555">
+		<file path="test_Assets/825.udsmesh"/>
+		<Size a="39.599403" x="0.08781" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="4704e653a24af530f1e54c1dc7190c48"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="826" label="Obj3d66-11862398-61-299">
+		<file path="test_Assets/826.udsmesh"/>
+		<Size a="39.599411" x="0.087811" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="0a2b4b45f37d2a5ea42e216059cc0715"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="827" label="Obj3d66-11862398-62-669">
+		<file path="test_Assets/827.udsmesh"/>
+		<Size a="39.599411" x="0.08781" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="ded55a920cde7ea8360657e0a73d0d1d"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="828" label="Obj3d66-11862398-63-789">
+		<file path="test_Assets/828.udsmesh"/>
+		<Size a="39.599411" x="0.087811" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="bb7fdf8ce8714338fedb7ea9d26d5284"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="829" label="Obj3d66-11862398-64-209">
+		<file path="test_Assets/829.udsmesh"/>
+		<Size a="39.599411" x="0.087811" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="86a57baf8cde9cd2072c30f0469dd399"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="830" label="Obj3d66-11862398-65-870">
+		<file path="test_Assets/830.udsmesh"/>
+		<Size a="39.599411" x="0.087812" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="d80ea7dd4b24d983790b7877873dbaa6"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="831" label="Obj3d66-11862398-66-913">
+		<file path="test_Assets/831.udsmesh"/>
+		<Size a="39.599396" x="0.087811" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="193ef97f6dcf0f8254b9604472b93f53"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="832" label="Obj3d66-11862398-67-46">
+		<file path="test_Assets/832.udsmesh"/>
+		<Size a="39.599407" x="0.087812" y="0.498095" z="33.720009"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="1cad3d89df0bb64a65418b7668cdaeea"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="833" label="Obj3d66-11862398-68-356">
+		<file path="test_Assets/833.udsmesh"/>
+		<Size a="39.599396" x="0.087811" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="df8b3ceb3c491065a48c337a3e5dc37c"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="834" label="Obj3d66-11862398-69-60">
+		<file path="test_Assets/834.udsmesh"/>
+		<Size a="39.599396" x="0.087811" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="9084652d9267287150caa00cce07e7bb"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="835" label="Obj3d66-11862398-70-889">
+		<file path="test_Assets/835.udsmesh"/>
+		<Size a="39.599411" x="0.087811" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="aeaf9fe9407589af704a04343a575d5f"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="836" label="Obj3d66-11862398-71-956">
+		<file path="test_Assets/836.udsmesh"/>
+		<Size a="39.599411" x="0.087811" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="ce00692f6e27ad96e48ac4fc96c3cda7"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="837" label="Obj3d66-11862398-72-511">
+		<file path="test_Assets/837.udsmesh"/>
+		<Size a="39.599411" x="0.087811" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="36834295d6d60895a67eed119d33168f"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="838" label="Obj3d66-11862398-73-159">
+		<file path="test_Assets/838.udsmesh"/>
+		<Size a="39.599403" x="0.087811" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="f0c60d8d276380bd83ab3dcabbebeb13"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="839" label="Obj3d66-11862398-74-94">
+		<file path="test_Assets/839.udsmesh"/>
+		<Size a="39.599411" x="0.087811" y="0.498095" z="33.720013"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="e4ae44444794059923ff6291f5dffa62"/>
+		<Material id="1" name="Mat3d66-11862398-8-81034"/>
+	</StaticMesh>
+	<StaticMesh name="1024" label="Obj3d66-11862398-75-803">
+		<file path="test_Assets/1024.udsmesh"/>
+		<Size a="1939969.375" x="774.492493" y="977.215271" z="10.01991"/>
+		<LightmapCoordinateIndex value="-1"/>
+		<LightmapUV value="-1"/>
+		<Hash value="38b4da37e177c396f13908be502baa7c"/>
+		<Material id="1" name="Mat3d66-11862398-3-46044"/>
+	</StaticMesh>
+	<ActorMesh name="842" label="Obj3d66-11862398-1-461" layer="0" mobility="Static">
+		<mesh name="842"/>
+		<Transform tx="7.850109" ty="-811.124512" tz="26.029921" sx="1.0" sy="1.0" sz="1.0" qx="-0.577699" qy="-0.407754" qz="0.577699" qw="-0.407754" qhex64="AD712620837CE2BFFE4436A0A518DABFAD712620837CE23FFE443680A518DABF"/>
+		<tag value="Max.superclassof: GeometryClass" />
+		<tag value="Max.classof: Editable_Poly" />
+		<tag value="Max.handle: 842" />
+		<tag value="Max.isGroupHead: false" />
+		<tag value="Max.isGroupMember: false" />
+		<tag value="Max.parent.handle: 0" />
+	</ActorMesh>
+	<ActorMesh name="1000" label="Obj3d66-11862398-2-647" layer="0" mobility="Static">
+		<mesh name="1000"/>
+		<Transform tx="237.908203" ty="-602.575867" tz="172.97197" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="F519E148A5EC7EBE303B7FA69EA0E63F0B3B7F269EA0E6BFB519E168A4EC7E3E"/>
+		<tag value="Max.superclassof: GeometryClass" />
+		<tag value="Max.classof: PolyMeshObject" />
+		<tag value="Max.handle: 1000" />
+		<tag value="Max.isGroupHead: false" />
+		<tag value="Max.isGroupMember: false" />
+		<tag value="Max.parent.handle: 0" />
+	</ActorMesh>
+	<Actor name="1022" label="Group-11862398-1-114" layer="0" mobility="Static">
+		<Transform tx="226.815628" ty="-818.362" tz="140.145218" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="0.0" qz="0.0" qw="1.0" qhex64="000000000000008000000000000000000000000000000080000000000000F03F"/>
+		<tag value="Max.superclassof: helper" />
+		<tag value="Max.classof: Dummy" />
+		<tag value="Max.handle: 1022" />
+		<tag value="Max.isGroupHead: true" />
+		<tag value="Max.isGroupMember: false" />
+		<tag value="Max.parent.handle: 0" />
+		<children visible="true">
+			<ActorMesh name="725" label="Obj3d66-11862398-3-653" layer="0" mobility="Static">
+				<mesh name="725"/>
+				<Transform tx="243.980621" ty="-942.731934" tz="154.48819" sx="10.000002" sy="10.0" sz="10.000002" qx="-0.00118" qy="0.707106" qz="-0.707105" qw="0.00118" qhex64="DE66CF248A5653BF33DCA0259DA0E63FCCDBA0859BA0E6BF2F6CCF849F56533F"/>
+				<tag value="Max.superclassof: GeometryClass" />
+				<tag value="Max.classof: Editable_Poly" />
+				<tag value="Max.handle: 725" />
+				<tag value="Max.isGroupHead: false" />
+				<tag value="Max.isGroupMember: true" />
+				<tag value="Max.parent.handle: 1022" />
+			</ActorMesh>
+			<ActorMesh name="726" label="Obj3d66-11862398-4-146" layer="0" mobility="Static">
+				<mesh name="726"/>
+				<Transform tx="243.603134" ty="-715.227478" tz="154.48819" sx="10.0" sy="10.0" sz="10.0" qx="-0.006102" qy="0.707081" qz="-0.70708" qw="0.006102" qhex64="8CAB267F5AFE78BF8B403B5F67A0E63F8E403BFF66A0E6BFFDAA26FF6AFE783F"/>
+				<tag value="Max.superclassof: GeometryClass" />
+				<tag value="Max.classof: Editable_Poly" />
+				<tag value="Max.handle: 726" />
+				<tag value="Max.isGroupHead: false" />
+				<tag value="Max.isGroupMember: true" />
+				<tag value="Max.parent.handle: 1022" />
+			</ActorMesh>
+			<ActorMesh name="727" label="Obj3d66-11862398-5-203" layer="0" mobility="Static">
+				<mesh name="727"/>
+				<Transform tx="233.367538" ty="-828.756348" tz="154.48819" sx="10.000009" sy="10.0" sz="10.000009" qx="0.001814" qy="0.707105" qz="-0.707104" qw="-0.001814" qhex64="86D09E12EBB65D3F68C0CFD599A0E63FB0C0CF3599A0E6BFF9D09E12EAB65DBF"/>
+				<tag value="Max.superclassof: GeometryClass" />
+				<tag value="Max.classof: Editable_Poly" />
+				<tag value="Max.handle: 727" />
+				<tag value="Max.isGroupHead: false" />
+				<tag value="Max.isGroupMember: true" />
+				<tag value="Max.parent.handle: 1022" />
+			</ActorMesh>
+			<ActorMesh name="728" label="Obj3d66-11862398-6-183" layer="0" mobility="Static">
+				<mesh name="728"/>
+				<Transform tx="239.552109" ty="-715.179382" tz="154.48819" sx="10.0" sy="10.0" sz="10.0" qx="0.000449" qy="0.707107" qz="-0.707106" qw="-0.000449" qhex64="D292F4773F743D3FC6E4D1999EA0E63F0CE5D1999DA0E6BF0DACF417E3733DBF"/>
+				<tag value="Max.superclassof: GeometryClass" />
+				<tag value="Max.classof: Editable_Poly" />
+				<tag value="Max.handle: 728" />
+				<tag value="Max.isGroupHead: false" />
+				<tag value="Max.isGroupMember: true" />
+				<tag value="Max.parent.handle: 1022" />
+			</ActorMesh>
+			<ActorMesh name="729" label="Obj3d66-11862398-7-909" layer="0" mobility="Static">
+				<mesh name="729"/>
+				<Transform tx="240.801712" ty="-942.679199" tz="154.48819" sx="10.0" sy="10.0" sz="10.0" qx="0.00007" qy="0.707107" qz="-0.707107" qw="-0.00007" qhex64="9D48C323CB66123F0D80A0A49EA0E63FF37FA0249EA0E6BF7DFEC2A3606512BF"/>
+				<tag value="Max.superclassof: GeometryClass" />
+				<tag value="Max.classof: Editable_Poly" />
+				<tag value="Max.handle: 729" />
+				<tag value="Max.isGroupHead: false" />
+				<tag value="Max.isGroupMember: true" />
+				<tag value="Max.parent.handle: 1022" />
+			</ActorMesh>
+			<ActorMesh name="730" label="Obj3d66-11862398-8-310" layer="0" mobility="Static">
+				<mesh name="730"/>
+				<Transform tx="229.50708" ty="-828.789734" tz="154.48819" sx="10.0" sy="10.0" sz="10.0" qx="0.000038" qy="0.707107" qz="-0.707107" qw="-0.000038" qhex64="0EBA32E514BD033FDB7BF5A59EA0E63FB97BF5259EA0E6BFD3B9320514BD03BF"/>
+				<tag value="Max.superclassof: GeometryClass" />
+				<tag value="Max.classof: Editable_Poly" />
+				<tag value="Max.handle: 730" />
+				<tag value="Max.isGroupHead: false" />
+				<tag value="Max.isGroupMember: true" />
+				<tag value="Max.parent.handle: 1022" />
+			</ActorMesh>
+			<Actor name="731" label="Group-11862398-2-905" layer="0" mobility="Static">
+				<Transform tx="203.616364" ty="-994.108521" tz="171.790634" sx="7.158007" sy="13.363563" sz="7.373461" qx="-0.502656" qy="-0.496902" qz="0.497327" qw="0.503081" qhex64="B94B24FCC115E0BFF3335F983FCDDFBFA1885D1835D4DF3FCB7523DC3D19E03F"/>
+				<tag value="Max.superclassof: helper" />
+				<tag value="Max.classof: Dummy" />
+				<tag value="Max.handle: 731" />
+				<tag value="Max.isGroupHead: false" />
+				<tag value="Max.isGroupMember: true" />
+				<tag value="Max.parent.handle: 1022" />
+				<children visible="true">
+					<ActorMesh name="732" label="Obj3d66-11862398-9-358" layer="0" mobility="Static">
+						<mesh name="732"/>
+						<Transform tx="196.151306" ty="-982.272766" tz="171.790634" sx="7.158007" sy="13.363563" sz="7.373461" qx="-0.502656" qy="-0.496902" qz="0.497327" qw="0.503081" qhex64="B94B24FCC115E0BFF3335F983FCDDFBFA1885D1835D4DF3FCB7523DC3D19E03F"/>
+						<tag value="Max.superclassof: GeometryClass" />
+						<tag value="Max.classof: Editable_mesh" />
+						<tag value="Max.handle: 732" />
+						<tag value="Max.isGroupHead: false" />
+						<tag value="Max.isGroupMember: false" />
+						<tag value="Max.parent.handle: 731" />
+					</ActorMesh>
+				</children>
+			</Actor>
+			<ActorMesh name="735" label="Obj3d66-11862398-10-375" layer="0" mobility="Static">
+				<mesh name="735"/>
+				<Transform tx="248.282227" ty="-714.702087" tz="153.648727" sx="10.000003" sy="10.0" sz="10.000003" qx="-0.004109" qy="0.707095" qz="-0.707095" qw="0.004109" qhex64="274DB89D96D470BF9444EFDC85A0E63FB644EFDC84A0E6BF454DB8BD95D4703F"/>
+				<tag value="Max.superclassof: GeometryClass" />
+				<tag value="Max.classof: Editable_Poly" />
+				<tag value="Max.handle: 735" />
+				<tag value="Max.isGroupHead: false" />
+				<tag value="Max.isGroupMember: true" />
+				<tag value="Max.parent.handle: 1022" />
+			</ActorMesh>
+			<ActorMesh name="736" label="Obj3d66-11862398-11-77" layer="0" mobility="Static">
+				<mesh name="736"/>
+				<Transform tx="238.070557" ty="-828.288574" tz="153.648636" sx="10.000009" sy="10.0" sz="10.000009" qx="0.001814" qy="0.707105" qz="-0.707104" qw="-0.001814" qhex64="86D09E12EBB65D3F68C0CFD599A0E63FB0C0CF3599A0E6BFF9D09E12EAB65DBF"/>
+				<tag value="Max.superclassof: GeometryClass" />
+				<tag value="Max.classof: Editable_Poly" />
+				<tag value="Max.handle: 736" />
+				<tag value="Max.isGroupHead: false" />
+				<tag value="Max.isGroupMember: true" />
+				<tag value="Max.parent.handle: 1022" />
+			</ActorMesh>
+			<ActorMesh name="737" label="Obj3d66-11862398-12-980" layer="0" mobility="Static">
+				<mesh name="737"/>
+				<Transform tx="248.951218" ty="-942.219849" tz="153.648636" sx="10.000002" sy="10.0" sz="10.000002" qx="-0.00118" qy="0.707106" qz="-0.707105" qw="0.00118" qhex64="DE66CF248A5653BF33DCA0259DA0E63FCCDBA0859BA0E6BF2F6CCF849F56533F"/>
+				<tag value="Max.superclassof: GeometryClass" />
+				<tag value="Max.classof: Editable_Poly" />
+				<tag value="Max.handle: 737" />
+				<tag value="Max.isGroupHead: false" />
+				<tag value="Max.isGroupMember: true" />
+				<tag value="Max.parent.handle: 1022" />
+			</ActorMesh>
+			<Actor name="740" label="Group-11862398-3-559" layer="0" mobility="Static">
+				<Transform tx="230.115097" ty="-648.734009" tz="-1.013379" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+				<tag value="Max.superclassof: helper" />
+				<tag value="Max.classof: Dummy" />
+				<tag value="Max.handle: 740" />
+				<tag value="Max.isGroupHead: false" />
+				<tag value="Max.isGroupMember: true" />
+				<tag value="Max.parent.handle: 1022" />
+				<children visible="true">
+					<Actor name="741" label="Group-11862398-4-760" layer="0" mobility="Static">
+						<Transform tx="246.704132" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+						<tag value="Max.superclassof: helper" />
+						<tag value="Max.classof: Dummy" />
+						<tag value="Max.handle: 741" />
+						<tag value="Max.isGroupHead: false" />
+						<tag value="Max.isGroupMember: true" />
+						<tag value="Max.parent.handle: 740" />
+						<children visible="true">
+							<Actor name="742" label="Group-11862398-5-896" layer="0" mobility="Static">
+								<Transform tx="227.204178" ty="-749.509705" tz="-1.532884" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+								<tag value="Max.superclassof: helper" />
+								<tag value="Max.classof: Dummy" />
+								<tag value="Max.handle: 742" />
+								<tag value="Max.isGroupHead: true" />
+								<tag value="Max.isGroupMember: true" />
+								<tag value="Max.parent.handle: 741" />
+								<children visible="true">
+									<ActorMesh name="743" label="Obj3d66-11862398-13-129" layer="0" mobility="Static">
+										<mesh name="743"/>
+										<Transform tx="246.704132" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 743" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="744" label="Obj3d66-11862398-14-457" layer="0" mobility="Static">
+										<mesh name="744"/>
+										<Transform tx="245.404129" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 744" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="745" label="Obj3d66-11862398-15-595" layer="0" mobility="Static">
+										<mesh name="745"/>
+										<Transform tx="244.104126" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 745" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="746" label="Obj3d66-11862398-16-24" layer="0" mobility="Static">
+										<mesh name="746"/>
+										<Transform tx="242.804123" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 746" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="747" label="Obj3d66-11862398-17-355" layer="0" mobility="Static">
+										<mesh name="747"/>
+										<Transform tx="241.504135" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 747" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="748" label="Obj3d66-11862398-18-81" layer="0" mobility="Static">
+										<mesh name="748"/>
+										<Transform tx="240.204132" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 748" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="749" label="Obj3d66-11862398-19-694" layer="0" mobility="Static">
+										<mesh name="749"/>
+										<Transform tx="238.904129" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 749" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="750" label="Obj3d66-11862398-20-247" layer="0" mobility="Static">
+										<mesh name="750"/>
+										<Transform tx="237.604126" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 750" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="751" label="Obj3d66-11862398-21-830" layer="0" mobility="Static">
+										<mesh name="751"/>
+										<Transform tx="236.304123" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 751" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="752" label="Obj3d66-11862398-22-717" layer="0" mobility="Static">
+										<mesh name="752"/>
+										<Transform tx="235.004135" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 752" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="753" label="Obj3d66-11862398-23-912" layer="0" mobility="Static">
+										<mesh name="753"/>
+										<Transform tx="233.704132" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 753" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="754" label="Obj3d66-11862398-24-655" layer="0" mobility="Static">
+										<mesh name="754"/>
+										<Transform tx="232.404129" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 754" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="755" label="Obj3d66-11862398-25-715" layer="0" mobility="Static">
+										<mesh name="755"/>
+										<Transform tx="231.104126" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 755" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="756" label="Obj3d66-11862398-26-527" layer="0" mobility="Static">
+										<mesh name="756"/>
+										<Transform tx="229.804123" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 756" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="757" label="Obj3d66-11862398-27-544" layer="0" mobility="Static">
+										<mesh name="757"/>
+										<Transform tx="228.504135" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 757" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="758" label="Obj3d66-11862398-28-369" layer="0" mobility="Static">
+										<mesh name="758"/>
+										<Transform tx="227.204132" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 758" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="759" label="Obj3d66-11862398-29-120" layer="0" mobility="Static">
+										<mesh name="759"/>
+										<Transform tx="225.904129" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 759" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="760" label="Obj3d66-11862398-30-927" layer="0" mobility="Static">
+										<mesh name="760"/>
+										<Transform tx="224.604126" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 760" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="761" label="Obj3d66-11862398-31-882" layer="0" mobility="Static">
+										<mesh name="761"/>
+										<Transform tx="223.304123" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 761" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="762" label="Obj3d66-11862398-32-131" layer="0" mobility="Static">
+										<mesh name="762"/>
+										<Transform tx="222.004135" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 762" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="763" label="Obj3d66-11862398-33-458" layer="0" mobility="Static">
+										<mesh name="763"/>
+										<Transform tx="220.704132" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 763" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="764" label="Obj3d66-11862398-34-540" layer="0" mobility="Static">
+										<mesh name="764"/>
+										<Transform tx="219.404129" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 764" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="765" label="Obj3d66-11862398-35-585" layer="0" mobility="Static">
+										<mesh name="765"/>
+										<Transform tx="218.104126" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 765" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="766" label="Obj3d66-11862398-36-896" layer="0" mobility="Static">
+										<mesh name="766"/>
+										<Transform tx="216.804123" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 766" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="767" label="Obj3d66-11862398-37-668" layer="0" mobility="Static">
+										<mesh name="767"/>
+										<Transform tx="215.504135" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 767" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="768" label="Obj3d66-11862398-38-790" layer="0" mobility="Static">
+										<mesh name="768"/>
+										<Transform tx="214.204132" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 768" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="769" label="Obj3d66-11862398-39-26" layer="0" mobility="Static">
+										<mesh name="769"/>
+										<Transform tx="212.904129" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 769" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="770" label="Obj3d66-11862398-40-468" layer="0" mobility="Static">
+										<mesh name="770"/>
+										<Transform tx="211.604126" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 770" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="771" label="Obj3d66-11862398-41-896" layer="0" mobility="Static">
+										<mesh name="771"/>
+										<Transform tx="210.304123" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 771" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="772" label="Obj3d66-11862398-42-823" layer="0" mobility="Static">
+										<mesh name="772"/>
+										<Transform tx="209.004135" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 772" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+									<ActorMesh name="773" label="Obj3d66-11862398-43-953" layer="0" mobility="Static">
+										<mesh name="773"/>
+										<Transform tx="207.704132" ty="-646.361023" tz="-1.532843" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 773" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 742" />
+									</ActorMesh>
+								</children>
+							</Actor>
+							<Actor name="840" label="Group-11862398-6-411" layer="0" mobility="Static">
+								<Transform tx="230.449173" ty="-749.509705" tz="281.823334" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+								<tag value="Max.superclassof: helper" />
+								<tag value="Max.classof: Dummy" />
+								<tag value="Max.handle: 840" />
+								<tag value="Max.isGroupHead: true" />
+								<tag value="Max.isGroupMember: true" />
+								<tag value="Max.parent.handle: 741" />
+								<children visible="true">
+									<ActorMesh name="809" label="Obj3d66-11862398-44-649" layer="0" mobility="Static">
+										<mesh name="809"/>
+										<Transform tx="249.949127" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 809" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="810" label="Obj3d66-11862398-45-725" layer="0" mobility="Static">
+										<mesh name="810"/>
+										<Transform tx="248.649124" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 810" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="811" label="Obj3d66-11862398-46-993" layer="0" mobility="Static">
+										<mesh name="811"/>
+										<Transform tx="236.949127" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 811" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="812" label="Obj3d66-11862398-47-316" layer="0" mobility="Static">
+										<mesh name="812"/>
+										<Transform tx="235.649124" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 812" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="813" label="Obj3d66-11862398-48-867" layer="0" mobility="Static">
+										<mesh name="813"/>
+										<Transform tx="234.349121" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 813" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="814" label="Obj3d66-11862398-49-558" layer="0" mobility="Static">
+										<mesh name="814"/>
+										<Transform tx="233.049118" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 814" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="815" label="Obj3d66-11862398-50-635" layer="0" mobility="Static">
+										<mesh name="815"/>
+										<Transform tx="231.74913" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 815" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="816" label="Obj3d66-11862398-51-599" layer="0" mobility="Static">
+										<mesh name="816"/>
+										<Transform tx="230.449127" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 816" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="817" label="Obj3d66-11862398-52-758" layer="0" mobility="Static">
+										<mesh name="817"/>
+										<Transform tx="229.149124" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 817" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="818" label="Obj3d66-11862398-53-233" layer="0" mobility="Static">
+										<mesh name="818"/>
+										<Transform tx="227.849121" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 818" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="819" label="Obj3d66-11862398-54-323" layer="0" mobility="Static">
+										<mesh name="819"/>
+										<Transform tx="226.549118" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 819" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="820" label="Obj3d66-11862398-55-498" layer="0" mobility="Static">
+										<mesh name="820"/>
+										<Transform tx="225.24913" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 820" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="821" label="Obj3d66-11862398-56-671" layer="0" mobility="Static">
+										<mesh name="821"/>
+										<Transform tx="223.949127" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 821" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="822" label="Obj3d66-11862398-57-479" layer="0" mobility="Static">
+										<mesh name="822"/>
+										<Transform tx="222.649124" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 822" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="823" label="Obj3d66-11862398-58-356" layer="0" mobility="Static">
+										<mesh name="823"/>
+										<Transform tx="221.349121" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 823" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="824" label="Obj3d66-11862398-59-299" layer="0" mobility="Static">
+										<mesh name="824"/>
+										<Transform tx="220.049118" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 824" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="825" label="Obj3d66-11862398-60-555" layer="0" mobility="Static">
+										<mesh name="825"/>
+										<Transform tx="218.74913" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 825" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="826" label="Obj3d66-11862398-61-299" layer="0" mobility="Static">
+										<mesh name="826"/>
+										<Transform tx="217.449127" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 826" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="827" label="Obj3d66-11862398-62-669" layer="0" mobility="Static">
+										<mesh name="827"/>
+										<Transform tx="216.149124" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 827" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="828" label="Obj3d66-11862398-63-789" layer="0" mobility="Static">
+										<mesh name="828"/>
+										<Transform tx="214.849121" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 828" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="829" label="Obj3d66-11862398-64-209" layer="0" mobility="Static">
+										<mesh name="829"/>
+										<Transform tx="213.549118" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 829" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="830" label="Obj3d66-11862398-65-870" layer="0" mobility="Static">
+										<mesh name="830"/>
+										<Transform tx="212.24913" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 830" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="831" label="Obj3d66-11862398-66-913" layer="0" mobility="Static">
+										<mesh name="831"/>
+										<Transform tx="247.349121" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 831" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="832" label="Obj3d66-11862398-67-46" layer="0" mobility="Static">
+										<mesh name="832"/>
+										<Transform tx="210.949127" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 832" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="833" label="Obj3d66-11862398-68-356" layer="0" mobility="Static">
+										<mesh name="833"/>
+										<Transform tx="246.049118" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 833" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="834" label="Obj3d66-11862398-69-60" layer="0" mobility="Static">
+										<mesh name="834"/>
+										<Transform tx="244.74913" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 834" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="835" label="Obj3d66-11862398-70-889" layer="0" mobility="Static">
+										<mesh name="835"/>
+										<Transform tx="243.449127" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 835" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="836" label="Obj3d66-11862398-71-956" layer="0" mobility="Static">
+										<mesh name="836"/>
+										<Transform tx="242.149124" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 836" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="837" label="Obj3d66-11862398-72-511" layer="0" mobility="Static">
+										<mesh name="837"/>
+										<Transform tx="240.849121" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 837" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="838" label="Obj3d66-11862398-73-159" layer="0" mobility="Static">
+										<mesh name="838"/>
+										<Transform tx="239.549118" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 838" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+									<ActorMesh name="839" label="Obj3d66-11862398-74-94" layer="0" mobility="Static">
+										<mesh name="839"/>
+										<Transform tx="238.24913" ty="-646.361023" tz="281.823364" sx="10.0" sy="10.0" sz="10.0" qx="-0.0" qy="0.707107" qz="-0.707107" qw="0.0" qhex64="D029B007A2C68ABE873A7FA69EA0E63F633A7F269EA0E6BF9929B047A1C68A3E"/>
+										<tag value="Max.superclassof: GeometryClass" />
+										<tag value="Max.classof: PolyMeshObject" />
+										<tag value="Max.handle: 839" />
+										<tag value="Max.isGroupHead: false" />
+										<tag value="Max.isGroupMember: true" />
+										<tag value="Max.parent.handle: 840" />
+									</ActorMesh>
+								</children>
+							</Actor>
+						</children>
+					</Actor>
+				</children>
+			</Actor>
+		</children>
+	</Actor>
+	<ActorMesh name="1024" label="Obj3d66-11862398-75-803" layer="0" mobility="Static">
+		<mesh name="1024"/>
+		<Transform tx="-457.452484" ty="-794.326721" tz="-9.519857" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="0.0" qz="0.0" qw="1.0" qhex64="000000000000008000000000000000000000000000000080000000000000F03F"/>
+		<tag value="Max.superclassof: GeometryClass" />
+		<tag value="Max.classof: Editable_Poly" />
+		<tag value="Max.handle: 1024" />
+		<tag value="Max.isGroupHead: false" />
+		<tag value="Max.isGroupMember: false" />
+		<tag value="Max.parent.handle: 0" />
+	</ActorMesh>
+	<Camera name="1033" label="Camera001" layer="0" mobility="Movable">
+		<LookAt Actor="1034"/>
+		<Transform tx="-273.498077" ty="-390.87851" tz="464.684479" sx="1.0" sy="1.0" sz="1.0" qx="0.157104" qy="0.308335" qz="-0.42594" qw="0.835957" qhex64="6C77E44FFD1BC43F6A9D010CC2BBD33FA095D1599B42DBBF35008DB428C0EA3F"/>
+		<SensorWidth value="36.0"/>
+		<SensorAspectRatio value="1.0"/>
+		<DepthOfField enabled="0"/>
+		<FocusDistance value="785.899658"/>
+		<FStop value="5.6"/>
+		<FocalLength value="89.884041"/>
+		<LookAtRollAllowed enabled="0"/>
+		<Post>
+		</Post>
+		<tag value="Max.superclassof: camera" />
+		<tag value="Max.classof: Targetcamera" />
+		<tag value="Max.handle: 1033" />
+		<tag value="Max.isGroupHead: false" />
+		<tag value="Max.isGroupMember: false" />
+		<tag value="Max.parent.handle: 0" />
+		<tag value="Max.Target.handle: 1034" />
+	</Camera>
+	<Actor name="1034" label="3d66Model-11862398-0000083-376" layer="0" mobility="Static">
+		<Transform tx="77.80661" ty="-874.406067" tz="-45.633652" sx="1.0" sy="1.0" sz="1.0" qx="-0.398229" qy="-0.129393" qz="0.280623" qw="0.863668" qhex64="6C93FE37957CD9BF1933CC7AF18FC0BF87D05BFABBF5D13F34A251372AA3EB3F"/>
+		<tag value="Max.superclassof: GeometryClass" />
+		<tag value="Max.classof: Targetobject" />
+		<tag value="Max.handle: 1034" />
+		<tag value="Max.isGroupHead: false" />
+		<tag value="Max.isGroupMember: false" />
+		<tag value="Max.parent.handle: 0" />
+		<tag value="Max.LookAt.handle: 1033" />
+	</Actor>
+	<Texture name="3d66Model-11862398-files-13_2_2_Tex" label="3d66Model-11862398-files-13_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="test_Assets/3d66Model-11862398-files-13.jpg">
+		<Hash value="838bfbe3c5e3ffa699d446e47c682500"/>
+	</Texture>
+	<Texture name="3d66Model-11862398-files-14_2_2_Tex" label="3d66Model-11862398-files-14_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="test_Assets/3d66Model-11862398-files-14.jpg">
+		<Hash value="bb413a8cc468d45ad509466638a5d0db"/>
+	</Texture>
+	<Texture name="3d66Model-11862398-files-11_2_2_Tex" label="3d66Model-11862398-files-11_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="test_Assets/3d66Model-11862398-files-11.jpg">
+		<Hash value="cbf8a48e3d3e138b0eb2322e122d79ce"/>
+	</Texture>
+	<Texture name="贴图__231491Color_Correction2317_Tex" label="贴图__231491Color_Correction2317_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="0" file="test_Assets/贴图__231491Color_Correction2317.tga">
+		<Hash value="77292bbfcc567246c8a4dfd972256bdd"/>
+	</Texture>
+	<Texture name="贴图__231489Color_Correction2341_Tex" label="贴图__231489Color_Correction2341_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="0" file="test_Assets/贴图__231489Color_Correction2341.tga">
+		<Hash value="4ddceba12884ea127482ed7fdc465e70"/>
+	</Texture>
+	<Texture name="3d66Model-11862398-files-2_2_2_Tex" label="3d66Model-11862398-files-2_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="test_Assets/3d66Model-11862398-files-2.jpg">
+		<Hash value="a6ea5d5b7d1185a5f8ac0e975810ad51"/>
+	</Texture>
+	<Texture name="3d66Model-11862398-files-12_2_2_Tex" label="3d66Model-11862398-files-12_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="1" file="test_Assets/3d66Model-11862398-files-12.jpg">
+		<Hash value="6c6868fef35ef9e9b3bc1a0c81d1080b"/>
+	</Texture>
+	<Texture name="3d66Model-11862398-files-1_2_2_Tex" label="3d66Model-11862398-files-1_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="test_Assets/3d66Model-11862398-files-1.jpg">
+		<Hash value="9759f00eacec7a3a7f6a67ef1136e375"/>
+	</Texture>
+	<Texture name="贴图__231491Color_Correction2421_Tex" label="贴图__231491Color_Correction2421_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="0" file="test_Assets/贴图__231491Color_Correction2421.tga">
+		<Hash value="b0c3c84a610b2b6d9d5bc5bd89df6c9e"/>
+	</Texture>
+	<Texture name="贴图__231489Color_Correction2445_Tex" label="贴图__231489Color_Correction2445_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="0" file="test_Assets/贴图__231489Color_Correction2445.tga">
+		<Hash value="1ef8ebc02e609ca21efa8a89ee47e33b"/>
+	</Texture>
+	<Texture name="3d66Model-11862398-files-15_2_2_Tex" label="3d66Model-11862398-files-15_2_2_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="2" file="test_Assets/3d66Model-11862398-files-15.jpg">
+		<Hash value="a39105945ea56d087e1f30538d02d70f"/>
+	</Texture>
+	<Texture name="Map__131Color_Correction2822_Tex" label="Map__131Color_Correction2822_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="0" file="test_Assets/Map__131Color_Correction2822.tga">
+		<Hash value="cbde508f970599810dc1f055e8965215"/>
+	</Texture>
+	<Texture name="3d66Model-11862398-files-16_1_0_Tex" label="3d66Model-11862398-files-16_1_0_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="0.454545" srgb="2" file="test_Assets/3d66Model-11862398-files-16.jpg">
+		<Hash value="b686eeca8e2844fb40e3edd76f1926d6"/>
+	</Texture>
+	<Texture name="Map__131Color_Correction3358_Tex" label="Map__131Color_Correction3358_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="0" file="test_Assets/Map__131Color_Correction3358.tga">
+		<Hash value="6e2f72532ca152affa7d91ea2a99c883"/>
+	</Texture>
+	<Texture name="Map__131Color_Correction2917_Tex" label="Map__131Color_Correction2917_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="0" file="test_Assets/Map__131Color_Correction2917.tga">
+		<Hash value="710b76e861ca3ed58f13a1f8313a0526"/>
+	</Texture>
+	<Texture name="Map__138Color_Correction2702_Tex" label="Map__138Color_Correction2702_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="0" file="test_Assets/Map__138Color_Correction2702.tga">
+		<Hash value="4a631722ff8cfb7b4357a0efbf20350c"/>
+	</Texture>
+	<Texture name="3d66Model-11862398-files-17_1_0_Tex" label="3d66Model-11862398-files-17_1_0_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="0.454545" srgb="2" file="test_Assets/3d66Model-11862398-files-17.jpg">
+		<Hash value="d0203aba32d72a442a1813583c49f36c"/>
+	</Texture>
+	<Texture name="Map__142Color_Correction2771_Tex" label="Map__142Color_Correction2771_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="0" file="test_Assets/Map__142Color_Correction2771.tga">
+		<Hash value="6e16457c4d7cc943ed4e9eae49316824"/>
+	</Texture>
+	<Texture name="Map__131Color_Correction3004_Tex" label="Map__131Color_Correction3004_Tex" texturemode="5" texturefilter="3" textureaddressx="0" textureaddressy="0" rgbcurve="1.000000" srgb="0" file="test_Assets/Map__131Color_Correction3004.tga">
+		<Hash value="94acf24ea80ae8076e0ea7a3ec080a8f"/>
+	</Texture>
+	<UEPbrMaterial name="620005">
+		<Expressions>
+			<Texture Name="" PathName="3d66Model-11862398-files-13_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Texture Name="" PathName="3d66Model-11862398-files-14_2_2_Tex">
+			</Texture>
+			<Scalar Name="Opacity_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=1.000000,G=1.000000,B=1.000000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="1" expression="6" OutputIndex="0"/>
+				<Input Name="2" expression="7" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Opacity_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="9" OutputIndex="0"/>
+				<Input Name="1" expression="10" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.7"/>
+			<OneMinus Name="">
+				<Input Name="0" expression="12" OutputIndex="0"/>
+			</OneMinus>
+			<Scalar Name="" constant="0.130526"/>
+			<Multiply Name="">
+				<Input Name="0" expression="11" OutputIndex="0"/>
+				<Input Name="1" expression="14" OutputIndex="0"/>
+			</Multiply>
+			<Desaturation Name="">
+				<Input Name="0" expression="11" OutputIndex="0"/>
+			</Desaturation>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="3d66Model-11862398-files-11_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="17" OutputIndex="0"/>
+				<Input Name="2" expression="19" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components">
+				<Input Name="0" expression="18" OutputIndex="0"/>
+			</FunctionCall>
+			<Multiply Name="">
+				<Input Name="0" expression="20" OutputIndex="0"/>
+				<Input Name="1" expression="22" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Normal_Intensity" constant="3.675"/>
+			<Multiply Name="">
+				<Input Name="0" expression="20" OutputIndex="1"/>
+				<Input Name="1" expression="22" OutputIndex="0"/>
+			</Multiply>
+			<AppendVector Name="">
+				<Input Name="0" expression="21" OutputIndex="0"/>
+				<Input Name="1" expression="23" OutputIndex="0"/>
+			</AppendVector>
+			<DotProduct Name="">
+				<Input Name="0" expression="24" OutputIndex="0"/>
+				<Input Name="1" expression="24" OutputIndex="0"/>
+			</DotProduct>
+			<OneMinus Name="">
+				<Input Name="0" expression="25" OutputIndex="0"/>
+			</OneMinus>
+			<Saturate Name="">
+				<Input Name="0" expression="26" OutputIndex="0"/>
+			</Saturate>
+			<SquareRoot Name="">
+				<Input Name="0" expression="27" OutputIndex="0"/>
+			</SquareRoot>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.MakeFloat3">
+				<Input Name="0" expression="21" OutputIndex="0"/>
+				<Input Name="1" expression="23" OutputIndex="0"/>
+				<Input Name="2" expression="28" OutputIndex="0"/>
+			</FunctionCall>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="13" OutputIndex="0"/>
+		<Input Name="Specular" expression="15" OutputIndex="0"/>
+		<Input Name="Opacity" expression="16" OutputIndex="0"/>
+		<Input Name="Normal" expression="29" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__2147474457">
+		<Expressions>
+			<Texture Name="" PathName="贴图__231491Color_Correction2317_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.509804,G=0.941177,B=0.549020,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Texture Name="" PathName="贴图__231489Color_Correction2341_Tex">
+			</Texture>
+			<Scalar Name="Roughness_Map_Amount" constant="0.4"/>
+			<Scalar Name="Roughness" constant="0.85"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="1" expression="6" OutputIndex="0"/>
+				<Input Name="2" expression="7" OutputIndex="0"/>
+			</LinearInterpolate>
+			<OneMinus Name="">
+				<Input Name="0" expression="9" OutputIndex="0"/>
+			</OneMinus>
+			<Scalar Name="" constant="0.51166"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="3d66Model-11862398-files-2_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="12" OutputIndex="0"/>
+				<Input Name="2" expression="14" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+			<Desaturation Name="">
+				<Input Name="0" expression="13" OutputIndex="0"/>
+				<Input Name="1" expression="16" OutputIndex="0"/>
+			</Desaturation>
+			<Scalar Name="Desaturation" constant="1.0"/>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components">
+				<Input Name="0" expression="15" OutputIndex="0"/>
+			</FunctionCall>
+			<Multiply Name="">
+				<Input Name="0" expression="17" OutputIndex="0"/>
+				<Input Name="1" expression="19" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Normal_Intensity" constant="2.45"/>
+			<Multiply Name="">
+				<Input Name="0" expression="17" OutputIndex="1"/>
+				<Input Name="1" expression="19" OutputIndex="0"/>
+			</Multiply>
+			<AppendVector Name="">
+				<Input Name="0" expression="18" OutputIndex="0"/>
+				<Input Name="1" expression="20" OutputIndex="0"/>
+			</AppendVector>
+			<DotProduct Name="">
+				<Input Name="0" expression="21" OutputIndex="0"/>
+				<Input Name="1" expression="21" OutputIndex="0"/>
+			</DotProduct>
+			<OneMinus Name="">
+				<Input Name="0" expression="22" OutputIndex="0"/>
+			</OneMinus>
+			<Saturate Name="">
+				<Input Name="0" expression="23" OutputIndex="0"/>
+			</Saturate>
+			<SquareRoot Name="">
+				<Input Name="0" expression="24" OutputIndex="0"/>
+			</SquareRoot>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.MakeFloat3">
+				<Input Name="0" expression="18" OutputIndex="0"/>
+				<Input Name="1" expression="20" OutputIndex="0"/>
+				<Input Name="2" expression="25" OutputIndex="0"/>
+			</FunctionCall>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="10" OutputIndex="0"/>
+		<Input Name="Specular" expression="11" OutputIndex="0"/>
+		<Input Name="Normal" expression="26" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="620007">
+		<Expressions>
+			<Texture Name="" PathName="3d66Model-11862398-files-12_2_2_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.500000,G=0.500000,B=0.500000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.7"/>
+			<OneMinus Name="">
+				<Input Name="0" expression="6" OutputIndex="0"/>
+			</OneMinus>
+			<Scalar Name="" constant="0.130526"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="3d66Model-11862398-files-1_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="9" OutputIndex="0"/>
+				<Input Name="2" expression="11" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components">
+				<Input Name="0" expression="10" OutputIndex="0"/>
+			</FunctionCall>
+			<Multiply Name="">
+				<Input Name="0" expression="12" OutputIndex="0"/>
+				<Input Name="1" expression="14" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Normal_Intensity" constant="0.6125"/>
+			<Multiply Name="">
+				<Input Name="0" expression="12" OutputIndex="1"/>
+				<Input Name="1" expression="14" OutputIndex="0"/>
+			</Multiply>
+			<AppendVector Name="">
+				<Input Name="0" expression="13" OutputIndex="0"/>
+				<Input Name="1" expression="15" OutputIndex="0"/>
+			</AppendVector>
+			<DotProduct Name="">
+				<Input Name="0" expression="16" OutputIndex="0"/>
+				<Input Name="1" expression="16" OutputIndex="0"/>
+			</DotProduct>
+			<OneMinus Name="">
+				<Input Name="0" expression="17" OutputIndex="0"/>
+			</OneMinus>
+			<Saturate Name="">
+				<Input Name="0" expression="18" OutputIndex="0"/>
+			</Saturate>
+			<SquareRoot Name="">
+				<Input Name="0" expression="19" OutputIndex="0"/>
+			</SquareRoot>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.MakeFloat3">
+				<Input Name="0" expression="13" OutputIndex="0"/>
+				<Input Name="1" expression="15" OutputIndex="0"/>
+				<Input Name="2" expression="20" OutputIndex="0"/>
+			</FunctionCall>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="7" OutputIndex="0"/>
+		<Input Name="Specular" expression="8" OutputIndex="0"/>
+		<Input Name="Normal" expression="21" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__2147474457_2">
+		<Expressions>
+			<Texture Name="" PathName="贴图__231491Color_Correction2421_Tex">
+			</Texture>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.509804,G=0.941177,B=0.549020,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+			</Multiply>
+			<Texture Name="" PathName="贴图__231489Color_Correction2445_Tex">
+			</Texture>
+			<Scalar Name="Roughness_Map_Amount" constant="0.4"/>
+			<Scalar Name="Roughness" constant="0.85"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="8" OutputIndex="0"/>
+				<Input Name="1" expression="6" OutputIndex="0"/>
+				<Input Name="2" expression="7" OutputIndex="0"/>
+			</LinearInterpolate>
+			<OneMinus Name="">
+				<Input Name="0" expression="9" OutputIndex="0"/>
+			</OneMinus>
+			<Scalar Name="" constant="0.51166"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="3d66Model-11862398-files-2_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="12" OutputIndex="0"/>
+				<Input Name="2" expression="14" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+			<Desaturation Name="">
+				<Input Name="0" expression="13" OutputIndex="0"/>
+				<Input Name="1" expression="16" OutputIndex="0"/>
+			</Desaturation>
+			<Scalar Name="Desaturation" constant="1.0"/>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components">
+				<Input Name="0" expression="15" OutputIndex="0"/>
+			</FunctionCall>
+			<Multiply Name="">
+				<Input Name="0" expression="17" OutputIndex="0"/>
+				<Input Name="1" expression="19" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Normal_Intensity" constant="2.45"/>
+			<Multiply Name="">
+				<Input Name="0" expression="17" OutputIndex="1"/>
+				<Input Name="1" expression="19" OutputIndex="0"/>
+			</Multiply>
+			<AppendVector Name="">
+				<Input Name="0" expression="18" OutputIndex="0"/>
+				<Input Name="1" expression="20" OutputIndex="0"/>
+			</AppendVector>
+			<DotProduct Name="">
+				<Input Name="0" expression="21" OutputIndex="0"/>
+				<Input Name="1" expression="21" OutputIndex="0"/>
+			</DotProduct>
+			<OneMinus Name="">
+				<Input Name="0" expression="22" OutputIndex="0"/>
+			</OneMinus>
+			<Saturate Name="">
+				<Input Name="0" expression="23" OutputIndex="0"/>
+			</Saturate>
+			<SquareRoot Name="">
+				<Input Name="0" expression="24" OutputIndex="0"/>
+			</SquareRoot>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.MakeFloat3">
+				<Input Name="0" expression="18" OutputIndex="0"/>
+				<Input Name="1" expression="20" OutputIndex="0"/>
+				<Input Name="2" expression="25" OutputIndex="0"/>
+			</FunctionCall>
+		</Expressions>
+		<Input Name="BaseColor" expression="5" OutputIndex="0"/>
+		<Input Name="Roughness" expression="10" OutputIndex="0"/>
+		<Input Name="Specular" expression="11" OutputIndex="0"/>
+		<Input Name="Normal" expression="26" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__2147474453">
+		<Expressions>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="3" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Mix_Amount" constant="0.0"/>
+			<Color Name="Mix_1" constant="(R=0.552941,G=0.545098,B=0.537255,A=1.000000)"/>
+			<Color Name="Mix_2" constant="(R=0.509804,G=0.490196,B=0.474510,A=1.000000)"/>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.325490,G=0.301961,B=0.282353,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="5" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="4" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="6" OutputIndex="0"/>
+				<Input Name="1" expression="7" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.5"/>
+			<OneMinus Name="">
+				<Input Name="0" expression="9" OutputIndex="0"/>
+			</OneMinus>
+			<Scalar Name="" constant="0.0"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="3d66Model-11862398-files-15_2_2_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="12" OutputIndex="0"/>
+				<Input Name="2" expression="14" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components">
+				<Input Name="0" expression="13" OutputIndex="0"/>
+			</FunctionCall>
+			<Multiply Name="">
+				<Input Name="0" expression="15" OutputIndex="0"/>
+				<Input Name="1" expression="17" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Normal_Intensity" constant="1.05"/>
+			<Multiply Name="">
+				<Input Name="0" expression="15" OutputIndex="1"/>
+				<Input Name="1" expression="17" OutputIndex="0"/>
+			</Multiply>
+			<AppendVector Name="">
+				<Input Name="0" expression="16" OutputIndex="0"/>
+				<Input Name="1" expression="18" OutputIndex="0"/>
+			</AppendVector>
+			<DotProduct Name="">
+				<Input Name="0" expression="19" OutputIndex="0"/>
+				<Input Name="1" expression="19" OutputIndex="0"/>
+			</DotProduct>
+			<OneMinus Name="">
+				<Input Name="0" expression="20" OutputIndex="0"/>
+			</OneMinus>
+			<Saturate Name="">
+				<Input Name="0" expression="21" OutputIndex="0"/>
+			</Saturate>
+			<SquareRoot Name="">
+				<Input Name="0" expression="22" OutputIndex="0"/>
+			</SquareRoot>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.MakeFloat3">
+				<Input Name="0" expression="16" OutputIndex="0"/>
+				<Input Name="1" expression="18" OutputIndex="0"/>
+				<Input Name="2" expression="23" OutputIndex="0"/>
+			</FunctionCall>
+		</Expressions>
+		<Input Name="BaseColor" expression="8" OutputIndex="0"/>
+		<Input Name="Roughness" expression="10" OutputIndex="0"/>
+		<Input Name="Specular" expression="11" OutputIndex="0"/>
+		<Input Name="Normal" expression="24" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__2147474454">
+		<Expressions>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="3" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Mix_Amount" constant="0.0"/>
+			<Color Name="Mix_1" constant="(R=0.552941,G=0.545098,B=0.537255,A=1.000000)"/>
+			<Color Name="Mix_2" constant="(R=0.509804,G=0.490196,B=0.474510,A=1.000000)"/>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.325490,G=0.301961,B=0.282353,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="5" OutputIndex="0"/>
+				<Input Name="1" expression="0" OutputIndex="0"/>
+				<Input Name="2" expression="4" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="6" OutputIndex="0"/>
+				<Input Name="1" expression="7" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Roughness" constant="0.5"/>
+			<OneMinus Name="">
+				<Input Name="0" expression="9" OutputIndex="0"/>
+			</OneMinus>
+			<Scalar Name="" constant="0.0"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="8" OutputIndex="0"/>
+		<Input Name="Roughness" expression="10" OutputIndex="0"/>
+		<Input Name="Specular" expression="11" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Mat3d66-11862398-5-58781">
+		<Expressions>
+			<Color Name="" constant="(R=0.784314,G=0.784314,B=0.784314,A=1.000000)"/>
+			<Color Name="" constant="(R=0.000000,G=0.000000,B=0.000000,A=1.000000)"/>
+			<Scalar Name="Roughness" constant="1.0"/>
+			<OneMinus Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+			</OneMinus>
+			<Scalar Name="" constant="0.598144"/>
+			<Scalar Name="" constant="1.0"/>
+			<OneMinus Name="">
+				<Input Name="0" expression="5" OutputIndex="0"/>
+			</OneMinus>
+			<Desaturation Name="">
+				<Input Name="0" expression="6" OutputIndex="0"/>
+			</Desaturation>
+			<Scalar Name="" constant="1.0"/>
+			<Scalar Name="" constant="0.9"/>
+			<Multiply Name="">
+				<Input Name="0" expression="9" OutputIndex="0"/>
+				<Input Name="1" expression="8" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="" constant="0.5"/>
+			<Multiply Name="">
+				<Input Name="0" expression="11" OutputIndex="0"/>
+				<Input Name="1" expression="8" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="" constant="1.56"/>
+			<Scalar Name="" constant="0.0"/>
+			<Scalar Name="" constant="0.0"/>
+			<Scalar Name="" constant="1.0"/>
+			<Fresnel Name="">
+				<Input Name="0" expression="16" OutputIndex="0"/>
+				<Input Name="1" expression="15" OutputIndex="0"/>
+			</Fresnel>
+			<OneMinus Name="">
+				<Input Name="0" expression="17" OutputIndex="0"/>
+			</OneMinus>
+			<Multiply Name="">
+				<Input Name="0" expression="18" OutputIndex="0"/>
+				<Input Name="1" expression="18" OutputIndex="0"/>
+			</Multiply>
+			<Multiply Name="">
+				<Input Name="0" expression="13" OutputIndex="0"/>
+				<Input Name="1" expression="13" OutputIndex="0"/>
+			</Multiply>
+			<Multiply Name="">
+				<Input Name="0" expression="14" OutputIndex="0"/>
+				<Input Name="1" expression="14" OutputIndex="0"/>
+			</Multiply>
+			<Add Name="">
+				<Input Name="0" expression="20" OutputIndex="0"/>
+				<Input Name="1" expression="21" OutputIndex="0"/>
+			</Add>
+			<Scalar Name="" constant="2.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="13" OutputIndex="0"/>
+				<Input Name="1" expression="23" OutputIndex="0"/>
+			</Multiply>
+			<Multiply Name="">
+				<Input Name="0" expression="24" OutputIndex="0"/>
+				<Input Name="1" expression="18" OutputIndex="0"/>
+			</Multiply>
+			<Subtract Name="">
+				<Input Name="0" expression="22" OutputIndex="0"/>
+				<Input Name="1" expression="25" OutputIndex="0"/>
+			</Subtract>
+			<Add Name="">
+				<Input Name="0" expression="26" OutputIndex="0"/>
+				<Input Name="1" expression="19" OutputIndex="0"/>
+			</Add>
+			<Add Name="">
+				<Input Name="0" expression="22" OutputIndex="0"/>
+				<Input Name="1" expression="25" OutputIndex="0"/>
+			</Add>
+			<Add Name="">
+				<Input Name="0" expression="28" OutputIndex="0"/>
+				<Input Name="1" expression="19" OutputIndex="0"/>
+			</Add>
+			<Divide Name="">
+				<Input Name="0" expression="27" OutputIndex="0"/>
+				<Input Name="1" expression="29" OutputIndex="0"/>
+			</Divide>
+			<Multiply Name="">
+				<Input Name="0" expression="22" OutputIndex="0"/>
+				<Input Name="1" expression="19" OutputIndex="0"/>
+			</Multiply>
+			<Subtract Name="">
+				<Input Name="0" expression="31" OutputIndex="0"/>
+				<Input Name="1" expression="25" OutputIndex="0"/>
+			</Subtract>
+			<Scalar Name="" constant="1.0"/>
+			<Add Name="">
+				<Input Name="0" expression="32" OutputIndex="0"/>
+				<Input Name="1" expression="33" OutputIndex="0"/>
+			</Add>
+			<Add Name="">
+				<Input Name="0" expression="31" OutputIndex="0"/>
+				<Input Name="1" expression="25" OutputIndex="0"/>
+			</Add>
+			<Scalar Name="" constant="1.0"/>
+			<Add Name="">
+				<Input Name="0" expression="35" OutputIndex="0"/>
+				<Input Name="1" expression="36" OutputIndex="0"/>
+			</Add>
+			<Divide Name="">
+				<Input Name="0" expression="34" OutputIndex="0"/>
+				<Input Name="1" expression="37" OutputIndex="0"/>
+			</Divide>
+			<Scalar Name="" constant="0.5"/>
+			<Add Name="">
+				<Input Name="0" expression="38" OutputIndex="0"/>
+				<Input Name="1" expression="30" OutputIndex="0"/>
+			</Add>
+			<Multiply Name="">
+				<Input Name="0" expression="40" OutputIndex="0"/>
+				<Input Name="1" expression="39" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="" constant="0.5"/>
+			<Power Name="">
+				<Input Name="0" expression="41" OutputIndex="0"/>
+				<Input Name="1" expression="42" OutputIndex="0"/>
+			</Power>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="10" OutputIndex="0"/>
+				<Input Name="1" expression="12" OutputIndex="0"/>
+				<Input Name="2" expression="43" OutputIndex="0"/>
+			</LinearInterpolate>
+			<OneMinus Name="">
+				<Input Name="0" expression="44" OutputIndex="0"/>
+			</OneMinus>
+			<Multiply Name="">
+				<Input Name="0" expression="45" OutputIndex="0"/>
+				<Input Name="1" expression="7" OutputIndex="0"/>
+			</Multiply>
+			<Desaturation Name="">
+				<Input Name="0" expression="46" OutputIndex="0"/>
+			</Desaturation>
+			<Scalar Name="Base_IOR" constant="1.56"/>
+			<Fresnel Name="">
+			</Fresnel>
+			<Scalar Name="" constant="1.0"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="50" OutputIndex="0"/>
+				<Input Name="1" expression="48" OutputIndex="0"/>
+				<Input Name="2" expression="49" OutputIndex="0"/>
+			</LinearInterpolate>
+			<PathTracingQualitySwitch Name="">
+				<Input Name="0" expression="51" OutputIndex="0"/>
+				<Input Name="1" expression="48" OutputIndex="0"/>
+			</PathTracingQualitySwitch>
+			<Scalar Name="" constant="5.0"/>
+			<Power Name="">
+				<Input Name="0" expression="10" OutputIndex="0"/>
+				<Input Name="1" expression="53" OutputIndex="0"/>
+			</Power>
+			<Scalar Name="" constant="0.6"/>
+			<Multiply Name="">
+				<Input Name="0" expression="55" OutputIndex="0"/>
+				<Input Name="1" expression="54" OutputIndex="0"/>
+			</Multiply>
+		</Expressions>
+		<Input Name="BaseColor" expression="56" OutputIndex="0"/>
+		<Input Name="Roughness" expression="3" OutputIndex="0"/>
+		<Input Name="Specular" expression="4" OutputIndex="0"/>
+		<Input Name="EmissiveColor" expression="1" OutputIndex="0"/>
+		<Input Name="Opacity" expression="47" OutputIndex="0"/>
+		<Input Name="Refraction" expression="52" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Mat3d66-11862398-6-85545">
+		<Expressions>
+			<VertexNormalWS Name="">
+			</VertexNormalWS>
+			<Fresnel Name="">
+				<Input Name="2" expression="0" OutputIndex="0"/>
+			</Fresnel>
+			<Color Name="Falloff_Front" constant="(R=0.015686,G=0.011765,B=0.019608,A=1.000000)"/>
+			<Color Name="Falloff_Side" constant="(R=1.000000,G=1.000000,B=1.000000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="3" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.862745,G=0.745098,B=0.509804,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="6" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+				<Input Name="2" expression="5" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="7" OutputIndex="0"/>
+				<Input Name="1" expression="8" OutputIndex="0"/>
+			</Multiply>
+			<Color Name="" constant="(R=0.000000,G=0.000000,B=0.000000,A=1.000000)"/>
+			<Texture Name="" PathName="Map__131Color_Correction2822_Tex">
+			</Texture>
+			<Scalar Name="Roughness_Map_Amount" constant="1.0"/>
+			<Scalar Name="Roughness" constant="1.0"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="13" OutputIndex="0"/>
+				<Input Name="1" expression="11" OutputIndex="0"/>
+				<Input Name="2" expression="12" OutputIndex="0"/>
+			</LinearInterpolate>
+			<OneMinus Name="">
+				<Input Name="0" expression="14" OutputIndex="0"/>
+			</OneMinus>
+			<Scalar Name="" constant="0.464496"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="3d66Model-11862398-files-16_1_0_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="17" OutputIndex="0"/>
+				<Input Name="2" expression="19" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+			<OneMinus Name="">
+				<Input Name="0" expression="18" OutputIndex="0"/>
+			</OneMinus>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components">
+				<Input Name="0" expression="20" OutputIndex="0"/>
+			</FunctionCall>
+			<Multiply Name="">
+				<Input Name="0" expression="21" OutputIndex="0"/>
+				<Input Name="1" expression="23" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Normal_Intensity" constant="0.175"/>
+			<Multiply Name="">
+				<Input Name="0" expression="21" OutputIndex="1"/>
+				<Input Name="1" expression="23" OutputIndex="0"/>
+			</Multiply>
+			<AppendVector Name="">
+				<Input Name="0" expression="22" OutputIndex="0"/>
+				<Input Name="1" expression="24" OutputIndex="0"/>
+			</AppendVector>
+			<DotProduct Name="">
+				<Input Name="0" expression="25" OutputIndex="0"/>
+				<Input Name="1" expression="25" OutputIndex="0"/>
+			</DotProduct>
+			<OneMinus Name="">
+				<Input Name="0" expression="26" OutputIndex="0"/>
+			</OneMinus>
+			<Saturate Name="">
+				<Input Name="0" expression="27" OutputIndex="0"/>
+			</Saturate>
+			<SquareRoot Name="">
+				<Input Name="0" expression="28" OutputIndex="0"/>
+			</SquareRoot>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.MakeFloat3">
+				<Input Name="0" expression="22" OutputIndex="0"/>
+				<Input Name="1" expression="24" OutputIndex="0"/>
+				<Input Name="2" expression="29" OutputIndex="0"/>
+			</FunctionCall>
+		</Expressions>
+		<Input Name="BaseColor" expression="9" OutputIndex="0"/>
+		<Input Name="Roughness" expression="15" OutputIndex="0"/>
+		<Input Name="Specular" expression="16" OutputIndex="0"/>
+		<Input Name="EmissiveColor" expression="10" OutputIndex="0"/>
+		<Input Name="Normal" expression="30" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Mat3d66-11862398-9-45744">
+		<Expressions>
+			<VertexNormalWS Name="">
+			</VertexNormalWS>
+			<Fresnel Name="">
+				<Input Name="2" expression="0" OutputIndex="0"/>
+			</Fresnel>
+			<Color Name="Falloff_Front" constant="(R=0.039216,G=0.019608,B=0.015686,A=1.000000)"/>
+			<Color Name="Falloff_Side" constant="(R=1.000000,G=1.000000,B=1.000000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="3" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.862745,G=0.745098,B=0.509804,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="6" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+				<Input Name="2" expression="5" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="7" OutputIndex="0"/>
+				<Input Name="1" expression="8" OutputIndex="0"/>
+			</Multiply>
+			<Color Name="" constant="(R=0.000000,G=0.000000,B=0.000000,A=1.000000)"/>
+			<Texture Name="" PathName="Map__131Color_Correction3358_Tex">
+			</Texture>
+			<Scalar Name="Roughness_Map_Amount" constant="1.0"/>
+			<Scalar Name="Roughness" constant="1.0"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="13" OutputIndex="0"/>
+				<Input Name="1" expression="11" OutputIndex="0"/>
+				<Input Name="2" expression="12" OutputIndex="0"/>
+			</LinearInterpolate>
+			<OneMinus Name="">
+				<Input Name="0" expression="14" OutputIndex="0"/>
+			</OneMinus>
+			<Scalar Name="" constant="0.464496"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="3d66Model-11862398-files-16_1_0_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="17" OutputIndex="0"/>
+				<Input Name="2" expression="19" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+			<OneMinus Name="">
+				<Input Name="0" expression="18" OutputIndex="0"/>
+			</OneMinus>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components">
+				<Input Name="0" expression="20" OutputIndex="0"/>
+			</FunctionCall>
+			<Multiply Name="">
+				<Input Name="0" expression="21" OutputIndex="0"/>
+				<Input Name="1" expression="23" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Normal_Intensity" constant="0.175"/>
+			<Multiply Name="">
+				<Input Name="0" expression="21" OutputIndex="1"/>
+				<Input Name="1" expression="23" OutputIndex="0"/>
+			</Multiply>
+			<AppendVector Name="">
+				<Input Name="0" expression="22" OutputIndex="0"/>
+				<Input Name="1" expression="24" OutputIndex="0"/>
+			</AppendVector>
+			<DotProduct Name="">
+				<Input Name="0" expression="25" OutputIndex="0"/>
+				<Input Name="1" expression="25" OutputIndex="0"/>
+			</DotProduct>
+			<OneMinus Name="">
+				<Input Name="0" expression="26" OutputIndex="0"/>
+			</OneMinus>
+			<Saturate Name="">
+				<Input Name="0" expression="27" OutputIndex="0"/>
+			</Saturate>
+			<SquareRoot Name="">
+				<Input Name="0" expression="28" OutputIndex="0"/>
+			</SquareRoot>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.MakeFloat3">
+				<Input Name="0" expression="22" OutputIndex="0"/>
+				<Input Name="1" expression="24" OutputIndex="0"/>
+				<Input Name="2" expression="29" OutputIndex="0"/>
+			</FunctionCall>
+		</Expressions>
+		<Input Name="BaseColor" expression="9" OutputIndex="0"/>
+		<Input Name="Roughness" expression="15" OutputIndex="0"/>
+		<Input Name="Specular" expression="16" OutputIndex="0"/>
+		<Input Name="EmissiveColor" expression="10" OutputIndex="0"/>
+		<Input Name="Normal" expression="30" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Mat3d66-11862398-7-83697">
+		<Expressions>
+			<VertexNormalWS Name="">
+			</VertexNormalWS>
+			<Fresnel Name="">
+				<Input Name="2" expression="0" OutputIndex="0"/>
+			</Fresnel>
+			<Color Name="Falloff_Front" constant="(R=0.039216,G=0.019608,B=0.015686,A=1.000000)"/>
+			<Color Name="Falloff_Side" constant="(R=1.000000,G=1.000000,B=1.000000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="3" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.862745,G=0.745098,B=0.509804,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="6" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+				<Input Name="2" expression="5" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="7" OutputIndex="0"/>
+				<Input Name="1" expression="8" OutputIndex="0"/>
+			</Multiply>
+			<Color Name="" constant="(R=0.000000,G=0.000000,B=0.000000,A=1.000000)"/>
+			<Texture Name="" PathName="Map__131Color_Correction2917_Tex">
+			</Texture>
+			<Scalar Name="Roughness_Map_Amount" constant="1.0"/>
+			<Scalar Name="Roughness" constant="1.0"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="13" OutputIndex="0"/>
+				<Input Name="1" expression="11" OutputIndex="0"/>
+				<Input Name="2" expression="12" OutputIndex="0"/>
+			</LinearInterpolate>
+			<OneMinus Name="">
+				<Input Name="0" expression="14" OutputIndex="0"/>
+			</OneMinus>
+			<Scalar Name="" constant="0.464496"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="3d66Model-11862398-files-16_1_0_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="17" OutputIndex="0"/>
+				<Input Name="2" expression="19" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+			<OneMinus Name="">
+				<Input Name="0" expression="18" OutputIndex="0"/>
+			</OneMinus>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components">
+				<Input Name="0" expression="20" OutputIndex="0"/>
+			</FunctionCall>
+			<Multiply Name="">
+				<Input Name="0" expression="21" OutputIndex="0"/>
+				<Input Name="1" expression="23" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Normal_Intensity" constant="0.175"/>
+			<Multiply Name="">
+				<Input Name="0" expression="21" OutputIndex="1"/>
+				<Input Name="1" expression="23" OutputIndex="0"/>
+			</Multiply>
+			<AppendVector Name="">
+				<Input Name="0" expression="22" OutputIndex="0"/>
+				<Input Name="1" expression="24" OutputIndex="0"/>
+			</AppendVector>
+			<DotProduct Name="">
+				<Input Name="0" expression="25" OutputIndex="0"/>
+				<Input Name="1" expression="25" OutputIndex="0"/>
+			</DotProduct>
+			<OneMinus Name="">
+				<Input Name="0" expression="26" OutputIndex="0"/>
+			</OneMinus>
+			<Saturate Name="">
+				<Input Name="0" expression="27" OutputIndex="0"/>
+			</Saturate>
+			<SquareRoot Name="">
+				<Input Name="0" expression="28" OutputIndex="0"/>
+			</SquareRoot>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.MakeFloat3">
+				<Input Name="0" expression="22" OutputIndex="0"/>
+				<Input Name="1" expression="24" OutputIndex="0"/>
+				<Input Name="2" expression="29" OutputIndex="0"/>
+			</FunctionCall>
+		</Expressions>
+		<Input Name="BaseColor" expression="9" OutputIndex="0"/>
+		<Input Name="Roughness" expression="15" OutputIndex="0"/>
+		<Input Name="Specular" expression="16" OutputIndex="0"/>
+		<Input Name="EmissiveColor" expression="10" OutputIndex="0"/>
+		<Input Name="Normal" expression="30" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="curtain">
+		<Expressions>
+			<VertexNormalWS Name="">
+			</VertexNormalWS>
+			<Fresnel Name="">
+				<Input Name="2" expression="0" OutputIndex="0"/>
+			</Fresnel>
+			<Texture Name="" PathName="Map__138Color_Correction2702_Tex">
+			</Texture>
+			<Color Name="Falloff_Side" constant="(R=0.941177,G=0.941177,B=0.941177,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="3" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.313726,G=0.313726,B=0.313726,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="6" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+				<Input Name="2" expression="5" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="7" OutputIndex="0"/>
+				<Input Name="1" expression="8" OutputIndex="0"/>
+			</Multiply>
+			<Color Name="" constant="(R=0.000000,G=0.000000,B=0.000000,A=1.000000)"/>
+			<Scalar Name="Roughness" constant="0.5"/>
+			<OneMinus Name="">
+				<Input Name="0" expression="11" OutputIndex="0"/>
+			</OneMinus>
+			<Scalar Name="" constant="0.0"/>
+			<Texture Name="" PathName="3d66Model-11862398-files-17_1_0_Tex">
+				<Input Name="Coordinates" expression="15" OutputIndex="0"/>
+			</Texture>
+			<TextureCoordinate Index="0" UTiling="5.0" VTiling="5.0"/>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components">
+				<Input Name="0" expression="14" OutputIndex="0"/>
+			</FunctionCall>
+			<Multiply Name="">
+				<Input Name="0" expression="16" OutputIndex="0"/>
+				<Input Name="1" expression="18" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Normal_Intensity" constant="3.325"/>
+			<Multiply Name="">
+				<Input Name="0" expression="16" OutputIndex="1"/>
+				<Input Name="1" expression="18" OutputIndex="0"/>
+			</Multiply>
+			<AppendVector Name="">
+				<Input Name="0" expression="17" OutputIndex="0"/>
+				<Input Name="1" expression="19" OutputIndex="0"/>
+			</AppendVector>
+			<DotProduct Name="">
+				<Input Name="0" expression="20" OutputIndex="0"/>
+				<Input Name="1" expression="20" OutputIndex="0"/>
+			</DotProduct>
+			<OneMinus Name="">
+				<Input Name="0" expression="21" OutputIndex="0"/>
+			</OneMinus>
+			<Saturate Name="">
+				<Input Name="0" expression="22" OutputIndex="0"/>
+			</Saturate>
+			<SquareRoot Name="">
+				<Input Name="0" expression="23" OutputIndex="0"/>
+			</SquareRoot>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.MakeFloat3">
+				<Input Name="0" expression="17" OutputIndex="0"/>
+				<Input Name="1" expression="19" OutputIndex="0"/>
+				<Input Name="2" expression="24" OutputIndex="0"/>
+			</FunctionCall>
+		</Expressions>
+		<Input Name="BaseColor" expression="9" OutputIndex="0"/>
+		<Input Name="Roughness" expression="12" OutputIndex="0"/>
+		<Input Name="Specular" expression="13" OutputIndex="0"/>
+		<Input Name="EmissiveColor" expression="10" OutputIndex="0"/>
+		<Input Name="Normal" expression="25" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Material__30">
+		<Expressions>
+			<Color Name="" constant="(R=0.909804,G=0.909804,B=0.909804,A=1.000000)"/>
+			<Color Name="" constant="(R=0.000000,G=0.000000,B=0.000000,A=1.000000)"/>
+			<Scalar Name="Roughness" constant="1.0"/>
+			<OneMinus Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+			</OneMinus>
+			<Scalar Name="" constant="0.0"/>
+		</Expressions>
+		<Input Name="BaseColor" expression="0" OutputIndex="0"/>
+		<Input Name="Roughness" expression="3" OutputIndex="0"/>
+		<Input Name="Specular" expression="4" OutputIndex="0"/>
+		<Input Name="EmissiveColor" expression="1" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Mat3d66-11862398-4-65671">
+		<Expressions>
+			<FunctionCall Function="curtain">
+			</FunctionCall>
+			<FunctionCall Function="/Engine/Functions/MaterialLayerFunctions/MatLayerBlend_Standard.MatLayerBlend_Standard">
+				<Input Name="0" expression="0" OutputIndex="0"/>
+				<Input Name="1" expression="2" OutputIndex="0"/>
+				<Input Name="2" expression="8" OutputIndex="0"/>
+			</FunctionCall>
+			<FunctionCall Function="Material__30">
+			</FunctionCall>
+			<Scalar Name="Layer_Amount" constant="0.0"/>
+			<Texture Name="" PathName="Map__142Color_Correction2771_Tex">
+			</Texture>
+			<Color Name="MixAmount" constant="(R=1.000000,G=1.000000,B=1.000000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="5" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+				<Input Name="2" expression="7" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="MixAmountMap_Weight" constant="0.2"/>
+			<Multiply Name="">
+				<Input Name="0" expression="3" OutputIndex="0"/>
+				<Input Name="1" expression="6" OutputIndex="0"/>
+			</Multiply>
+		</Expressions>
+		<Input Name="MaterialAttributes" expression="1" OutputIndex="0"/>
+		<UseMaterialAttributes enabled="1"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<UEPbrMaterial name="Mat3d66-11862398-8-81034">
+		<Expressions>
+			<VertexNormalWS Name="">
+			</VertexNormalWS>
+			<Fresnel Name="">
+				<Input Name="2" expression="0" OutputIndex="0"/>
+			</Fresnel>
+			<Color Name="Falloff_Front" constant="(R=0.015686,G=0.011765,B=0.019608,A=1.000000)"/>
+			<Color Name="Falloff_Side" constant="(R=1.000000,G=1.000000,B=1.000000,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="2" OutputIndex="0"/>
+				<Input Name="1" expression="3" OutputIndex="0"/>
+				<Input Name="2" expression="1" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Color_Texture_Amount" constant="1.0"/>
+			<Color Name="" constant="(R=0.862745,G=0.745098,B=0.509804,A=1.000000)"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="6" OutputIndex="0"/>
+				<Input Name="1" expression="4" OutputIndex="0"/>
+				<Input Name="2" expression="5" OutputIndex="0"/>
+			</LinearInterpolate>
+			<Scalar Name="Base_Level" constant="1.0"/>
+			<Multiply Name="">
+				<Input Name="0" expression="7" OutputIndex="0"/>
+				<Input Name="1" expression="8" OutputIndex="0"/>
+			</Multiply>
+			<Color Name="" constant="(R=0.000000,G=0.000000,B=0.000000,A=1.000000)"/>
+			<Texture Name="" PathName="Map__131Color_Correction3004_Tex">
+			</Texture>
+			<Scalar Name="Roughness_Map_Amount" constant="1.0"/>
+			<Scalar Name="Roughness" constant="1.0"/>
+			<LinearInterpolate Name="">
+				<Input Name="0" expression="13" OutputIndex="0"/>
+				<Input Name="1" expression="11" OutputIndex="0"/>
+				<Input Name="2" expression="12" OutputIndex="0"/>
+			</LinearInterpolate>
+			<OneMinus Name="">
+				<Input Name="0" expression="14" OutputIndex="0"/>
+			</OneMinus>
+			<Scalar Name="" constant="0.464496"/>
+			<TextureObjectParameter Name="Bump_Map">
+				<KeyValueProperty name="Texture" type="Texture" val="3d66Model-11862398-files-16_1_0_Tex"/>
+			</TextureObjectParameter>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions03/Procedurals/NormalFromHeightmap.NormalFromHeightmap">
+				<Input Name="0" expression="17" OutputIndex="0"/>
+				<Input Name="2" expression="19" OutputIndex="0"/>
+			</FunctionCall>
+			<Scalar Name="" constant="0.001"/>
+			<OneMinus Name="">
+				<Input Name="0" expression="18" OutputIndex="0"/>
+			</OneMinus>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.BreakOutFloat3Components">
+				<Input Name="0" expression="20" OutputIndex="0"/>
+			</FunctionCall>
+			<Multiply Name="">
+				<Input Name="0" expression="21" OutputIndex="0"/>
+				<Input Name="1" expression="23" OutputIndex="0"/>
+			</Multiply>
+			<Scalar Name="Normal_Intensity" constant="0.175"/>
+			<Multiply Name="">
+				<Input Name="0" expression="21" OutputIndex="1"/>
+				<Input Name="1" expression="23" OutputIndex="0"/>
+			</Multiply>
+			<AppendVector Name="">
+				<Input Name="0" expression="22" OutputIndex="0"/>
+				<Input Name="1" expression="24" OutputIndex="0"/>
+			</AppendVector>
+			<DotProduct Name="">
+				<Input Name="0" expression="25" OutputIndex="0"/>
+				<Input Name="1" expression="25" OutputIndex="0"/>
+			</DotProduct>
+			<OneMinus Name="">
+				<Input Name="0" expression="26" OutputIndex="0"/>
+			</OneMinus>
+			<Saturate Name="">
+				<Input Name="0" expression="27" OutputIndex="0"/>
+			</Saturate>
+			<SquareRoot Name="">
+				<Input Name="0" expression="28" OutputIndex="0"/>
+			</SquareRoot>
+			<FunctionCall Function="/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.MakeFloat3">
+				<Input Name="0" expression="22" OutputIndex="0"/>
+				<Input Name="1" expression="24" OutputIndex="0"/>
+				<Input Name="2" expression="29" OutputIndex="0"/>
+			</FunctionCall>
+		</Expressions>
+		<Input Name="BaseColor" expression="9" OutputIndex="0"/>
+		<Input Name="Roughness" expression="15" OutputIndex="0"/>
+		<Input Name="Specular" expression="16" OutputIndex="0"/>
+		<Input Name="EmissiveColor" expression="10" OutputIndex="0"/>
+		<Input Name="Normal" expression="30" OutputIndex="0"/>
+		<OpacityMaskClipValue value="0.3333"/>
+	</UEPbrMaterial>
+	<MetaData name="842" reference="Actor.842">
+	</MetaData>
+	<MetaData name="1000" reference="Actor.1000">
+	</MetaData>
+	<MetaData name="1022" reference="Actor.1022">
+	</MetaData>
+	<MetaData name="725" reference="Actor.725">
+	</MetaData>
+	<MetaData name="726" reference="Actor.726">
+	</MetaData>
+	<MetaData name="727" reference="Actor.727">
+	</MetaData>
+	<MetaData name="728" reference="Actor.728">
+	</MetaData>
+	<MetaData name="729" reference="Actor.729">
+	</MetaData>
+	<MetaData name="730" reference="Actor.730">
+	</MetaData>
+	<MetaData name="731" reference="Actor.731">
+	</MetaData>
+	<MetaData name="732" reference="Actor.732">
+	</MetaData>
+	<MetaData name="735" reference="Actor.735">
+	</MetaData>
+	<MetaData name="736" reference="Actor.736">
+	</MetaData>
+	<MetaData name="737" reference="Actor.737">
+	</MetaData>
+	<MetaData name="740" reference="Actor.740">
+	</MetaData>
+	<MetaData name="741" reference="Actor.741">
+	</MetaData>
+	<MetaData name="742" reference="Actor.742">
+	</MetaData>
+	<MetaData name="743" reference="Actor.743">
+	</MetaData>
+	<MetaData name="744" reference="Actor.744">
+	</MetaData>
+	<MetaData name="745" reference="Actor.745">
+	</MetaData>
+	<MetaData name="746" reference="Actor.746">
+	</MetaData>
+	<MetaData name="747" reference="Actor.747">
+	</MetaData>
+	<MetaData name="748" reference="Actor.748">
+	</MetaData>
+	<MetaData name="749" reference="Actor.749">
+	</MetaData>
+	<MetaData name="750" reference="Actor.750">
+	</MetaData>
+	<MetaData name="751" reference="Actor.751">
+	</MetaData>
+	<MetaData name="752" reference="Actor.752">
+	</MetaData>
+	<MetaData name="753" reference="Actor.753">
+	</MetaData>
+	<MetaData name="754" reference="Actor.754">
+	</MetaData>
+	<MetaData name="755" reference="Actor.755">
+	</MetaData>
+	<MetaData name="756" reference="Actor.756">
+	</MetaData>
+	<MetaData name="757" reference="Actor.757">
+	</MetaData>
+	<MetaData name="758" reference="Actor.758">
+	</MetaData>
+	<MetaData name="759" reference="Actor.759">
+	</MetaData>
+	<MetaData name="760" reference="Actor.760">
+	</MetaData>
+	<MetaData name="761" reference="Actor.761">
+	</MetaData>
+	<MetaData name="762" reference="Actor.762">
+	</MetaData>
+	<MetaData name="763" reference="Actor.763">
+	</MetaData>
+	<MetaData name="764" reference="Actor.764">
+	</MetaData>
+	<MetaData name="765" reference="Actor.765">
+	</MetaData>
+	<MetaData name="766" reference="Actor.766">
+	</MetaData>
+	<MetaData name="767" reference="Actor.767">
+	</MetaData>
+	<MetaData name="768" reference="Actor.768">
+	</MetaData>
+	<MetaData name="769" reference="Actor.769">
+	</MetaData>
+	<MetaData name="770" reference="Actor.770">
+	</MetaData>
+	<MetaData name="771" reference="Actor.771">
+	</MetaData>
+	<MetaData name="772" reference="Actor.772">
+	</MetaData>
+	<MetaData name="773" reference="Actor.773">
+	</MetaData>
+	<MetaData name="840" reference="Actor.840">
+	</MetaData>
+	<MetaData name="809" reference="Actor.809">
+	</MetaData>
+	<MetaData name="810" reference="Actor.810">
+	</MetaData>
+	<MetaData name="811" reference="Actor.811">
+	</MetaData>
+	<MetaData name="812" reference="Actor.812">
+	</MetaData>
+	<MetaData name="813" reference="Actor.813">
+	</MetaData>
+	<MetaData name="814" reference="Actor.814">
+	</MetaData>
+	<MetaData name="815" reference="Actor.815">
+	</MetaData>
+	<MetaData name="816" reference="Actor.816">
+	</MetaData>
+	<MetaData name="817" reference="Actor.817">
+	</MetaData>
+	<MetaData name="818" reference="Actor.818">
+	</MetaData>
+	<MetaData name="819" reference="Actor.819">
+	</MetaData>
+	<MetaData name="820" reference="Actor.820">
+	</MetaData>
+	<MetaData name="821" reference="Actor.821">
+	</MetaData>
+	<MetaData name="822" reference="Actor.822">
+	</MetaData>
+	<MetaData name="823" reference="Actor.823">
+	</MetaData>
+	<MetaData name="824" reference="Actor.824">
+	</MetaData>
+	<MetaData name="825" reference="Actor.825">
+	</MetaData>
+	<MetaData name="826" reference="Actor.826">
+	</MetaData>
+	<MetaData name="827" reference="Actor.827">
+	</MetaData>
+	<MetaData name="828" reference="Actor.828">
+	</MetaData>
+	<MetaData name="829" reference="Actor.829">
+	</MetaData>
+	<MetaData name="830" reference="Actor.830">
+	</MetaData>
+	<MetaData name="831" reference="Actor.831">
+	</MetaData>
+	<MetaData name="832" reference="Actor.832">
+	</MetaData>
+	<MetaData name="833" reference="Actor.833">
+	</MetaData>
+	<MetaData name="834" reference="Actor.834">
+	</MetaData>
+	<MetaData name="835" reference="Actor.835">
+	</MetaData>
+	<MetaData name="836" reference="Actor.836">
+	</MetaData>
+	<MetaData name="837" reference="Actor.837">
+	</MetaData>
+	<MetaData name="838" reference="Actor.838">
+	</MetaData>
+	<MetaData name="839" reference="Actor.839">
+	</MetaData>
+	<MetaData name="1024" reference="Actor.1024">
+	</MetaData>
+	<Export Duration="0"/>
+</DatasmithUnrealScene>

@@ -62,6 +62,7 @@ SceneFormatDetectResult DetectSceneFormat(const std::string& path, size_t sniffB
     bool extPbrt = HasExt(path, ".pbrt");
     bool extXml  = HasExt(path, ".xml");
     bool extDs   = HasExt(path, ".udatasmith") || HasExt(path, ".datasmith");
+    bool extBlend = HasExt(path, ".blend");
 
     // Quick Mitsuba check (XML root)
     if (extXml || prefix.find("<scene") != std::string::npos) {
@@ -79,6 +80,12 @@ SceneFormatDetectResult DetectSceneFormat(const std::string& path, size_t sniffB
             r.reason = "扩展或 JSON 含 Datasmith 关键字";
             return r;
         }
+    }
+
+    if (extBlend) {
+        r.format = SceneFormat::Blend;
+        r.reason = "扩展名匹配 .blend";
+        return r;
     }
 
     // PBRT: extension or directive tokens
