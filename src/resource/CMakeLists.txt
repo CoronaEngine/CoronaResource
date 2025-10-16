@@ -52,6 +52,8 @@ target_link_libraries(CoronaResource
     PUBLIC
     stb_headers
     assimp::assimp
+    cabbage::concurrent
+    Corona::Logger
     INTERFACE
     ktm
 )

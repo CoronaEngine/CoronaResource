@@ -42,8 +42,22 @@ FetchContent_Declare(
     EXCLUDE_FROM_ALL
 )
 
+FetchContent_Declare(CoronaLogger
+    GIT_REPOSITORY https://github.com/CoronaEngine/CoronaLogger.git
+    GIT_TAG        main
+    GIT_SHALLOW    TRUE
+    EXCLUDE_FROM_ALL
+)
+
+FetchContent_Declare(CabbageConcurrent
+    GIT_REPOSITORY https://github.com/CoronaEngine/CabbageConcurrent.git
+    GIT_TAG        main
+    GIT_SHALLOW    TRUE
+    EXCLUDE_FROM_ALL
+)
+
 # Make dependencies available
-FetchContent_MakeAvailable(ktm assimp stb)
+FetchContent_MakeAvailable(ktm assimp stb CoronaLogger CabbageConcurrent)
 
 # Create interface library for stb (header-only)
 FetchContent_GetProperties(stb)
