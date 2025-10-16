@@ -2,13 +2,13 @@
 // Created by 25473 on 25-10-7.
 //
 
-#include "../public/import_factor.h"
+#include <import_factor.h>
 
-#include "../public/pbrt_importer.h"
-#include "../public/blend_importer.h"
-#include "../public/datasmith_importer.h"
-#include "../public/mitsuba_importer.h"
-#include "../public/tungsten_importer.h"
+#include <pbrt_importer.h>
+#include <blend_importer.h>
+#include <datasmith_importer.h>
+#include <mitsuba_importer.h>
+#include <tungsten_importer.h>
 
 ISceneImporterPtr CreateImporter(SceneFormat fmt) {
     switch (fmt) {

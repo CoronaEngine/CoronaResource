@@ -2,7 +2,7 @@
 // Created by 25473 on 25-10-7.
 //
 
-#include "../public/pbrt_importer.h"
+#include <pbrt_importer.h>
 
 #include <fstream>
 

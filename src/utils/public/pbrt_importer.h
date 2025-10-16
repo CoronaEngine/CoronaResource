@@ -3,7 +3,7 @@
 //
 
 #pragma once
-#include "../scene_importer.h"
+#include <scene_importer.h>
 
 class PBRTImporter : public ISceneImporter {
 public:

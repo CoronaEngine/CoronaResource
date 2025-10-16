@@ -4,7 +4,7 @@
 #pragma once
 #include <memory>
 
-#include "../scene_format_detector.h"
+#include <scene_format_detector.h>
 #include "scene_importer.h"
 
 ISceneImporterPtr CreateImporter(SceneFormat fmt);
