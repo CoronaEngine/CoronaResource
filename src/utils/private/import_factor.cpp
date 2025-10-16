@@ -9,6 +9,7 @@
 #include <datasmith_importer.h>
 #include <mitsuba_importer.h>
 #include <tungsten_importer.h>
+#include <visionscene_importer.h>
 
 ISceneImporterPtr CreateImporter(SceneFormat fmt) {
     switch (fmt) {
@@ -17,6 +18,7 @@ ISceneImporterPtr CreateImporter(SceneFormat fmt) {
         case SceneFormat::Datasmith: return std::make_unique<DatasmithImporter>();
         case SceneFormat::Blend: return std::make_unique<BlendImporter>();
         case SceneFormat::Tungsten: return std::make_unique<TungstenImporter>();
+        case SceneFormat::VisionScene: return std::make_unique<VisionSceneImporter>();
         default: return {};
     }
 }

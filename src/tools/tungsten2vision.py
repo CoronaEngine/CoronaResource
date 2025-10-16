@@ -431,6 +431,10 @@ def main():
     global g_mat_outputs
     g_mat_outputs = convert_materials(scene_input)
     scene_output = {
+        "corona_resource": {  # vision 场景专属标识符
+            "type": "scene",
+            "version": "0.1"
+        },
         "shapes" : convert_shapes(scene_input),
         "materials" : g_mat_outputs,
         "sampler" : convert_sampler(scene_input),

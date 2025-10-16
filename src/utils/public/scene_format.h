@@ -11,6 +11,7 @@ enum class SceneFormat {
     Datasmith,
     Blend,
     Tungsten,
+    VisionScene,
     Unknown
 };
 
@@ -21,6 +22,7 @@ inline const char* ToString(SceneFormat f) {
         case SceneFormat::Datasmith: return "Datasmith";
         case SceneFormat::Blend: return "Blend";
         case SceneFormat::Tungsten: return "Tungsten";
+        case SceneFormat::VisionScene: return "VisionScene";
         case SceneFormat::Unknown: return "Unknown";
     }
 }

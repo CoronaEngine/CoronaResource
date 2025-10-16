@@ -65,6 +65,31 @@ SceneFormatDetectResult DetectSceneFormat(const std::string& path, size_t sniffB
     bool extDs   = HasExt(path, ".udatasmith") || HasExt(path, ".datasmith");
     bool extBlend = HasExt(path, ".blend");
 
+    // VisionScene: filename or JSON with unique keys
+    auto lowerPath = path; std::transform(lowerPath.begin(), lowerPath.end(), lowerPath.begin(), ::tolower);
+    bool looksJson = !prefix.empty() && prefix.front() == '{';
+    if (looksJson) {
+        // Strongest signal: explicit marker
+        if (ContainsAny(prefix, {"\"corona_resource\""})) {
+            r.format = SceneFormat::VisionScene;
+            r.reason = "包含 corona_resource 标识符";
+            return r;
+        }
+        // Unique keys: warper, light_sampler are strong hints; also common top-level arrays
+        if (ContainsAny(prefix, {"\"warper\"", "\"light_sampler\""}) &&
+            ContainsAny(prefix, {"\"shapes\"", "\"materials\"", "\"camera\""})) {
+            r.format = SceneFormat::VisionScene;
+            r.reason = "JSON 且包含 VisionScene 典型键: warper/light_sampler";
+            return r;
+        }
+        // Fallback by filename pattern
+        if (lowerPath.find("vision_scene") != std::string::npos) {
+            r.format = SceneFormat::VisionScene;
+            r.reason = "文件名包含 vision_scene";
+            return r;
+        }
+    }
+
     // Quick Mitsuba check (XML root)
     if (extXml || prefix.find("<scene") != std::string::npos) {
         if (ContainsAny(prefix, {"<scene", "<shape", "<sensor", "version=\"", "<emitter"})) {
