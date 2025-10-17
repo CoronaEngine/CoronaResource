@@ -6,15 +6,17 @@
 set(CORONARESOURCE_CORE_SOURCES)
 set(CORONARESOURCE_CORE_PUBLIC_HEADERS)
 
+set(CORONARESOURCE_IMPORTER_DIR ${CMAKE_CURRENT_SOURCE_DIR}/importer)
+
 # Collect source files based on enabled features
 
 # Datasmith parser
 if(CORONARESOURCE_BUILD_DATASMITH)
     file(GLOB DATASMITH_REFACTOR_PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/datasmith_refactor/Private/*.cpp
+        ${CORONARESOURCE_IMPORTER_DIR}/datasmith_refactor/Private/*.cpp
     )
     file(GLOB DATASMITH_REFACTOR_PUBLIC
-        ${CMAKE_CURRENT_SOURCE_DIR}/datasmith_refactor/Public/*.h
+        ${CORONARESOURCE_IMPORTER_DIR}/datasmith_refactor/Public/*.h
     )
     list(APPEND CORONARESOURCE_CORE_SOURCES ${DATASMITH_REFACTOR_PRIVATE})
     list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${DATASMITH_REFACTOR_PUBLIC})
@@ -26,10 +28,10 @@ endif()
 # Import subsystem (requires external engine headers)
 if(CORONARESOURCE_BUILD_IMPORT)
     file(GLOB IMPORT_SRC
-        ${CMAKE_CURRENT_SOURCE_DIR}/import/*.cpp
+        ${CORONARESOURCE_IMPORTER_DIR}/import/*.cpp
     )
     file(GLOB IMPORT_HEADERS
-        ${CMAKE_CURRENT_SOURCE_DIR}/import/*.h
+        ${CORONARESOURCE_IMPORTER_DIR}/import/*.h
     )
     list(APPEND CORONARESOURCE_CORE_SOURCES ${IMPORT_SRC})
     list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${IMPORT_HEADERS})
@@ -41,10 +43,10 @@ endif()
 # PBRT scene importer
 if(CORONARESOURCE_BUILD_PBRT_IMPORT)
     file(GLOB PBRT_IMPORT_SRC
-        ${CMAKE_CURRENT_SOURCE_DIR}/pbrt_import/*.cpp
+        ${CORONARESOURCE_IMPORTER_DIR}/pbrt/*.cpp
     )
     file(GLOB PBRT_IMPORT_HEADERS
-        ${CMAKE_CURRENT_SOURCE_DIR}/pbrt_import/*.h
+        ${CORONARESOURCE_IMPORTER_DIR}/pbrt/*.h
     )
     list(APPEND CORONARESOURCE_CORE_SOURCES ${PBRT_IMPORT_SRC})
     list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${PBRT_IMPORT_HEADERS})
@@ -55,20 +57,20 @@ endif()
 
 # Utilities (format detection + import factory)
 file(GLOB VS_UTILS_SRC
-    ${CMAKE_CURRENT_SOURCE_DIR}/utils/private/*.cpp
+    ${CORONARESOURCE_IMPORTER_DIR}/utils/private/*.cpp
 )
 file(GLOB VS_UTILS_HEADERS
-    ${CMAKE_CURRENT_SOURCE_DIR}/utils/public/*.h
+    ${CORONARESOURCE_IMPORTER_DIR}/utils/public/*.h
 )
 list(APPEND CORONARESOURCE_CORE_SOURCES ${VS_UTILS_SRC})
 list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${VS_UTILS_HEADERS})
 
 # Generic scene loader (format auto-detection entry point)
 list(APPEND CORONARESOURCE_CORE_SOURCES
-    ${CMAKE_CURRENT_SOURCE_DIR}/scene_loader.cpp
+    ${CORONARESOURCE_IMPORTER_DIR}/scene_loader.cpp
 )
 list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS
-    ${CMAKE_CURRENT_SOURCE_DIR}/scene_loader.h
+    ${CORONARESOURCE_IMPORTER_DIR}/scene_loader.h
 )
 
 # Verify we have sources to build
@@ -91,15 +93,6 @@ add_library(CoronaResource::Core ALIAS CoronaResourceCore)
 # Set library properties using utility function
 coronaresource_set_target_properties(CoronaResourceCore)
 
-# Generate version header
-set(CORONARESOURCE_GENERATED_DIR ${CMAKE_CURRENT_BINARY_DIR}/generated)
-file(MAKE_DIRECTORY ${CORONARESOURCE_GENERATED_DIR})
-configure_file(
-        ${CMAKE_CURRENT_SOURCE_DIR}/CoronaResourceVersion.h.in
-    ${CORONARESOURCE_GENERATED_DIR}/CoronaResourceVersion.h
-    @ONLY
-)
-
 # Configure include directories
 # Use generator expressions for export-safe paths:
 # - BUILD_INTERFACE: paths visible during build
@@ -107,11 +100,11 @@ configure_file(
 target_include_directories(CoronaResourceCore
     PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/datasmith_refactor/Public>
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/pbrt_import>
-        $<BUILD_INTERFACE:${CORONARESOURCE_GENERATED_DIR}>
+        $<BUILD_INTERFACE:${CORONARESOURCE_IMPORTER_DIR}>
+        $<BUILD_INTERFACE:${CORONARESOURCE_IMPORTER_DIR}/datasmith_refactor/Public>
+        $<BUILD_INTERFACE:${CORONARESOURCE_IMPORTER_DIR}/pbrt>
+        $<BUILD_INTERFACE:${CORONARESOURCE_IMPORTER_DIR}/utils/public>
         $<BUILD_INTERFACE:${ktm_SOURCE_DIR}>
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/utils/public>
         $<INSTALL_INTERFACE:include>
 )
 
@@ -162,12 +155,6 @@ if(CORONARESOURCE_INSTALL)
             DESTINATION ${CORONARESOURCE_INSTALL_INCLUDEDIR}/CoronaResource
         )
     endif()
-    
-    # Install generated version header
-    install(
-        FILES ${CORONARESOURCE_GENERATED_DIR}/CoronaResourceVersion.h
-        DESTINATION ${CORONARESOURCE_INSTALL_INCLUDEDIR}/CoronaResource
-    )
 endif()
 
 # =============================================================================

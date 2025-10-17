@@ -6,7 +6,6 @@
 #include <iostream>
 #include <algorithm>
 
-#include "CoronaResourceVersion.h"
 #include "scene_loader.h"
 
 // Resource Manager includes
@@ -115,7 +114,7 @@ int main(int /*argc*/, char** /*argv*/) {
     // std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "test_tungsten" / "kitchen" / "scene.json";
     std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "test_tungsten" / "kitchen" / "vision_scene.json";
 
-    std::cout << "CORONARESOURCEExample (Version: " << corona_resource::VersionString << ")\n";
+    std::cout << "CORONARESOURCEExample\n";
     std::cout << "使用固定内部场景文件: " << scenePath.string() << "\n";
 
     if (!std::filesystem::exists(scenePath)) {
