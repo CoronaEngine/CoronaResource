@@ -414,7 +414,7 @@ def convert_lightsampler(scene_input):
 def main():
     # fn = 'res\\render_scene\\cornell-box\\tungsten_scene.json'
     # fn = 'res\\render_scene\\staircase\\tungsten_scene.json'
-    fn = 'examples\\test_tungsten\\kitchen\\scene.json'
+    fn = 'res\\render_scene\\spaceship\\tungsten_scene.json'
     # fn = 'res\\render_scene\\glass-of-water\\tungsten_scene.json'
     # fn = 'res\\render_scene\\kitchen\\tungsten_scene.json'
     # fn = 'res\\render_scene\\coffee\\tungsten_scene.json'
@@ -431,10 +431,6 @@ def main():
     global g_mat_outputs
     g_mat_outputs = convert_materials(scene_input)
     scene_output = {
-        "corona_resource": {  # vision 场景专属标识符
-            "type": "scene",
-            "version": "0.1"
-        },
         "shapes" : convert_shapes(scene_input),
         "materials" : g_mat_outputs,
         "sampler" : convert_sampler(scene_input),
