@@ -10,19 +10,38 @@ set(CORONARESOURCE_IMPORTER_DIR ${CMAKE_CURRENT_SOURCE_DIR}/importer)
 
 # Collect source files based on enabled features
 
-# Datasmith parser
+# Datasmith parser (note: currently no C++ sources in importer/datasmith)
 if(CORONARESOURCE_BUILD_DATASMITH)
-    file(GLOB DATASMITH_REFACTOR_PRIVATE
-        ${CORONARESOURCE_IMPORTER_DIR}/datasmith_refactor/Private/*.cpp
+    file(GLOB DATASMITH_SRC
+        ${CORONARESOURCE_IMPORTER_DIR}/datasmith/*.cpp
     )
-    file(GLOB DATASMITH_REFACTOR_PUBLIC
-        ${CORONARESOURCE_IMPORTER_DIR}/datasmith_refactor/Public/*.h
+    file(GLOB DATASMITH_HEADERS
+        ${CORONARESOURCE_IMPORTER_DIR}/datasmith/*.h
     )
-    list(APPEND CORONARESOURCE_CORE_SOURCES ${DATASMITH_REFACTOR_PRIVATE})
-    list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${DATASMITH_REFACTOR_PUBLIC})
-    message(STATUS "Datasmith parser: ENABLED")
+    list(APPEND CORONARESOURCE_CORE_SOURCES ${DATASMITH_SRC})
+    list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${DATASMITH_HEADERS})
+    message(STATUS "Datasmith parser: ENABLED (sources found: ${DATASMITH_SRC})")
 else()
     message(STATUS "Datasmith parser: DISABLED")
+endif()
+
+# Mitsuba parser (gate upstream sources to avoid external SDK unless explicitly enabled)
+if(CORONARESOURCE_BUILD_MITSUBA)
+    if(CORONARESOURCE_USE_UPSTREAM_MITSUBA)
+        file(GLOB MITSUBA_SRC
+            ${CORONARESOURCE_IMPORTER_DIR}/mitsuba/*.cpp
+        )
+        file(GLOB MITSUBA_HEADERS
+            ${CORONARESOURCE_IMPORTER_DIR}/mitsuba/*.h
+        )
+        list(APPEND CORONARESOURCE_CORE_SOURCES ${MITSUBA_SRC})
+        list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${MITSUBA_HEADERS})
+        message(STATUS "Mitsuba parser (upstream sources): ENABLED")
+    else()
+        message(STATUS "Mitsuba parser: ENABLED (utils-only; upstream sources disabled)")
+    endif()
+else()
+    message(STATUS "Mitsuba parser: DISABLED")
 endif()
 
 # Import subsystem (requires external engine headers)
@@ -40,38 +59,98 @@ else()
     message(STATUS "Import subsystem: DISABLED")
 endif()
 
-# PBRT scene importer
+# PBRT scene importer (gate upstream sources)
 if(CORONARESOURCE_BUILD_PBRT_IMPORT)
-    file(GLOB PBRT_IMPORT_SRC
-        ${CORONARESOURCE_IMPORTER_DIR}/pbrt/*.cpp
-    )
-    file(GLOB PBRT_IMPORT_HEADERS
-        ${CORONARESOURCE_IMPORTER_DIR}/pbrt/*.h
-    )
-    list(APPEND CORONARESOURCE_CORE_SOURCES ${PBRT_IMPORT_SRC})
-    list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${PBRT_IMPORT_HEADERS})
-    message(STATUS "PBRT importer: ENABLED")
+    if(CORONARESOURCE_USE_UPSTREAM_PBRT)
+        file(GLOB PBRT_IMPORT_SRC
+            ${CORONARESOURCE_IMPORTER_DIR}/pbrt/*.cpp
+        )
+        file(GLOB PBRT_IMPORT_HEADERS
+            ${CORONARESOURCE_IMPORTER_DIR}/pbrt/*.h
+        )
+        list(APPEND CORONARESOURCE_CORE_SOURCES ${PBRT_IMPORT_SRC})
+        list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${PBRT_IMPORT_HEADERS})
+        message(STATUS "PBRT importer (upstream sources): ENABLED")
+    else()
+        message(STATUS "PBRT importer: ENABLED (utils-only; upstream sources disabled)")
+    endif()
 else()
     message(STATUS "PBRT importer: DISABLED")
 endif()
 
 # Utilities (format detection + import factory)
-file(GLOB VS_UTILS_SRC
-    ${CORONARESOURCE_IMPORTER_DIR}/utils/private/*.cpp
-)
-file(GLOB VS_UTILS_HEADERS
-    ${CORONARESOURCE_IMPORTER_DIR}/utils/public/*.h
-)
-list(APPEND CORONARESOURCE_CORE_SOURCES ${VS_UTILS_SRC})
-list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${VS_UTILS_HEADERS})
+if(CORONARESOURCE_BUILD_IMPORTER_UTILS)
+    file(GLOB VS_UTILS_SRC
+        ${CORONARESOURCE_IMPORTER_DIR}/utils/private/*.cpp
+    )
+    file(GLOB VS_UTILS_HEADERS
+        ${CORONARESOURCE_IMPORTER_DIR}/utils/public/*.h
+    )
+    list(APPEND CORONARESOURCE_CORE_SOURCES ${VS_UTILS_SRC})
+    list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${VS_UTILS_HEADERS})
+    message(STATUS "Importer utils: ENABLED")
+else()
+    message(STATUS "Importer utils: DISABLED")
+endif()
 
-# Generic scene loader (format auto-detection entry point)
-list(APPEND CORONARESOURCE_CORE_SOURCES
-    ${CORONARESOURCE_IMPORTER_DIR}/scene_loader.cpp
-)
-list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS
-    ${CORONARESOURCE_IMPORTER_DIR}/scene_loader.h
-)
+# Tungsten importer
+if(CORONARESOURCE_BUILD_TUNGSTEN)
+    file(GLOB TUNGSTEN_SRC
+        ${CORONARESOURCE_IMPORTER_DIR}/tungsten/*.cpp
+    )
+    file(GLOB TUNGSTEN_HEADERS
+        ${CORONARESOURCE_IMPORTER_DIR}/tungsten/*.hpp
+        ${CORONARESOURCE_IMPORTER_DIR}/tungsten/*.h
+    )
+    list(APPEND CORONARESOURCE_CORE_SOURCES ${TUNGSTEN_SRC})
+    list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${TUNGSTEN_HEADERS})
+    message(STATUS "Tungsten importer: ENABLED")
+else()
+    message(STATUS "Tungsten importer: DISABLED")
+endif()
+
+# VisionScene importer (C++ IR types)
+if(CORONARESOURCE_BUILD_VISION_SCENE)
+    file(GLOB VISION_SCENE_SRC
+        ${CORONARESOURCE_IMPORTER_DIR}/vision_scene/Private/*.cpp
+    )
+    file(GLOB VISION_SCENE_HEADERS
+        ${CORONARESOURCE_IMPORTER_DIR}/vision_scene/Public/*.h
+    )
+    list(APPEND CORONARESOURCE_CORE_SOURCES ${VISION_SCENE_SRC})
+    list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${VISION_SCENE_HEADERS})
+    message(STATUS "VisionScene importer: ENABLED")
+else()
+    message(STATUS "VisionScene importer: DISABLED")
+endif()
+
+# Core importer (src/importer/import)
+if(CORONARESOURCE_BUILD_IMPORTER_IMPORT)
+    file(GLOB IMPORT_CORE_SRC
+        ${CORONARESOURCE_IMPORTER_DIR}/import/*.cpp
+    )
+    file(GLOB IMPORT_CORE_HEADERS
+        ${CORONARESOURCE_IMPORTER_DIR}/import/*.h
+    )
+    list(APPEND CORONARESOURCE_CORE_SOURCES ${IMPORT_CORE_SRC})
+    list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${IMPORT_CORE_HEADERS})
+    message(STATUS "Importer core (import/): ENABLED")
+else()
+    message(STATUS "Importer core (import/): DISABLED")
+endif()
+
+# Scene loader entry point
+if(CORONARESOURCE_BUILD_SCENE_LOADER)
+    list(APPEND CORONARESOURCE_CORE_SOURCES
+        ${CORONARESOURCE_IMPORTER_DIR}/scene_loader.cpp
+    )
+    list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS
+        ${CORONARESOURCE_IMPORTER_DIR}/scene_loader.h
+    )
+    message(STATUS "Scene loader: ENABLED")
+else()
+    message(STATUS "Scene loader: DISABLED")
+endif()
 
 # Verify we have sources to build
 if(NOT CORONARESOURCE_CORE_SOURCES)
@@ -101,7 +180,8 @@ target_include_directories(CoronaResourceCore
     PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
         $<BUILD_INTERFACE:${CORONARESOURCE_IMPORTER_DIR}>
-        $<BUILD_INTERFACE:${CORONARESOURCE_IMPORTER_DIR}/datasmith_refactor/Public>
+        $<BUILD_INTERFACE:${CORONARESOURCE_IMPORTER_DIR}/mitsuba>
+        $<BUILD_INTERFACE:${CORONARESOURCE_IMPORTER_DIR}/datasmith>
         $<BUILD_INTERFACE:${CORONARESOURCE_IMPORTER_DIR}/pbrt>
         $<BUILD_INTERFACE:${CORONARESOURCE_IMPORTER_DIR}/utils/public>
         $<BUILD_INTERFACE:${ktm_SOURCE_DIR}>
@@ -113,6 +193,12 @@ if(CORONARESOURCE_BUILD_IMPORT)
     target_compile_definitions(CoronaResourceCore PUBLIC CORONARESOURCE_ENABLE_IMPORT=1)
 else()
     target_compile_definitions(CoronaResourceCore PUBLIC CORONARESOURCE_ENABLE_IMPORT=0)
+endif()
+
+if(CORONARESOURCE_BUILD_MITSUBA)
+    target_compile_definitions(CoronaResourceCore PUBLIC CORONARESOURCE_ENABLE_MITSUBA=1)
+else()
+    target_compile_definitions(CoronaResourceCore PUBLIC CORONARESOURCE_ENABLE_MITSUBA=0)
 endif()
 
 if(CORONARESOURCE_BUILD_DATASMITH)

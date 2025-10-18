@@ -7,6 +7,8 @@
 #include <string>
 #include <vector>
 #include "ktm/ktm.h"
+#include "parameter_block.h"
+#include "enums.h"
 
 struct GeometryData {
     GeometryTopology topology = GeometryTopology::TriMesh;

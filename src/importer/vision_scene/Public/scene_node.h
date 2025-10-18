@@ -10,6 +10,8 @@
 
 #include "ktm/ktm.h"
 #include "enums.h"
+#include "parameter_block.h"
+#include "source_location.h"
 
 struct SceneNode {
     NodeKind kind = NodeKind::Unknown;

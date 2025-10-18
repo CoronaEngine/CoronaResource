@@ -111,8 +111,8 @@ int main(int /*argc*/, char** /*argv*/) {
     // std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "test_mitsuba" / "kitchen" / "scene_v3.xml";
     // std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "test_datasmith" / "test.udatasmith";
     // std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "test_scenes" / "cbox" / "cbox.blend";
-    // std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "test_tungsten" / "kitchen" / "scene.json";
-    std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "test_tungsten" / "kitchen" / "vision_scene.json";
+    std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "test_tungsten" / "kitchen" / "scene.json";
+    // std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "test_tungsten" / "kitchen" / "vision_scene.json";
 
     std::cout << "CORONARESOURCEExample\n";
     std::cout << "使用固定内部场景文件: " << scenePath.string() << "\n";
