@@ -103,7 +103,7 @@ void resourceManagerExample() {
 int main(int /*argc*/, char** /*argv*/) {
     // 运行 Resource Manager 示例
 
-    // resourceManagerExample();
+    resourceManagerExample();
 
     // 固定内部测试场景路径（使用源目录 + 示例测试场景）
     // std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "assets" / "test_pbrt" / "kitchen" / "scene-v4.pbrt";
