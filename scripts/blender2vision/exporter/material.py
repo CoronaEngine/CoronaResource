@@ -140,20 +140,79 @@ func_tab = {
 
 
 def export(exporter, material, materials, node_tab=None):
-    output_node_id = "Material Output"
-    output = material.node_tree.nodes[output_node_id]
-    bsdf = output.inputs["Surface"].links[0].from_node
+    # 检查材质是否有节点树
+    if not material.node_tree:
+        print(f"Warning: Material '{material.name}' has no node tree, using default diffuse")
+        return {
+            "type": "diffuse",
+            "param": {
+                "color": [0.8, 0.8, 0.8],
+                "roughness": [0.8],
+            },
+        }
+    
+    # 查找材质输出节点
+    output_node = None
+    for node in material.node_tree.nodes:
+        if node.type == "OUTPUT_MATERIAL":
+            output_node = node
+            break
+    
+    if not output_node:
+        print(f"Warning: Material '{material.name}' has no Material Output node, using default diffuse")
+        return {
+            "type": "diffuse",
+            "param": {
+                "color": [0.8, 0.8, 0.8],
+                "roughness": [0.8],
+            },
+        }
+    
+    # 检查Surface输入是否连接
+    if not output_node.inputs["Surface"].is_linked:
+        print(f"Warning: Material '{material.name}' has no shader connected to Surface, using default diffuse")
+        return {
+            "type": "diffuse",
+            "param": {
+                "color": [0.8, 0.8, 0.8],
+                "roughness": [0.8],
+            },
+        }
+    
+    bsdf = output_node.inputs["Surface"].links[0].from_node
 
     if material.name in materials:
         return materials[material.name]
+    
+    # 检查是否支持该类型的BSDF节点
+    if bsdf.type not in func_tab:
+        print(f"Warning: Unsupported material type '{bsdf.type}' in material '{material.name}', using default diffuse")
+        return {
+            "type": "diffuse",
+            "param": {
+                "color": [0.8, 0.8, 0.8],
+                "roughness": [0.8],
+            },
+        }
+    
     export_func = func_tab[bsdf.type]
     node_tab = {} if node_tab is None else node_tab
 
-    data = export_func(exporter, bsdf, node_tab)
-    data["node_tab"] = node_tab
-    if bsdf.type == "ADD_SHADER":
-        materials[material.name] = data["param"]["material"]
-    else:
-        materials[material.name] = data
-    return data
+    try:
+        data = export_func(exporter, bsdf, node_tab)
+        data["node_tab"] = node_tab
+        if bsdf.type == "ADD_SHADER":
+            materials[material.name] = data["param"]["material"]
+        else:
+            materials[material.name] = data
+        return data
+    except Exception as e:
+        print(f"Error exporting material '{material.name}': {e}, using default diffuse")
+        return {
+            "type": "diffuse",
+            "param": {
+                "color": [0.8, 0.8, 0.8],
+                "roughness": [0.8],
+            },
+        }
 

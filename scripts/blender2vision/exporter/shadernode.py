@@ -36,9 +36,43 @@ def parse_input(exporter, input, dim, node_tab):
 def parse_image_node(exporter, link, dim, node_tab):
     from_node = link.from_node
     exporter.try_make_tex_dir()
-    src_path = bpy.path.abspath(from_node.image.filepath)
-    dst_path = exporter.texture_path(from_node.image.name)
-    shutil.copyfile(src_path, dst_path)
+    
+    # 检查图像节点是否有有效的图像数据
+    if not from_node.image:
+        print(f"Warning: Image node has no image data")
+        return None
+    
+    # 处理嵌入式纹理（packed images）
+    if from_node.image.packed_file:
+        # 如果是嵌入式纹理，先保存到磁盘
+        image_name = from_node.image.name
+        if not image_name.lower().endswith(('.png', '.jpg', '.jpeg', '.exr', '.hdr')):
+            image_name += '.png'  # 添加默认扩展名
+        dst_path = exporter.texture_path(image_name)
+        
+        try:
+            # 保存嵌入的图像到文件
+            from_node.image.save_render(dst_path)
+            print(f"Info: Saved packed texture to: {dst_path}")
+        except Exception as e:
+            print(f"Warning: Failed to save packed texture: {e}")
+            return None
+    else:
+        # 处理外部文件纹理
+        src_path = bpy.path.abspath(from_node.image.filepath)
+        dst_path = exporter.texture_path(from_node.image.name)
+        
+        # 检查源文件是否存在
+        if not os.path.exists(src_path):
+            print(f"Warning: Texture file not found: {src_path}")
+            return None
+        
+        try:
+            shutil.copyfile(src_path, dst_path)
+        except (FileNotFoundError, PermissionError, OSError) as e:
+            print(f"Warning: Failed to copy texture file from {src_path} to {dst_path}: {e}")
+            return None
+    
     r_path = exporter.tex_dir + "/" + from_node.image.name
     _, extension = os.path.splitext(r_path)
     cs = from_node.image.colorspace_settings.name
@@ -318,6 +352,27 @@ def parse_math(exporter, link, dim, node_tab):
     fs = link.from_socket
     output_key = fs.name
     node_name = str(from_node)
+    ret = slot_data(node_name, output_key, "x")
+    
+    # 获取数学节点的操作类型和输入
+    operation = from_node.operation
+    value0 = parse_node(exporter, from_node.inputs[0], 1, node_tab)
+    value1 = parse_node(exporter, from_node.inputs[1], 1, node_tab) if len(from_node.inputs) > 1 else None
+    value2 = parse_node(exporter, from_node.inputs[2], 1, node_tab) if len(from_node.inputs) > 2 else None
+    
+    val = {
+        "type": "converter",
+        "construct_name": "math",
+        "param": {
+            "operation": operation,
+            "value0": value0,
+            "value1": value1,
+            "value2": value2,
+            "use_clamp": from_node.use_clamp,
+        },
+    }
+    try_add_tab(node_tab, node_name, val)
+    return ret
     
     
 def parse_separate_color(exporter, link, dim, node_tab):
@@ -380,8 +435,17 @@ def parse_node(exporter, socket, dim, node_tab):
     if socket.is_linked:
         link = socket.links[0]
         key = link.from_node.type
-        func = func_dict[key]
-        return func(exporter, link, dim, node_tab)
+        if key in func_dict:
+            func = func_dict[key]
+            result = func(exporter, link, dim, node_tab)
+            # 如果节点解析函数返回None（例如纹理文件不存在），使用默认值
+            if result is not None:
+                return result
+            # 如果返回None，继续使用下面的默认值逻辑
+        else:
+            print(f"Warning: Unsupported node type '{key}', using default value")
+            # 继续使用默认值逻辑
+    
     if dim == 1:
         value = socket.default_value
         return {
