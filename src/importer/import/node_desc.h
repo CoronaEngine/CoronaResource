@@ -5,12 +5,14 @@
 #pragma once
 
 #include <utility>
-#include "core/stl.h"
-#include "core/hash.h"
+#include "stl.h"
+#include "hash.h"
 #include "math/basic_types.h"
 #include "parameter_set.h"
 #include "math/geometry.h"
-#include "core/dynamic_module.h"
+#include "dynamic_module.h"
+#include "polymorphic.h"
+#include "device.h"
 
 namespace vision {
 
@@ -41,7 +43,57 @@ enum AttrTag {
     Illumination
 };
 
-struct NodeDesc : public Hashable {
+class RTTI {
+public:
+    [[nodiscard]] virtual const char *class_name() const noexcept {
+        return typeid(*this).name();
+    }
+};
+
+
+class TempHashable : public RTTI {
+private:
+    mutable uint64_t hash_{0u};
+    mutable bool hash_computed_{false};
+    mutable uint64_t topology_hash_{0u};
+    mutable bool topology_hash_computed_{false};
+
+protected:
+    [[nodiscard]] virtual uint64_t compute_hash() const noexcept {
+        return hash64(class_name(), reinterpret_cast<uint64_t>(this));
+    }
+    [[nodiscard]] virtual uint64_t compute_topology_hash() const noexcept {
+        return hash64(class_name());
+    }
+
+public:
+    void reset_hash() const noexcept { hash_computed_ = false; }
+    void reset_topology_hash() const noexcept { topology_hash_computed_ = false; }
+
+    [[nodiscard]] uint64_t hash() const noexcept {
+        if (!hash_computed_) {
+            hash_ = hash64(class_name(), compute_hash());
+            hash_computed_ = true;
+        }
+        return hash_;
+    }
+
+    [[nodiscard]] uint64_t topology_hash() const noexcept {
+        if (!topology_hash_computed_) {
+            topology_hash_ = hash64(class_name(), compute_topology_hash());
+            topology_hash_computed_ = true;
+        }
+        return topology_hash_;
+    }
+
+    template<typename T>
+    static uint64_t compute_hash(uint64_t hash) {
+        return hash64(typeid(std::remove_cvref_t<T>).name(), hash);
+    }
+    ~TempHashable() = default;
+};
+
+struct NodeDesc : public TempHashable {
 protected:
     string_view type_;
     ParameterSet parameter_{DataWrap::object()};

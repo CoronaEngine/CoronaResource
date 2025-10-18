@@ -5,14 +5,19 @@
 #pragma once
 
 #include "math/basic_types.h"
-#include "core/logging.h"
-#include "base/vs_header.h"
+#include "logging.h"
+#include "vs_header.h"
+#include <string>
+#include <nlohmann/json.hpp>
 
+#define OC_NODISCARD [[nodiscard]]
 using namespace ocarina;
 
 namespace vision {
 
 using DataWrap = nlohmann::json;
+using uint = uint32_t;
+using string = std::string;
 
 template<typename T, size_t N>
 DataWrap to_json(Vector<T, N> vec) {
