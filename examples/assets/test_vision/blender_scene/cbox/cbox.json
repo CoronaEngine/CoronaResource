@@ -1,0 +1,887 @@
+{
+    "sampler": {
+        "type": "independent",
+        "param": {
+            "spp": 128
+        }
+    },
+    "light_sampler": {
+        "type": "uniform",
+        "param": {
+            "env_prob": 0.5,
+            "env_separate": false,
+            "lights": []
+        }
+    },
+    "spectrum": {
+        "type": "srgb",
+        "param": {}
+    },
+    "integrator": {
+        "type": "pt",
+        "param": {
+            "max_depth": 8,
+            "min_depth": 3,
+            "rr_threshold": 1.0
+        }
+    },
+    "shapes": [
+        {
+            "type": "model",
+            "names": "Floor",
+            "param": {
+                "fn": "meshes/Floor.glb",
+                "smooth": true,
+                "material": "FloorBSDF",
+                "transform": {
+                    "type": "matrix4x4",
+                    "param": {
+                        "matrix4x4": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "type": "model",
+            "names": "Ceiling",
+            "param": {
+                "fn": "meshes/Ceiling.glb",
+                "smooth": true,
+                "material": "CeilingBSDF",
+                "transform": {
+                    "type": "matrix4x4",
+                    "param": {
+                        "matrix4x4": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "type": "model",
+            "names": "BackWall",
+            "param": {
+                "fn": "meshes/BackWall.glb",
+                "smooth": true,
+                "material": "BackWallBSDF",
+                "transform": {
+                    "type": "matrix4x4",
+                    "param": {
+                        "matrix4x4": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "type": "model",
+            "names": "RightWall",
+            "param": {
+                "fn": "meshes/RightWall.glb",
+                "smooth": true,
+                "material": "RightWallBSDF",
+                "transform": {
+                    "type": "matrix4x4",
+                    "param": {
+                        "matrix4x4": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "type": "model",
+            "names": "LeftWall",
+            "param": {
+                "fn": "meshes/LeftWall.glb",
+                "smooth": true,
+                "material": "LeftWallBSDF",
+                "transform": {
+                    "type": "matrix4x4",
+                    "param": {
+                        "matrix4x4": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "type": "model",
+            "names": "Light",
+            "param": {
+                "fn": "meshes/Light.glb",
+                "smooth": true,
+                "material": "LightBSDF.001",
+                "transform": {
+                    "type": "matrix4x4",
+                    "param": {
+                        "matrix4x4": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        ]
+                    }
+                },
+                "emission": {
+                    "type": "area",
+                    "param": {
+                        "color": {
+                            "channels": "xyz",
+                            "node": {
+                                "type": "number",
+                                "param": {
+                                    "value": [
+                                        1.0,
+                                        0.7058823704719543,
+                                        0.23529411852359772
+                                    ]
+                                }
+                            }
+                        },
+                        "scale": 17.0
+                    }
+                }
+            }
+        },
+        {
+            "type": "model",
+            "names": "sphere",
+            "param": {
+                "fn": "meshes/sphere.glb",
+                "smooth": true,
+                "material": "Material",
+                "transform": {
+                    "type": "matrix4x4",
+                    "param": {
+                        "matrix4x4": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "type": "model",
+            "names": "Cube",
+            "param": {
+                "fn": "meshes/Cube.glb",
+                "smooth": true,
+                "material": "Material",
+                "transform": {
+                    "type": "matrix4x4",
+                    "param": {
+                        "matrix4x4": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        ]
+                    }
+                }
+            }
+        }
+    ],
+    "pipeline": {
+        "type": "fixed",
+        "param": {
+            "obfuscation": false,
+            "valid_check": false,
+            "frame_buffer": {
+                "type": "normal",
+                "param": {
+                    "accumulation": true,
+                    "exposure": 1.0,
+                    "tone_mapper": {
+                        "type": "linear",
+                        "param": {}
+                    },
+                    "resolution": [
+                        1024,
+                        1024
+                    ]
+                }
+            }
+        }
+    },
+    "render_setting": {
+        "min_world_radius": 10,
+        "polymorphic_mode": 1
+    },
+    "materials": [
+        {
+            "type": "diffuse",
+            "param": {
+                "color": {
+                    "channels": "xyz",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": [
+                                0.7250000238418579,
+                                0.7099999785423279,
+                                0.6800000071525574
+                            ]
+                        }
+                    }
+                },
+                "roughness": {
+                    "channels": "x",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": 0.0
+                        }
+                    }
+                }
+            },
+            "node_tab": {},
+            "name": "FloorBSDF"
+        },
+        {
+            "type": "diffuse",
+            "param": {
+                "color": {
+                    "channels": "xyz",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": [
+                                0.7250000238418579,
+                                0.7099999785423279,
+                                0.6800000071525574
+                            ]
+                        }
+                    }
+                },
+                "roughness": {
+                    "channels": "x",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": 0.0
+                        }
+                    }
+                }
+            },
+            "node_tab": {},
+            "name": "CeilingBSDF"
+        },
+        {
+            "type": "diffuse",
+            "param": {
+                "color": {
+                    "channels": "xyz",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": [
+                                0.7250000238418579,
+                                0.7099999785423279,
+                                0.6800000071525574
+                            ]
+                        }
+                    }
+                },
+                "roughness": {
+                    "channels": "x",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": 0.0
+                        }
+                    }
+                }
+            },
+            "node_tab": {},
+            "name": "BackWallBSDF"
+        },
+        {
+            "type": "diffuse",
+            "param": {
+                "color": {
+                    "channels": "xyz",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": [
+                                0.14000000059604645,
+                                0.44999998807907104,
+                                0.09099999815225601
+                            ]
+                        }
+                    }
+                },
+                "roughness": {
+                    "channels": "x",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": 0.0
+                        }
+                    }
+                }
+            },
+            "node_tab": {},
+            "name": "RightWallBSDF"
+        },
+        {
+            "type": "diffuse",
+            "param": {
+                "color": {
+                    "channels": "xyz",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": [
+                                0.6299999952316284,
+                                0.06499999761581421,
+                                0.05000000074505806
+                            ]
+                        }
+                    }
+                },
+                "roughness": {
+                    "channels": "x",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": 0.0
+                        }
+                    }
+                }
+            },
+            "node_tab": {},
+            "name": "LeftWallBSDF"
+        },
+        {
+            "type": "diffuse",
+            "param": {
+                "color": {
+                    "channels": "xyz",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        }
+                    }
+                },
+                "roughness": {
+                    "channels": "x",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": 0.0
+                        }
+                    }
+                }
+            },
+            "name": "LightBSDF.001"
+        },
+        {
+            "type": "principled_bsdf",
+            "param": {
+                "color": {
+                    "channels": "xyz",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": [
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929
+                            ]
+                        }
+                    }
+                },
+                "roughness": {
+                    "channels": "x",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": 0.7927272319793701
+                        }
+                    }
+                },
+                "ior": {
+                    "channels": "x",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": 1.4500000476837158
+                        }
+                    }
+                },
+                "metallic": {
+                    "channels": "x",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": 0.0
+                        }
+                    }
+                },
+                "spec_tint": {
+                    "channels": "xyz",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        }
+                    }
+                },
+                "anisotropic": {
+                    "channels": "x",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": 0.0
+                        }
+                    }
+                },
+                "normal": {
+                    "channels": "xyz",
+                    "output_key": "Normal",
+                    "node": "<bpy_struct, ShaderNodeNormalMap(\"Normal Map\") at 0x0000023E101D44A0>"
+                },
+                "sheen_weight": {
+                    "channels": "x",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": 0.0
+                        }
+                    }
+                },
+                "sheen_roughness": {
+                    "channels": "x",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": 0.6018181443214417
+                        }
+                    }
+                },
+                "sheen_tint": {
+                    "channels": "xyz",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        }
+                    }
+                },
+                "coat_weight": {
+                    "channels": "x",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": 0.0
+                        }
+                    }
+                },
+                "coat_roughness": {
+                    "channels": "x",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": 0.029999999329447746
+                        }
+                    }
+                },
+                "coat_ior": {
+                    "channels": "x",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": 1.5
+                        }
+                    }
+                },
+                "coat_tint": {
+                    "channels": "xyz",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        }
+                    }
+                },
+                "subsurface_weight": {
+                    "channels": "x",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": 0.0
+                        }
+                    }
+                },
+                "subsurface_radius": {
+                    "channels": "xyz",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": [
+                                1.0,
+                                0.20000000298023224,
+                                0.10000000149011612
+                            ]
+                        }
+                    }
+                },
+                "subsurface_scale": {
+                    "channels": "x",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": 0.05000000074505806
+                        }
+                    }
+                },
+                "transmission_weight": {
+                    "channels": "x",
+                    "node": {
+                        "type": "number",
+                        "param": {
+                            "value": 0.0
+                        }
+                    }
+                }
+            },
+            "node_tab": {
+                "<bpy_struct, ShaderNodeTexCoord(\"Texture Coordinate\") at 0x0000023E101D4BA0>": {
+                    "type": "src_node",
+                    "construct_name": "tex_coord",
+                    "param": {}
+                },
+                "<bpy_struct, ShaderNodeMapping(\"Mapping\") at 0x0000023E101D4660>": {
+                    "type": "converter",
+                    "construct_name": "vector_mapping",
+                    "param": {
+                        "type": "POINT",
+                        "vector": {
+                            "channels": "x",
+                            "output_key": "UV",
+                            "node": "<bpy_struct, ShaderNodeTexCoord(\"Texture Coordinate\") at 0x0000023E101D4BA0>"
+                        },
+                        "scale": {
+                            "channels": "xyz",
+                            "node": {
+                                "type": "number",
+                                "param": {
+                                    "value": [
+                                        1.0,
+                                        1.0,
+                                        1.0
+                                    ]
+                                }
+                            }
+                        },
+                        "rotation": {
+                            "channels": "xyz",
+                            "node": {
+                                "type": "number",
+                                "param": {
+                                    "value": [
+                                        0.0,
+                                        0.0,
+                                        0.0
+                                    ]
+                                }
+                            }
+                        },
+                        "location": {
+                            "channels": "xyz",
+                            "node": {
+                                "type": "number",
+                                "param": {
+                                    "value": [
+                                        0.0,
+                                        0.0,
+                                        0.0
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "<bpy_struct, ShaderNodeTexImage(\"Image Texture.001\") at 0x0000023E101D42E0>": {
+                    "type": "image",
+                    "param": {
+                        "fn": "textures/brickwall_normal.jpg",
+                        "vector": {
+                            "channels": "x",
+                            "output_key": "Vector",
+                            "node": "<bpy_struct, ShaderNodeMapping(\"Mapping\") at 0x0000023E101D4660>"
+                        },
+                        "color_space": "linear"
+                    }
+                },
+                "<bpy_struct, ShaderNodeNormalMap(\"Normal Map\") at 0x0000023E101D44A0>": {
+                    "type": "converter",
+                    "construct_name": "normal_map",
+                    "param": {
+                        "color": {
+                            "channels": "xyz",
+                            "output_key": "Color",
+                            "node": "<bpy_struct, ShaderNodeTexImage(\"Image Texture.001\") at 0x0000023E101D42E0>"
+                        },
+                        "strength": {
+                            "channels": "x",
+                            "node": {
+                                "type": "number",
+                                "param": {
+                                    "value": 0.8999999761581421
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "name": "Material"
+        }
+    ],
+    "camera": {
+        "type": "thin_lens",
+        "param": {
+            "focal_distance": 5.0,
+            "lens_radius": 0.0,
+            "sensitivity": 0.5,
+            "velocity": 10.0,
+            "fov_y": 18.88979571105623,
+            "name": "_unnamed_2",
+            "filter": {
+                "type": "gaussian",
+                "param": {
+                    "radius": 2.0,
+                    "sigma": 1.0
+                }
+            },
+            "transform": {
+                "type": "Euler",
+                "param": {
+                    "yaw": 5.008956130975331e-06,
+                    "pitch": -4.325711003616561e-06,
+                    "position": [
+                        0.0,
+                        1.0,
+                        6.800000190734863
+                    ]
+                }
+            },
+            "film": {
+                "type": "rgb",
+                "param": {
+                    "resolution": [
+                        1024,
+                        1024
+                    ],
+                    "tone_mapper": {
+                        "type": "linear",
+                        "param": {}
+                    }
+                }
+            }
+        }
+    }
+}
