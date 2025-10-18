@@ -106,13 +106,13 @@ int main(int /*argc*/, char** /*argv*/) {
     // resourceManagerExample();
 
     // 固定内部测试场景路径（使用源目录 + 示例测试场景）
-    // std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "test_pbrt" / "kitchen" / "scene-v4.pbrt";
-    // std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "test_mitsuba" / "kitchen" / "scene_v0.6.xml";
-    // std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "test_mitsuba" / "kitchen" / "scene_v3.xml";
-    // std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "test_datasmith" / "test.udatasmith";
-    // std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "test_scenes" / "cbox" / "cbox.blend";
-    std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "test_tungsten" / "kitchen" / "scene.json";
-    // std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "test_tungsten" / "kitchen" / "vision_scene.json";
+    // std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "assets" / "test_pbrt" / "kitchen" / "scene-v4.pbrt";
+    // std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "assets" / "test_mitsuba" / "kitchen" / "scene_v0.6.xml";
+    // std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "assets" / "test_mitsuba" / "kitchen" / "scene_v3.xml";
+    // std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "assets" / "test_datasmith" / "test.udatasmith";
+    // std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "assets" / "test_scenes" / "cbox" / "cbox.blend";
+    std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "assets" / "test_tungsten" / "kitchen" / "scene.json";
+    // std::filesystem::path scenePath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "assets" / "test_tungsten" / "kitchen" / "vision_scene.json";
 
     std::cout << "CORONARESOURCEExample\n";
     std::cout << "使用固定内部场景文件: " << scenePath.string() << "\n";
