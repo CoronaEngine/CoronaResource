@@ -24,7 +24,7 @@ void resourceManagerExample() {
     Corona::ModelLoader modelLoader;
     
     // 测试路径 - 使用项目中的一个模型文件路径
-    std::filesystem::path modelPath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "assets" / "test_model";
+    std::filesystem::path modelPath = std::filesystem::path(CORONARESOURCE_SOURCE_DIR) / "Examples" / "assets" / "test_assimp";
     
     // 查找场景目录中的模型文件
     std::vector<std::string> modelExtensions = {".obj", ".fbx", ".gltf", ".glb", ".dae"};

@@ -19,6 +19,11 @@ function(coronaresource_configure_install)
         return()
     endif()
 
+    # If present, include third-party targets required by CoronaResourceCore in the export set
+    if(TARGET nlohmann_json)
+        install(TARGETS nlohmann_json EXPORT ${CORONARESOURCE_EXPORT_NAME})
+    endif()
+
     # Install export targets
     install(
         EXPORT ${CORONARESOURCE_EXPORT_NAME}

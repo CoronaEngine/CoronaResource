@@ -18,13 +18,11 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Compiler-specific warnings and flags
 if(MSVC)
+    # 统一使用 /utf-8，避免 /source-charset 与 /utf-8 冲突
     add_compile_options(
-        /W4 # Warning level 4
-        /permissive- # Standards conformance
-        $<$<COMPILE_LANGUAGE:C>:/source-charset:utf-8>
-        $<$<COMPILE_LANGUAGE:C>:/execution-charset:utf-8>
-        $<$<COMPILE_LANGUAGE:CXX>:/source-charset:utf-8>
-        $<$<COMPILE_LANGUAGE:CXX>:/execution-charset:utf-8>
+        /W4            # Warning level 4
+        /permissive-   # Standards conformance
+        /utf-8         # Set source & execution charset to UTF-8
     )
 else()
     add_compile_options(

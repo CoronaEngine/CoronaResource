@@ -42,22 +42,38 @@ FetchContent_Declare(
     EXCLUDE_FROM_ALL
 )
 
-FetchContent_Declare(CoronaLogger
-    GIT_REPOSITORY https://github.com/CoronaEngine/CoronaLogger.git
-    GIT_TAG        main
-    GIT_SHALLOW    TRUE
+# Fetch nlohmann/json single-header JSON library
+message(STATUS "Fetching nlohmann/json library...")
+FetchContent_Declare(
+    nlohmann_json
+    GIT_REPOSITORY https://github.com/nlohmann/json.git
+    GIT_TAG v3.11.3
+    GIT_SHALLOW TRUE
     EXCLUDE_FROM_ALL
 )
 
-FetchContent_Declare(CabbageConcurrent
+# CoronaLogger
+message(STATUS "Fetching CoronaLogger library...")
+FetchContent_Declare(
+    CoronaLogger
+    GIT_REPOSITORY https://github.com/CoronaEngine/CoronaLogger.git
+    GIT_TAG main
+    GIT_SHALLOW TRUE
+    EXCLUDE_FROM_ALL
+)
+
+# CabbageConcurrent
+message(STATUS "Fetching CabbageConcurrent library...")
+FetchContent_Declare(
+    CabbageConcurrent
     GIT_REPOSITORY https://github.com/CoronaEngine/CabbageConcurrent.git
-    GIT_TAG        main
-    GIT_SHALLOW    TRUE
+    GIT_TAG main
+    GIT_SHALLOW TRUE
     EXCLUDE_FROM_ALL
 )
 
 # Make dependencies available
-FetchContent_MakeAvailable(ktm assimp stb CoronaLogger CabbageConcurrent)
+FetchContent_MakeAvailable(ktm assimp stb nlohmann_json CoronaLogger CabbageConcurrent)
 
 # Create interface library for stb (header-only)
 FetchContent_GetProperties(stb)
@@ -72,3 +88,6 @@ target_include_directories(stb_headers INTERFACE ${stb_SOURCE_DIR})
 message(STATUS "ktm library: Ready")
 message(STATUS "Assimp library: Ready")
 message(STATUS "stb library: Ready (header-only)")
+message(STATUS "nlohmann/json library: Ready (target: nlohmann_json::nlohmann_json)")
+message(STATUS "CoronaLogger: Ready")
+message(STATUS "CabbageConcurrent: Ready")

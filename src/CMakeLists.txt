@@ -173,6 +173,11 @@ target_include_directories(CoronaResourceCore
         $<INSTALL_INTERFACE:include>
 )
 
+# Ensure nlohmann/json headers are visible to consumers/IDEs when using FetchContent
+if(DEFINED nlohmann_json_SOURCE_DIR)
+    target_include_directories(CoronaResourceCore PUBLIC $<BUILD_INTERFACE:${nlohmann_json_SOURCE_DIR}/include>)
+endif()
+
 # Compile definitions for feature toggles
 if(CORONARESOURCE_BUILD_IMPORT)
     target_compile_definitions(CoronaResourceCore PUBLIC CORONARESOURCE_ENABLE_IMPORT=1)
@@ -202,6 +207,7 @@ endif()
 target_link_libraries(CoronaResourceCore
     PUBLIC
         ktm
+        nlohmann_json::nlohmann_json
 )
 
 # IDE source organization using utility function
