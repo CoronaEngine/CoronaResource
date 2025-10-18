@@ -124,21 +124,6 @@ else()
     message(STATUS "VisionScene importer: DISABLED")
 endif()
 
-# Core importer (src/importer/import)
-if(CORONARESOURCE_BUILD_IMPORTER_IMPORT)
-    file(GLOB IMPORT_CORE_SRC
-        ${CORONARESOURCE_IMPORTER_DIR}/import/*.cpp
-    )
-    file(GLOB IMPORT_CORE_HEADERS
-        ${CORONARESOURCE_IMPORTER_DIR}/import/*.h
-    )
-    list(APPEND CORONARESOURCE_CORE_SOURCES ${IMPORT_CORE_SRC})
-    list(APPEND CORONARESOURCE_CORE_PUBLIC_HEADERS ${IMPORT_CORE_HEADERS})
-    message(STATUS "Importer core (import/): ENABLED")
-else()
-    message(STATUS "Importer core (import/): DISABLED")
-endif()
-
 # Scene loader entry point
 if(CORONARESOURCE_BUILD_SCENE_LOADER)
     list(APPEND CORONARESOURCE_CORE_SOURCES

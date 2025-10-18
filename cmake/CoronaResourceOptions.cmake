@@ -18,6 +18,10 @@ option(CORONARESOURCE_BUILD_IMPORT "Build import subsystem (requires external en
 if(DEFINED CORONARESOURCE_BUILD_Mitsuba AND NOT DEFINED CORONARESOURCE_BUILD_MITSUBA)
     set(CORONARESOURCE_BUILD_MITSUBA ${CORONARESOURCE_BUILD_Mitsuba})
 endif()
+# Backward-compat: map deprecated CORONARESOURCE_BUILD_IMPORTER_IMPORT to CORONARESOURCE_BUILD_IMPORT
+if(DEFINED CORONARESOURCE_BUILD_IMPORTER_IMPORT)
+    set(CORONARESOURCE_BUILD_IMPORT ${CORONARESOURCE_BUILD_IMPORTER_IMPORT})
+endif()
 option(CORONARESOURCE_BUILD_MITSUBA "Build Mitsuba parser" OFF)
 option(CORONARESOURCE_BUILD_DATASMITH "Build Datasmith parser" OFF)
 option(CORONARESOURCE_BUILD_PBRT_IMPORT "Build PBRT scene importer" OFF)
@@ -31,7 +35,6 @@ option(CORONARESOURCE_USE_UPSTREAM_PBRT "Include src/importer/pbrt/*.cpp (requir
 option(CORONARESOURCE_BUILD_IMPORTER_UTILS "Build importer/utils (factory, detectors, importers stubs)" ON)
 option(CORONARESOURCE_BUILD_TUNGSTEN "Build Tungsten importer (src/importer/tungsten)" OFF)
 option(CORONARESOURCE_BUILD_VISION_SCENE "Build VisionScene importer (src/importer/vision_scene)" OFF)
-option(CORONARESOURCE_BUILD_IMPORTER_IMPORT "Build core importer (src/importer/import)" OFF)
 option(CORONARESOURCE_BUILD_SCENE_LOADER "Build scene_loader entry (src/importer/scene_loader.*)" ON)
 
 # Non-C++ helper folders (kept as toggles for packaging/install; no C++ sources)
